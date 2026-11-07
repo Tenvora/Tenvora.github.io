@@ -1,9 +1,95 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tenvora — المعرض</title>
-<style>body{font-family:system-ui,sans-serif;background:#0A0A0A;color:#EDE6D6;display:grid;place-items:center;min-height:100vh;margin:0}h1{font-size:clamp(1.6rem,5vw,3rem);letter-spacing:0}p{opacity:.7}</style>
-<h1>معرض Tenvora</h1>
-<p>من صناعة Tenvora — جارٍ تجهيز المواقع.</p>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معرض Tenvora — نماذج مواقع عربية</title>
+<meta name="description" content="معرض نماذج أمامية بالعربية من صناعة Tenvora: خمسة مواقع شكلية بخمس مدارس تصميم مختلفة, بدون باك اند.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0A; --gold:#C6A15B; --ivory:#EDE6D6; --muted:#9A9184;
+    --line:rgba(198,161,91,.28);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ink);color:var(--ivory);
+    font-family:"Tajawal",system-ui,sans-serif;line-height:1.8;letter-spacing:0;
+    font-size:17px;
+  }
+  .wrap{max-width:1040px;margin-inline:auto;padding:clamp(28px,6vw,72px) clamp(20px,5vw,40px)}
+  header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding-bottom:22px;border-bottom:1px solid var(--line)}
+  .mark{font-family:"El Messiri",serif;font-size:clamp(22px,4vw,30px);color:var(--ivory)}
+  .mark b{color:var(--gold);font-weight:600}
+  .kicker{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;color:var(--muted);
+    direction:ltr;unicode-bidi:isolate;letter-spacing:.14em}
+  h1{font-family:"El Messiri",serif;font-weight:700;line-height:1.35;
+    font-size:clamp(30px,6.4vw,54px);margin:clamp(34px,7vw,64px) 0 14px}
+  .lede{color:var(--muted);max-width:62ch;margin:0 0 clamp(30px,5vw,46px)}
+  ol{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  li a{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;
+    text-decoration:none;color:inherit;padding:20px 22px;border:1px solid var(--line);
+    transition:border-color .35s cubic-bezier(.2,.7,.2,1),background .35s cubic-bezier(.2,.7,.2,1)}
+  li a:hover,li a:focus-visible{border-color:var(--gold);background:rgba(198,161,91,.07)}
+  li a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .num{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--gold);
+    direction:ltr;unicode-bidi:isolate;font-size:14px}
+  .name{font-family:"El Messiri",serif;font-size:clamp(19px,3.4vw,25px);font-weight:600}
+  .meta{display:block;color:var(--muted);font-size:14.5px;margin-top:6px}
+  .school{display:inline-block;border:1px solid var(--line);padding:1px 10px;
+    font-size:12.5px;color:var(--gold);margin-inline-start:8px}
+  footer{margin-top:clamp(40px,8vw,72px);padding-top:22px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;color:var(--muted);font-size:14.5px}
+  .note{color:var(--muted);font-size:14px;margin-top:-18px}
+  @media (prefers-reduced-motion: reduce){li a{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark">منصة <b>Tenvora</b></div>
+    <div class="kicker" dir="ltr">SHOWCASE · BATCH 1 / 10</div>
+  </header>
+
+  <h1>خمسة مواقع، خمس مدارس تصميم</h1>
+  <p class="lede">نماذج أمامية كاملة بالعربية، كل واحد منها مكتوب من الصفر بهويته اللونية وخطوطه وحركته التوقيعية. لا باك اند، ولا لوحة أدمن، ولا أي طلب شبكة خارج الخطوط ومكتبات الحركة.</p>
+  <p class="note">باقي الدفعة الأولى تحت الإنتاج — تُضاف هنا تباعاً.</p>
+
+  <ol>
+    <li><a href="/01-suria/">
+      <span class="num" dir="ltr">01</span>
+      <span><span class="name">سُرعة</span><span class="school">نيون عربيسك</span>
+        <span class="meta">منصة رواتب ومدفوعات للشركات الصغيرة · الرياض · <span dir="ltr">suria.sa</span></span></span>
+    </a></li>
+    <li><a href="/02-helmu/">
+      <span class="num" dir="ltr">02</span>
+      <span><span class="name">حُلم</span><span class="school">زجاجي Aurora</span>
+        <span class="meta">استوديو تصميم داخلي للفلل · دبي · <span dir="ltr">helmu.ae</span></span></span>
+    </a></li>
+    <li><a href="/03-wahadata/">
+      <span class="num" dir="ltr">03</span>
+      <span><span class="name">واحة داتا</span><span class="school">Glass HUD</span>
+        <span class="meta">هندسة بيانات وتحليلات صناعية · الخبر · <span dir="ltr">waha-data.sa</span></span></span>
+    </a></li>
+    <li><a href="/04-marasi/">
+      <span class="num" dir="ltr">04</span>
+      <span><span class="name">مَراسي</span><span class="school">سينمائي Parallax</span>
+        <span class="meta">لوجستيات موانئ — رحلة شحنة · الدوحة · <span dir="ltr">marasi.qa</span></span></span>
+    </a></li>
+    <li><a href="/05-suqur/">
+      <span class="num" dir="ltr">05</span>
+      <span><span class="name">صقور</span><span class="school">Noir فاخر</span>
+        <span class="meta">تراث الصيد بالصقور · أبوظبي · <span dir="ltr">suqur.ae</span></span></span>
+    </a></li>
+  </ol>
+
+  <footer>
+    <span>من صناعة Tenvora</span>
+    <span dir="ltr" class="kicker">ARABIC · RTL · STATIC</span>
+  </footer>
+</div>
+</body>
 </html>
