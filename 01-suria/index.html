@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سُرعة — تحويل رواتب موظفيك في ثلاث دقائق</title>
+<meta name="description" content="منصّة رواتب ودفعات للمنشآت الصغيرة في السعودية: ارفع الكشف، راجع وصادق، تصل الرواتب إلى جميع البنوك المحلية خلال دقائق.">
+<meta name="theme-color" content="#0B0E14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;family=Reem+Kufi:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى الرئيسي</a>
+
+<!-- ══════════════════════ decorative background layers ══════════════════════ -->
+<div class="bg-field" aria-hidden="true">
+  <div class="bg-base"></div>
+  <span class="glow glow--hero"></span>
+  <span class="glow glow--mid"></span>
+  <span class="glow glow--end"></span>
+  <div class="bg-grain"></div>
+  <div class="bg-vignette"></div>
+</div>
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<header class="site-header" id="top">
+  <div class="scroll-rail" aria-hidden="true"><span class="scroll-rail__fill" id="scrollRailFill"></span></div>
+  <div class="shell header-inner">
+    <a class="brand" href="#top" aria-label="سُرعة — العودة إلى أعلى الصفحة">
+      <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+        <rect x="1" y="1" width="32" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+        <path d="M25 8H17v8h-8v10h16" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="22" y="22" width="4" height="4" fill="currentColor"/>
+      </svg>
+      <span class="brand-name">سُرعة</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="التنقّل الرئيسي">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#how">كيف يعمل</a></li>
+        <li><a class="nav-link" href="#features">المزايا</a></li>
+        <li><a class="nav-link" href="#numbers">أرقام</a></li>
+        <li><a class="nav-link" href="#security">الأمان</a></li>
+        <li><a class="nav-link" href="#voices">آراء العملاء</a></li>
+        <li><a class="nav-link" href="#faq">الأسئلة الشائعة</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-primary btn--sm" href="#cta">
+        <span>ابدأ مجانًا</span>
+        <svg class="btn-arrow" width="15" height="12" viewBox="0 0 15 12" aria-hidden="true" focusable="false">
+          <path d="M14 6H2m0 0l4-4M2 6l4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/>
+        </svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="افتح قائمة التنقّل">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section class="hero" data-reveal-group>
+    <svg class="arabesque arabesque--hero" aria-hidden="true" focusable="false" width="100%" height="100%">
+      <defs>
+        <pattern id="kufic-hero" width="104" height="104" patternUnits="userSpaceOnUse">
+          <path d="M0 52h26V26h26v26h26v26H52v26" fill="none" stroke="currentColor" stroke-width="1"/>
+          <rect x="34" y="34" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M104 13H78v26M0 91h26V65" fill="none" stroke="currentColor" stroke-width="1"/>
+          <rect x="48" y="48" width="8" height="8" fill="currentColor" opacity=".5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#kufic-hero)"/>
+    </svg>
+
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          منصّة الرواتب والدفعات للمنشآت الصغيرة والمتوسطة
+        </p>
+        <h1 class="h-display" data-reveal>رواتب موظفيك كاملةً<br>في ثلاث دقائق،<br><span class="accent-underline">من كشفٍ إلى حساباتٍ</span><br>في كل البنوك.</h1>
+        <p class="lead" data-reveal>
+          «سُرعة» تقرأ ملف الرواتب لديك، وتُظهر لك كل خطأ قبل الإرسال، ثم تخرج الدفعة أمرًا واحدًا إلى حسابات موظفيك —
+          مع سجلٍّ مالي واضح تُراجع عليه نهاية العام, دون ورقةٍ واحدة ودون زيارة للبنك.
+        </p>
+        <div class="hero-cta" data-reveal>
+          <a class="btn btn-primary" href="#cta">
+            <span>اطلب كشفك الأول</span>
+            <svg class="btn-arrow" width="16" height="12" viewBox="0 0 16 12" aria-hidden="true" focusable="false">
+              <path d="M15 6H2m0 0l4-4M2 6l4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="#how">
+            <svg width="13" height="16" viewBox="0 0 13 16" aria-hidden="true" focusable="false">
+              <path d="M12 8H1m0 0l5-5M1 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/>
+            </svg>
+            <span>شاهد المسار في ٦٠ ثانية</span>
+          </a>
+        </div>
+        <ul class="hero-notes" data-reveal>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1 8.5l4 4L15 2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>بلا بطاقة ائتمانية للتجربة</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1 8.5l4 4L15 2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>إعداد يُكمل في جلسة واحدة</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1 8.5l4 4L15 2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>إلغاء في أي وقت</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <!-- product mockup: payroll card (HTML: deterministic RTL layout, no SVG text anchoring) -->
+        <div class="pay-card" role="img" aria-label="معاينة كشف رواتب شهري داخل المنصة: أربعة وعشرون موظفًا، إجمالي مئة وستة وثمانون ألفًا وأربعمئة ريال، وحالة الدفعة تم التحويل.">
+          <div class="pay-card__head">
+            <p class="pay-card__title">كشف يوليو — القسم التشغيلي</p>
+            <span class="pay-badge">
+              <span class="pay-badge__dot" aria-hidden="true"></span>
+              <span>تم التحويل</span>
+            </span>
+          </div>
+          <ul class="pay-rows">
+            <li class="pay-row">
+              <span class="pay-avatar" aria-hidden="true">ع.س</span>
+              <span class="pay-who">
+                <b class="pay-name">عبدالله السالم</b>
+                <span class="pay-role">مهندس موقع</span>
+              </span>
+              <span class="pay-amt num" dir="ltr">9,250</span>
+            </li>
+            <li class="pay-row">
+              <span class="pay-avatar" aria-hidden="true">ن.ح</span>
+              <span class="pay-who">
+                <b class="pay-name">نورة الحربي</b>
+                <span class="pay-role">مسؤولة مشتريات</span>
+              </span>
+              <span class="pay-amt num" dir="ltr">8,400</span>
+            </li>
+            <li class="pay-row">
+              <span class="pay-avatar" aria-hidden="true">م.ق</span>
+              <span class="pay-who">
+                <b class="pay-name">ماجد القحطاني</b>
+                <span class="pay-role">فني تشغيل</span>
+              </span>
+              <span class="pay-amt num" dir="ltr">6,180</span>
+            </li>
+          </ul>
+          <div class="pay-total">
+            <p class="pay-total__label">إجمالي الدفعة · ٢٤ موظفًا</p>
+            <p class="pay-total__amt"><span class="num" dir="ltr">186,400</span><span class="pay-cur">ر.س</span></p>
+          </div>
+          <div class="pay-bar" aria-hidden="true"><span class="js-progress-bar"></span></div>
+          <p class="pay-foot" aria-hidden="true">
+            <span class="pay-foot__mark"></span>
+            <span>وصلت خلال ٢ دقيقة و٤١ ثانية</span>
+          </p>
+        </div>
+
+        <!-- product mockup: arrival notification -->
+        <div class="float-toast" aria-hidden="true">
+          <svg class="float-toast__icon" viewBox="0 0 34 34" focusable="false">
+            <rect x="6" y="6" width="22" height="22" rx="8" fill="none" stroke="currentColor" stroke-opacity=".45"/>
+            <path d="M17 11v9m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="square"/>
+            <path d="M12 24h10" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+          <span class="float-toast__txt">
+            <b>إشعار وصول الراتب</b>
+            <span>٢٤ من ٢٤ موظفًا · الآن</span>
+          </span>
+        </div>
+
+        <!-- kufic medallion -->
+        <svg class="medallion" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="30" y="30" width="60" height="60"/>
+            <rect x="18" y="18" width="84" height="84" opacity=".55"/>
+            <path d="M60 6v30M60 84v30M6 60h30M84 60h30"/>
+            <rect x="46" y="46" width="28" height="28" opacity=".8"/>
+            <path d="M30 60h16V44M90 60H74v16M60 90V74" opacity=".7"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TRUST STRIP ══════════════════════ -->
+  <section class="trust" aria-labelledby="trust-title" data-reveal-group>
+    <div class="shell">
+      <h2 class="trust-title" id="trust-title" data-reveal>فرق المحاسبة في هذه المنشآت تُصدر كشوفها شهريًا عبر «سُرعة»</h2>
+      <ul class="wordmarks" data-reveal>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="16" height="16" fill="none"/><rect x="8" y="9" width="6" height="6" class="wm-solid"/></svg>
+          <span class="wm-name">نجد للتجارة</span>
+        </li>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V4h16v16H4zm4 0v-8h8v8" fill="none"/></svg>
+          <span class="wm-name">ركن الرياض</span>
+        </li>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none"/><path d="M12 4v16M4 12h16" fill="none"/></svg>
+          <span class="wm-name">مخابز الأصالة</span>
+        </li>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 20l6-11 4 6 3-4 5 9H2z" fill="none"/></svg>
+          <span class="wm-name">بحر الرمال</span>
+        </li>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none"/><rect x="9" y="9" width="6" height="6" class="wm-solid"/></svg>
+          <span class="wm-name">واحة شرق</span>
+        </li>
+        <li>
+          <svg class="wm-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12h5l3-7 3 14 3-7h4" fill="none"/></svg>
+          <span class="wm-name">مجموعة أُفق</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ 3 STEPS : THE MONEY PATH ══════════════════════ -->
+  <section class="steps section is-stacked" id="how" aria-labelledby="how-title">
+    <svg class="arabesque" aria-hidden="true" focusable="false" width="100%" height="100%">
+      <defs>
+        <pattern id="kufic-steps" width="88" height="88" patternUnits="userSpaceOnUse">
+          <path d="M0 44h22V22h22v22h22v22H44v22" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M88 11H66V33" fill="none" stroke="currentColor" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#kufic-steps)"/>
+    </svg>
+
+    <div class="shell">
+      <header class="section-head" data-reveal-group>
+        <p class="section-kicker"><span class="kufic-num" aria-hidden="true">٠١</span> كيف تعمل «سُرعة»</p>
+        <h2 class="h-section" id="how-title">ثلاث نقاط على المسار،<br>ودقيقة وثمانٍ وأربعون ثانية في المتوسط.</h2>
+        <p class="section-lead">تصفّح إلى أسفل وراقِب الدفعة تسير على المسار: من الرفع إلى الوصول.</p>
+      </header>
+
+      <!-- rail : the line that draws itself on scroll -->
+      <div class="path-wrap" id="money-path">
+        <svg class="path-rail" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="path-rail__ghost" pathLength="100"
+                d="M1180 96H1160V44H1040V96H660V44H540V96H160V44H40V96H20"/>
+          <path class="path-rail__live" id="railLive" pathLength="100" stroke-dasharray="100"
+                d="M1180 96H1160V44H1040V96H660V44H540V96H160V44H40V96H20"/>
+        </svg>
+        <ul class="path-nodes" aria-hidden="true">
+          <li class="path-node" data-node="0" style="--x: 8.333%"><span class="node-square"></span></li>
+          <li class="path-node" data-node="1" style="--x: 50%"><span class="node-square"></span></li>
+          <li class="path-node" data-node="2" style="--x: 91.666%"><span class="node-square"></span></li>
+        </ul>
+      </div>
+
+      <ol class="step-cards" id="stepCards">
+        <li class="step-card" data-step="0">
+          <span class="step-index" aria-hidden="true"><span class="num" dir="ltr">01</span></span>
+          <h3 class="step-title">ارفع كشف الرواتب</h3>
+          <p class="step-text">
+            اسحب ملف الرواتب بصيغة إكسل أو <span class="num" dir="ltr">CSV</span> من نظام الموارد البشرية لديك. تقرأه «سُرعة» سطرًا سطرًا: الأسماء، الآيبان،
+            أرقام التأمينات، البدلات والخصومات — وتضع علامة حمراء على أي خانة ناقصة قبل أن يصل أي مبلغ لأحد.
+          </p>
+          <ul class="step-meta">
+            <li>الصيغ المدعومة: <span class="num" dir="ltr">XLSX · CSV</span></li>
+            <li>تظهر الأخطاء خلال <span class="num" dir="ltr">5</span> ثوانٍ</li>
+          </ul>
+          <svg class="step-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-opacity=".3"/>
+            <path d="M22 32V14m0 0l-7 7m7-7l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+            <path d="M12 38h20" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </li>
+        <li class="step-card" data-step="1">
+          <span class="step-index" aria-hidden="true"><span class="num" dir="ltr">02</span></span>
+          <h3 class="step-title">راجع وصادق بطرفين</h3>
+          <p class="step-text">
+            يراجع المفوَّض الإجمالي وعدد المستفيدين ويوافق برمز تحقّق مؤقت يصل إلى جواله. لا يخرج أي مبلغ بأمر طرف واحد،
+            فتبقى المسؤولية مشتركة بين المالك والمحاسب كما في دفترك الورقي — لكن بنقرةٍ واحدة.
+          </p>
+          <ul class="step-meta">
+            <li>توقيع مزدوج إلزامي</li>
+            <li>صلاحية الرمز <span class="num" dir="ltr">60</span> ثانية</li>
+          </ul>
+          <svg class="step-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-opacity=".3"/>
+            <path d="M13 23l6 6L32 15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
+            <rect x="9" y="9" width="6" height="6" fill="currentColor" opacity=".45"/>
+          </svg>
+        </li>
+        <li class="step-card" data-step="2">
+          <span class="step-index" aria-hidden="true"><span class="num" dir="ltr">03</span></span>
+          <h3 class="step-title">تصل الرواتب إلى جميع البنوك</h3>
+          <p class="step-text">
+            تخرج الدفعة أمرًا واحدًا إلى حسابات موظفيك في جميع البنوك المحلية، وتصل خلال دقائق مع إشعار لكل موظف
+            يوضّح له صافي الراتب والبدلات والخصومات. ولمن يعمل باليوميات: الدفع الفوري متاح على مدار الساعة.
+          </p>
+          <ul class="step-meta">
+            <li>متوسط الوصول: <span class="num" dir="ltr">2</span> دقيقة و٤٨ ثانية</li>
+            <li>إشعار فوري لكل مستفيد</li>
+          </ul>
+          <svg class="step-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-opacity=".3"/>
+            <path d="M8 34V18m9 16V12m9 22V22m9 12V14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+          </svg>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ BENTO FEATURES ══════════════════════ -->
+  <section class="features section" id="features" aria-labelledby="features-title">
+    <div class="shell">
+      <header class="section-head" data-reveal-group>
+        <p class="section-kicker"><span class="kufic-num" aria-hidden="true">٠٢</span> المزايا</p>
+        <h2 class="h-section" id="features-title">مصنوعة لمكتب محاسبٍ واحد<br>يدير ثلاث منشآت بيده.</h2>
+      </header>
+
+      <div class="bento" data-reveal-group>
+        <article class="tile tile--a" data-reveal>
+          <div class="tile-head">
+            <h3 class="tile-title">كشفٌ يعرف أخطاءه بنفسه</h3>
+            <p class="tile-text">
+              توقّف المنصة عندك قبل البنك: آيبان ناقص رقمًا، موظفٌ تكرّر في كشفين، بدلٌ يخرج عن سياسته، أو خصمٌ يفوق
+              المتاح. تظهر المخالفة في سطرها مع سبب واضح واقتراح تصحيح، فلا تعود للملف بعد ساعتين.
+            </p>
+          </div>
+          <svg class="tile-art" viewBox="0 0 300 118" role="img" aria-label="مقتطف من قائمة تحقّق تكشف أربعة أخطاء في ملف الرواتب قبل الإرسال.">
+            <g font-family="Tajawal, sans-serif" font-size="11">
+              <rect x="1" y="4" width="298" height="26" rx="7" fill="#141B28" stroke="#22D3EE" stroke-opacity=".16"/>
+              <rect x="262" y="11" width="12" height="12" rx="3" fill="none" stroke="#5BE7A0" stroke-width="1.6"/>
+              <path d="M264.5 17l2.5 2.5 4.5-5" fill="none" stroke="#5BE7A0" stroke-width="1.6"/>
+              <text x="248" y="21" text-anchor="end" fill="#C6D3E4">تطابق الأسماء مع الوثائق · ٢٤ سطرًا</text>
+
+              <rect x="1" y="36" width="298" height="26" rx="7" fill="#1B1420" stroke="#FF7B9C" stroke-opacity=".35"/>
+              <rect x="262" y="43" width="12" height="12" rx="3" fill="none" stroke="#FF7B9C" stroke-width="1.6"/>
+              <path d="M265 46l6 6m0-6l-6 6" fill="none" stroke="#FF7B9C" stroke-width="1.6"/>
+              <text x="248" y="53" text-anchor="end" fill="#FFB3C6">السطر ١٤ — الآيبان يقلّ رقمًا واحدًا</text>
+
+              <rect x="1" y="68" width="298" height="26" rx="7" fill="#1B1420" stroke="#FF7B9C" stroke-opacity=".35"/>
+              <rect x="262" y="75" width="12" height="12" rx="3" fill="none" stroke="#FF7B9C" stroke-width="1.6"/>
+              <path d="M265 78l6 6m0-6l-6 6" fill="none" stroke="#FF7B9C" stroke-width="1.6"/>
+              <text x="248" y="85" text-anchor="end" fill="#FFB3C6">السطر ٢٢ — بدل سكن أعلى من الحد</text>
+
+              <rect x="1" y="100" width="298" height="14" rx="7" fill="#141B28"/>
+              <rect x="188" y="100" width="112" height="14" rx="7" fill="#22D3EE" fill-opacity=".5"/>
+              <text x="150" y="106" dominant-baseline="middle" text-anchor="start" font-family="Tajawal, sans-serif" font-size="10" fill="#8494AC">٢ من ٢٤ سطرًا يحتاج مراجعة</text>
+            </g>
+          </svg>
+        </article>
+
+        <article class="tile tile--b" data-reveal>
+          <svg class="tile-glyph" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <rect x="3" y="3" width="34" height="34" rx="7" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+            <path d="M20 10v20m-8-8h16" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="16" y="16" width="8" height="8" fill="currentColor" opacity=".22"/>
+          </svg>
+          <h3 class="tile-title">أمر واحد لكل البنوك</h3>
+          <p class="tile-text">موظفون في ثمانية بنوك مختلفة؟ يخرجون من نافذة واحدة، بجدول زمني واحد، وبسجلّ تصفية واحد.</p>
+        </article>
+
+        <article class="tile tile--c" data-reveal>
+          <svg class="tile-glyph" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <path d="M8 34V6h18l6 6v22z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 18h12M14 24h12M14 30h7" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M26 6v6h6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <h3 class="tile-title">تقارير يسلّمها محاسبك كما هي</h3>
+          <p class="tile-text">كشف شهري، توزيع تكلفة على الأقسام، وسجل دفعات سنوي قابل للتصدير بصيغة <span class="num" dir="ltr">PDF</span> و<span class="num" dir="ltr">CSV</span>.</p>
+        </article>
+
+        <article class="tile tile--d" data-reveal>
+          <div class="tile-head">
+            <svg class="tile-glyph" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+              <path d="M20 4l14 5v10c0 8-6 14-14 17-8-3-14-9-14-17V9z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="15" y="17" width="10" height="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M17 17v-2a3 3 0 016 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+            <h3 class="tile-title">صلاحيات تُقسَّم بالتفصيل</h3>
+            <p class="tile-text">
+              من يرفع، من يراجع، من يوافق، ومن يرى الأرقام فقط. أربعة أدوار جاهزة، ويمكن تقييد كل دور بنطاق زمني
+              ومبلغ أقصى لكل دفعة.
+            </p>
+          </div>
+          <ul class="role-chips" aria-hidden="true">
+            <li>مالك</li>
+            <li>محاسب</li>
+            <li>مدقّق</li>
+            <li>قراءة فقط</li>
+          </ul>
+        </article>
+
+        <article class="tile tile--e" data-reveal>
+          <h3 class="tile-title">يرتبط بما تستخدمه أصلًا</h3>
+          <p class="tile-text">ملفات جاهزة من أنظمة الموارد البشرية والشركات المحاسبية، أو تكامل مباشر عبر واجهة برمجية لمن لديه فريق تقني.</p>
+          <svg class="tile-art tile-art--sync" viewBox="0 0 260 56" role="img" aria-label="مخطط يوضح تدفق البيانات من نظام الموارد البشرية إلى سُرعة ثم إلى البنوك.">
+            <g fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="196" y="12" width="48" height="32" rx="8" stroke-opacity=".55"/>
+              <rect x="106" y="12" width="48" height="32" rx="8" stroke="#F5C518" stroke-opacity=".7"/>
+              <rect x="16" y="12" width="48" height="32" rx="8" stroke-opacity=".55"/>
+              <path d="M192 28h-34M102 28H68" stroke-dasharray="4 5"/>
+            </g>
+            <text x="220" y="44" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="8" fill="#8494AC">النظام</text>
+            <text x="130" y="44" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="8" fill="#F5C518">سُرعة</text>
+            <text x="40" y="44" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="8" fill="#8494AC">البنوك</text>
+          </svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ NUMBERS ══════════════════════ -->
+  <section class="numbers section" id="numbers" aria-labelledby="numbers-title">
+    <div class="shell">
+      <header class="section-head section-head--inline">
+        <p class="section-kicker"><span class="kufic-num" aria-hidden="true">٠٣</span> بالأرقام</p>
+        <h2 class="h-section h-section--sm" id="numbers-title">ما نقيسه كل يوم</h2>
+      </header>
+      <dl class="stat-grid" data-reveal-group>
+        <div class="stat" data-reveal>
+          <dt class="stat-label">متوسط زمن إصدار الدفعة</dt>
+          <dd class="stat-value"><span class="num" dir="ltr" data-count="3" data-decimals="0">3</span><span class="stat-unit">دقيقة</span></dd>
+        </div>
+        <div class="stat" data-reveal>
+          <dt class="stat-label">منشأة سعودية تُصدر كشوفها شهريًا</dt>
+          <dd class="stat-value"><span class="num" dir="ltr" data-count="2400" data-suffix="+">2,400+</span></dd>
+        </div>
+        <div class="stat" data-reveal>
+          <dt class="stat-label">نسبة نجاح الدفعات خلال <span class="num" dir="ltr">2025</span></dt>
+          <dd class="stat-value"><span class="num" dir="ltr" data-count="99.98" data-decimals="2">99.98</span><span class="stat-unit">%</span></dd>
+        </div>
+        <div class="stat" data-reveal>
+          <dt class="stat-label">بنكًا وحافظة رقمية مدعومة</dt>
+          <dd class="stat-value"><span class="num" dir="ltr" data-count="27">27</span></dd>
+        </div>
+      </dl>
+      <p class="numbers-note">قياسات داخلية على الدفعات الصادرة خلال عام <span class="num" dir="ltr">2025</span>، وتُراجَع شهريًا مع فريق العمليات.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SECURITY ══════════════════════ -->
+  <section class="security section" id="security" aria-labelledby="security-title">
+    <svg class="arabesque" aria-hidden="true" focusable="false" width="100%" height="100%">
+      <defs>
+        <pattern id="kufic-sec" width="72" height="72" patternUnits="userSpaceOnUse">
+          <path d="M0 36h18V18h18v18h18v18H36v18" fill="none" stroke="currentColor" stroke-width="1"/>
+          <rect x="30" y="30" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#kufic-sec)"/>
+    </svg>
+    <div class="shell security-grid">
+      <div class="security-art" data-reveal>
+        <svg class="shield" viewBox="0 0 260 300" role="img" aria-label="رمز درع بأقفال هندسية يمثّل طبقات الحماية في المنصة.">
+          <defs>
+            <linearGradient id="shieldFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22D3EE" stop-opacity=".16"/>
+              <stop offset="1" stop-color="#22D3EE" stop-opacity=".02"/>
+            </linearGradient>
+          </defs>
+          <path class="shield-outline" d="M130 10l104 34v96c0 62-44 108-104 150-60-42-104-88-104-150V44z" fill="url(#shieldFill)" stroke="#22D3EE" stroke-width="1.6"/>
+          <path d="M130 34l80 26v80c0 48-34 84-80 116-46-32-80-68-80-116V60z" fill="none" stroke="#22D3EE" stroke-opacity=".35"/>
+          <g fill="none" stroke="#F5C518" stroke-opacity=".85" stroke-width="1.6">
+            <rect x="106" y="126" width="48" height="42" rx="6"/>
+            <path d="M116 126v-10a14 14 0 0128 0v10"/>
+            <rect x="126" y="140" width="8" height="14" fill="#F5C518" stroke="none"/>
+          </g>
+          <g stroke="#22D3EE" stroke-opacity=".55" stroke-width="1.4" fill="none">
+            <path d="M130 88v22M130 172v26M86 130H64M196 130h-22"/>
+            <rect x="122" y="192" width="16" height="16"/>
+            <rect x="122" y="72" width="16" height="16" opacity=".7"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="security-copy">
+        <p class="section-kicker" data-reveal><span class="kufic-num" aria-hidden="true">٠٤</span> الأمان والامتثال</p>
+        <h2 class="h-section" data-reveal>أموالك تبقى في حسابك البنكي.<br>نحرّكها، ولا نحفظها.</h2>
+        <p class="section-lead" data-reveal>
+          لا تحتفظ «سُرعة» بأموالك في محفظة داخلية، ولا تطلب كلمة مرور حسابك البنكي أبدًا. الربط يكون بصلاحيات مدفوعات
+          مُقيّدة تُنشئها أنت من قناة البنك الذي تتعامل معه، ولكل عملية أثرٌ يبقى في سجلّك.
+        </p>
+        <ul class="security-list" data-reveal-group>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12h8m-4-4v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><b>تشفير في النقل والتخزين</b> بمعايير <span class="num" dir="ltr">AES-256</span> وقنوات اتصال مشفّرة <span class="num" dir="ltr">TLS 1.3</span>.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2.5 2.5L16 10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><b>مصادقة ثنائية وتوقيع مزدوج</b> على كل عملية دفع، مع سقف مبلغ لكل موافق.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><b>سجل عمليات لا يُعدَّل</b>: مَن رفع، مَن وافق، متى، وبأي جهاز — قابل للتصدير في أي لحظة.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V8l8-4 8 4v12" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><b>عزل بيانات كل منشأة</b> في مساحة عمل مستقلة، بمفاتيح خاصة بها.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l4 2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span><b>مراجعة أمنية دورية</b> لسطح المنصة وواجهاتها، وتقرير يُرسل للعميل عند الطلب.</span>
+          </li>
+        </ul>
+        <div class="promise-card" data-reveal>
+          <p class="promise-title">ما لا نفعله، كتابةً</p>
+          <ul class="promise-list">
+            <li>لا نطلب كلمة مرور حسابك البنكي ولا رمز الدخول الكامل.</li>
+            <li>لا نحتفظ بأموالك ولا نُحوّلها لحسابنا الوسيط.</li>
+            <li>لا نبيع ولا نشارك بيانات موظفيك مع أي جهة.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TESTIMONIALS ══════════════════════ -->
+  <section class="voices section" id="voices" aria-labelledby="voices-title">
+    <div class="shell">
+      <header class="section-head">
+        <p class="section-kicker"><span class="kufic-num" aria-hidden="true">٠٥</span> آراء العملاء</p>
+        <h2 class="h-section" id="voices-title">من مكتبٍ في الرياض، ومثله في الدمام وأبها.</h2>
+      </header>
+
+      <div class="carousel" id="carousel" role="group" aria-roledescription="عارض شهادات" aria-label="آراء العملاء — ثلاث بطاقات، تنقّل بالأزرار أو بمفاتيح الأسهم" tabindex="0">
+        <div class="carousel-viewport" aria-live="polite">
+          <div class="carousel-track" id="carouselTrack">
+            <figure class="t-slide is-active" aria-hidden="false">
+              <svg class="t-quote-mark" viewBox="0 0 44 34" aria-hidden="true" focusable="false">
+                <path d="M4 30V16C4 8 10 3 18 3v6c-4 0-7 3-7 7h7v14zM24 30V16c0-8 6-13 14-13v6c-4 0-7 3-7 7h7v14z" fill="currentColor" opacity=".5"/>
+              </svg>
+              <blockquote>
+                <p>كانت الرواتب تأخذ مني نصف يوم بين البنك والورقة والقلم. اليوم أرفع الملف وأصادق عليه وأنا في السيارة
+                في طريقي إلى الموقع. أكثر ما غيّر نظرتي أن الأخطاء تظهر لي قبل الإرسال، لا بعده.</p>
+              </blockquote>
+              <figcaption>
+                <span class="t-avatar" aria-hidden="true">ع.س</span>
+                <span class="t-who">
+                  <b>أبو رائد العتيق</b>
+                  <em>صاحب مؤسسة مقاولات صغيرة · الرياض</em>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="t-slide" aria-hidden="true">
+              <svg class="t-quote-mark" viewBox="0 0 44 34" aria-hidden="true" focusable="false">
+                <path d="M4 30V16C4 8 10 3 18 3v6c-4 0-7 3-7 7h7v14zM24 30V16c0-8 6-13 14-13v6c-4 0-7 3-7 7h7v14z" fill="currentColor" opacity=".5"/>
+              </svg>
+              <blockquote>
+                <p>لديّ ثلاثون موظفة بين دوام كامل وجزئي، ويتغيّر الكشف كل أسبوع تقريبًا. صار التعديل يصل في نفس اللحظة،
+                وصار بإمكاني أن أُبيّن للموظفة تفاصيل راتبها على شاشة جوالها بدل أن تنتظر نهاية الشهر.</p>
+              </blockquote>
+              <figcaption>
+                <span class="t-avatar" aria-hidden="true">ن.ح</span>
+                <span class="t-who">
+                  <b>نورة الحربي</b>
+                  <em>مديرة موارد بشرية · الدمام</em>
+                </span>
+              </figcaption>
+            </figure>
+
+            <figure class="t-slide" aria-hidden="true">
+              <svg class="t-quote-mark" viewBox="0 0 44 34" aria-hidden="true" focusable="false">
+                <path d="M4 30V16C4 8 10 3 18 3v6c-4 0-7 3-7 7h7v14zM24 30V16c0-8 6-13 14-13v6c-4 0-7 3-7 7h7v14z" fill="currentColor" opacity=".5"/>
+              </svg>
+              <blockquote>
+                <p>أهم معيار لي عند ترشيح أي أداة لعملائي: هل أستطيع أن أثبت كل ريال؟ هنا سجل الدفعات يُصدَّر كما هو ضمن
+                أوراق السنة، مع اسم مَن وافق والوقت والجهاز. هذا وحده وفّر علي مراجعات طويلة.</p>
+              </blockquote>
+              <figcaption>
+                <span class="t-avatar" aria-hidden="true">س.د</span>
+                <span class="t-who">
+                  <b>سلطان الدوسري</b>
+                  <em>محاسب قانوني · أبها</em>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="carousel-ui">
+          <div class="carousel-dots" id="carouselDots" role="group" aria-label="اختر شهادة">
+            <button type="button" class="dot is-active" aria-current="true" aria-label="الشهادة الأولى من ثلاث" aria-controls="carouselTrack" data-index="0"></button>
+            <button type="button" class="dot" aria-current="false" aria-label="الشهادة الثانية من ثلاث" aria-controls="carouselTrack" data-index="1"></button>
+            <button type="button" class="dot" aria-current="false" aria-label="الشهادة الثالثة من ثلاث" aria-controls="carouselTrack" data-index="2"></button>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" class="round-btn" id="prevBtn" aria-label="الشهادة السابقة" aria-controls="carouselTrack">
+              <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 7h16m0 0l-5-5m5 5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+            </button>
+            <button type="button" class="round-btn" id="nextBtn" aria-label="الشهادة التالية" aria-controls="carouselTrack">
+              <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M17 7H1m0 0l5-5M1 7l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FAQ ══════════════════════ -->
+  <section class="faq section" id="faq" aria-labelledby="faq-title">
+    <div class="shell faq-grid">
+      <header class="faq-head">
+        <p class="section-kicker"><span class="kufic-num" aria-hidden="true">٠٦</span> الأسئلة الشائعة</p>
+        <h2 class="h-section" id="faq-title">أسئلة يسألها كل صاحب منشأة قبل أول دفعة.</h2>
+        <p class="section-lead">لم تجد سؤالك؟ فريق الإعداد يردّ خلال ساعات العمل الرسمية.</p>
+      </header>
+
+      <div class="faq-list">
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>كم يستغرق وصول الراتب إلى حساب الموظف بعد موافقتي؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            في أغلب الحالات تصل الدفعة خلال دقائق، ومتوسط الوقت المقيس لدينا دقيقتان وثمانٍ وأربعون ثانية. لو خرجت الدفعة قرب نهاية
+            اليوم أو في عطلة رسمية، تُرحَّل تلقائيًا إلى أقرب وقت تسوية، وتصل الموظفَ رسالة توضح التوقيت المتوقع.
+          </p></div>
+        </details>
+
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>هل تحتاج «سُرعة» إلى كلمة مرور حسابي البنكي؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            لا. تفتح أنت صلاحية الدفع من قناة البنك بنفسك، وترتبط بها المنصة بصلاحيات محدّدة على المدفوعات فقط. كلمة مرورك
+            البنكية تبقى عندك، ويمكن إلغاء الربط في أي وقت من جهة البنك دون مراجعتنا.
+          </p></div>
+        </details>
+
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>ما صيغات ملفات كشف الرواتب المدعومة؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            ملف إكسل أو ملف <span class="num" dir="ltr">CSV</span>، بقالبنا الجاهز أو بقالب نظامك الحالي: نلتقط الأعمدة بالأسماء ونطلب منك مطابقةً واحدة
+            عند أول رفع. بعد ذلك لا يحتاج كشفك لتعديل، فأي صيغة ثابتة تعمل مباشرة.
+          </p></div>
+        </details>
+
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>هل يمكن إيقاف الدفعة بعد الموافقة عليها؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            نعم ما دامت الدفعة في نافذة الجدولة. بعد التوقيع يتوفّر زرّ «إيقاف فوري» لمدة ثلاثين دقيقة، وبعدها تبدأ التسوية. أما بعد
+            خروج المبلغ فلا يمكن سحبه، لكن يمكنك من نفس الشاشة أن تُصدر دفعًا معاكسًا للمستفيد نفسه، ويُسجَّل التشغيلان
+            في السجل معًا.
+          </p></div>
+        </details>
+
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>كيف تتعامل المنصة مع خطأ في رقم الآيبان؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            يتحقّق النظام من طول الرقم وصحته وبنك المستفيد قبل الإرسال، فيظهر السطر مرفوضًا مع السبب. ولو تبيّن لاحقًا أن المستفيد
+            غيّر اسمه أو بنكُه، تُصلَّح البيانات في كشف الشهر التالي دون أن يتأثر السجل التاريخي.
+          </p></div>
+        </details>
+
+        <details class="qa" data-reveal>
+          <summary class="qa-q">
+            <span>كيف تُحتسب التكلفة؟</span>
+            <span class="qa-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="qa-a"><p>
+            اشتراك شهري ثابت حسب عدد الموظفين، بلا رسوم إعداد وبلا نسبة على المبالغ المحوّلة. كل خطة تشمل عددًا غير محدود
+            من الكشوف والمستخدمين والتقارير، والتجربة ثلاثون يومًا بلا بطاقة ائتمانية.
+          </p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA ══════════════════════ -->
+  <section class="cta section" id="cta" aria-labelledby="cta-title">
+    <svg class="arabesque" aria-hidden="true" focusable="false" width="100%" height="100%">
+      <defs>
+        <pattern id="kufic-cta" width="96" height="96" patternUnits="userSpaceOnUse">
+          <path d="M0 48h24V24h24v24h24v24H48v24" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M96 24H72v24M0 72h24V48" fill="none" stroke="currentColor" stroke-width="1"/>
+          <rect x="44" y="44" width="8" height="8" fill="currentColor" opacity=".4"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#kufic-cta)"/>
+    </svg>
+
+    <div class="shell cta-inner">
+      <h2 class="h-display h-display--cta" id="cta-title" data-reveal>كشوف هذا الشهر<br>يمكن أن تنتهي قبل الغداء.</h2>
+      <p class="lead" data-reveal>أرسل بريدك، ويجهّز لك فريق الإعداد قالب كشف يطابق ملفك الحالي في جلسة واحدة قصيرة.
+        نضيفك أيضًا إلى نشرة المحاسبين الشهرية — وإلغاء الاشتراك متاح في أي وقت.</p>
+
+      <form class="cta-form" id="ctaForm" novalidate data-reveal>
+        <div class="field">
+          <label class="field-label" for="email">بريد العمل</label>
+          <input class="field-input" id="email" name="email" type="email" inputmode="email" autocomplete="email"
+                 placeholder="name@company.sa" lang="en" dir="ltr" aria-describedby="formHint">
+          <span class="field-glow" aria-hidden="true"></span>
+        </div>
+        <button class="btn btn-gold" type="submit">
+          <span>ارسل وجهّز الجلسة</span>
+          <svg class="btn-arrow" width="16" height="12" viewBox="0 0 16 12" aria-hidden="true" focusable="false">
+            <path d="M15 6H2m0 0l4-4M2 6l4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <p class="form-hint" id="formHint">بريدك يُستخدم لجلسة الإعداد ونشرة المحاسبين فقط، ولا يُشارك مع أي جهة.</p>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="cta-alt" data-reveal>أو ابدأ التجربة بنفسك: <a class="link-inline" href="#how">ثلاث دقائق على المسار</a>، وثلاثون يومًا بلا بطاقة ائتمانية.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="site-footer">
+  <svg class="arabesque arabesque--footer" aria-hidden="true" focusable="false" width="100%" height="100%">
+    <defs>
+      <pattern id="kufic-foot" width="80" height="80" patternUnits="userSpaceOnUse">
+        <path d="M0 40h20V20h20v20h20v20H40v20" fill="none" stroke="currentColor" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#kufic-foot)"/>
+  </svg>
+
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand--foot" href="#top" aria-label="سُرعة — العودة إلى أعلى الصفحة">
+        <svg class="brand-mark" width="32" height="32" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="32" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+          <path d="M25 8H17v8h-8v10h16" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="22" y="22" width="4" height="4" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">سُرعة</span>
+      </a>
+      <p class="footer-tag">منصّة رواتب ودفعات للمنشآت الصغيرة والمتوسطة في السعودية.<br><span class="domain" dir="ltr">suria.sa</span></p>
+      <address class="footer-contact">
+        <span>الرياض — طريق الملك فهد, مركز الأعمال الشمالي</span>
+        <a href="mailto:hello@suria.sa" dir="ltr" class="num">hello@suria.sa</a>
+        <a href="tel:+966110000000" dir="ltr" class="num">+966 11 000 0000</a>
+      </address>
+    </div>
+
+    <nav class="footer-col" aria-label="روابط المنصّة">
+      <h3 class="footer-h">المنصّة</h3>
+      <ul>
+        <li><a href="#how">كيف يعمل المسار</a></li>
+        <li><a href="#features">المزايا</a></li>
+        <li><a href="#numbers">الأرقام</a></li>
+        <li><a href="#cta">الاشتراك والتجربة</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="روابط الموارد">
+      <h3 class="footer-h">الموارد</h3>
+      <ul>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <li><a href="#security">الأمان والامتثال</a></li>
+        <li><a href="#voices">قصص العملاء</a></li>
+        <li><a href="#top">دليل تهيئة كشف الرواتب</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h3 class="footer-h">ساعات الدعم</h3>
+      <p class="footer-note">الأحد إلى الخميس<br><span class="num" dir="ltr">8:00 – 20:00</span> بتوقيت الرياض</p>
+      <p class="footer-note">الدفع الفوري متاح على مدار الساعة</p>
+    </div>
+  </div>
+
+  <div class="shell footer-bottom">
+    <p class="credit">من صناعة <span class="tenvora" dir="ltr">Tenvora</span></p>
+    <p class="legal">© <span class="num" dir="ltr" id="year">2026</span> «سُرعة» — نموذج تصميمي لأغراض عرض الهوية البصرية.</p>
+    <ul class="legal-links">
+      <li><a href="#top">سياسة الخصوصية</a></li>
+      <li><a href="#top">الشروط</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
