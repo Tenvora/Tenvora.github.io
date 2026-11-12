@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مَدار — طاقة رياح برية في سلطنة عُمان</title>
+<meta name="description" content="مَدار: مطوّر طاقة رياح برية في مسقط. موارد رياح مقيسة ميدانيًا في الدقم وظفار ومصيرة، ومحافظ مشاريع من 15 إلى 120 ميجاوات، وحاسبة إنتاج توربين مبنية على منحنى قدرة فعلي.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top" aria-label="مَدار — الصفحة الرئيسية">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="11" r="1.9" fill="currentColor"/>
+        <path d="M16 11 L16 2.2 M16 11 L23.6 15.4 M16 11 L8.4 15.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+        <path d="M16 12.9 L15.1 29.8 M13.1 29.8 L18.9 29.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="brand__name">مَدار</span>
+      <span class="brand__dom" dir="ltr">madar.om</span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#resource">المورد المقيس</a>
+      <a href="#portfolio">المشاريع</a>
+      <a href="#turbines">التوربينات</a>
+      <a href="#grid">الشبكة والتراخيص</a>
+      <a href="#impact">الأثر</a>
+      <a href="#calculator">حاسبة الإنتاج</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--solid btn--sm" href="#contact">طلب دراسة جدوى</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="افتح القائمة">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#resource">المورد المقيس</a>
+    <a href="#portfolio">المشاريع</a>
+    <a href="#turbines">التوربينات</a>
+    <a href="#grid">الشبكة والتراخيص</a>
+    <a href="#impact">الأثر</a>
+    <a href="#calculator">حاسبة الإنتاج</a>
+    <a href="#process">مسار الشراكة</a>
+    <a class="btn btn--solid" href="#contact">طلب دراسة جدوى</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <div class="ruler" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <p class="tag" data-reveal><span class="tag__dot"></span> مسقط · سلطنة عُمان — تطوير رياح برية منذ <bdi class="n">2018</bdi></p>
+        <h1 data-reveal>طاقة رياح برية،<br>مقيسة قبل أن تكون موعودة.</h1>
+        <p class="lede" data-reveal>نطوّر مزارع رياح برية للسوق المحلي على الساحل الشرقي وهضبة ظفار. كل رقم إنتاج في هذه الصفحة مشتق من سلسلة قياس لا تقل عن <bdi class="n">12</bdi> شهرًا عند ارتفاع المحور، ومنحنى قدرة حقيقي، ومعامل توافر موقّع مع مشغّل الشبكة.</p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--solid btn--lg" href="#calculator">احسب إنتاج توربين</a>
+          <a class="btn btn--link" href="#resource">بيانات المواقع<span aria-hidden="true"> ←</span></a>
+        </div>
+        <dl class="ledger" data-reveal>
+          <div>
+            <dt>القدرة قيد التطوير</dt>
+            <dd><bdi class="n">275.3</bdi> <span>م.و</span></dd>
+          </div>
+          <div>
+            <dt>إنتاج سنوي متوقع</dt>
+            <dd><bdi class="n">967,900</bdi> <span>م.و.س</span></dd>
+          </div>
+          <div>
+            <dt>محطات قياس عاملة</dt>
+            <dd><bdi class="n">6</bdi> <span>مواقع</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="hero__fig" data-reveal>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Afsluitdijk_-_wind_turbines.jpg/1920px-Afsluitdijk_-_wind_turbines.jpg"
+             alt="صف من توربينات الرياح البرية بأبراج عالية وثلاث شفرات لكل توربين، تحت سماء غائمة."
+             width="1920" height="1280" fetchpriority="high">
+        <figcaption>
+          <span>نمط بناء برّي قياسي: برج <bdi class="n">120</bdi> م، دوار <bdi class="n">126</bdi> م، خرج <bdi class="n">690</bdi> <bdi class="n">V</bdi> إلى محول <bdi class="n">33/132</bdi> <bdi class="n">kV</bdi>.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== FRAMEWORK STRIP ===== -->
+  <section class="frame">
+    <div class="wrap">
+      <p class="frame__label">نعمل داخل إطار هذه الجهات، لا بالنيابة عنها</p>
+      <ul class="frame__list">
+        <li>هيئة تنظيم الخدمات العامة</li>
+        <li>شبكة النقل الوطنية العُمانية</li>
+        <li>المنطقة الاقتصادية الخاصة بالدقم</li>
+        <li>البرنامج الوطني للطاقة المتجددة</li>
+        <li>رؤية عُمان <bdi class="n">2040</bdi></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== MEASURED RESOURCE ===== -->
+  <section class="section" id="resource">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">المورد — أرقام مقيسة</p>
+          <h2 class="section__title">الرياح في عُمان مورد هندسي، لا شعار بيئي.</h2>
+        </div>
+        <p class="sec-head__note">الوحدات: سرعة الرياح <bdi class="n">m/s</bdi> على ارتفاع المحور، ومعامل الشكل <bdi class="n">k</bdi> من توزيع ويبول، وأسط المعامل <bdi class="n">α</bdi> لقانون القدرة للقص الرأسي.</p>
+      </div>
+
+      <div class="table-card" data-reveal>
+        <div class="table-scroll">
+          <table class="data">
+            <caption>سلسلة القياس الميدانية — مُصحَّحة إلى ارتفاع المحور <bdi class="n">120</bdi> م بقانون القدرة <bdi class="n">v(h) = v10 · (h/10)^α</bdi></caption>
+            <thead>
+              <tr>
+                <th scope="col">محطة القياس</th>
+                <th scope="col">الموقع</th>
+                <th scope="col">الأداة</th>
+                <th scope="col" class="num">مدة القياس</th>
+                <th scope="col" class="num"><bdi class="n">v10</bdi></th>
+                <th scope="col" class="num"><bdi class="n">α</bdi></th>
+                <th scope="col" class="num"><bdi class="n">v120</bdi></th>
+                <th scope="col" class="num"><bdi class="n">k</bdi></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="id">DQM-02</td><td>الدقم — وادي قهوان، <bdi class="n">4</bdi> كم داخلية</td><td>ليدار أرضي <bdi class="n">DWS</bdi></td><td class="num"><bdi class="n">26</bdi> شهرًا</td><td class="num">5.8</td><td class="num">0.16</td><td class="num"><strong>8.6</strong></td><td class="num">2.10</td></tr>
+              <tr><td class="id">DQM-05</td><td>الدقم — هضبة السوادة، ساحلي</td><td>صاري <bdi class="n">125</bdi> م</td><td class="num"><bdi class="n">19</bdi> شهرًا</td><td class="num">6.1</td><td class="num">0.16</td><td class="num"><strong>9.1</strong></td><td class="num">2.15</td></tr>
+              <tr><td class="id">SHW-01</td><td>صور — رأس الفيل</td><td>صاري <bdi class="n">140</bdi> م</td><td class="num"><bdi class="n">14</bdi> شهرًا</td><td class="num">5.0</td><td class="num">0.16</td><td class="num"><strong>7.4</strong></td><td class="num">2.00</td></tr>
+              <tr><td class="id">DHF-03</td><td>ظلم — هضبة ظفار <bdi class="n">900</bdi> م</td><td>ليدار أرضي <bdi class="n">DWS</bdi></td><td class="num"><bdi class="n">31</bdi> شهرًا</td><td class="num">6.4</td><td class="num">0.20</td><td class="num"><strong>10.5</strong></td><td class="num">2.35</td></tr>
+              <tr><td class="id">MSN-01</td><td>مصيرة — الهضبة الشمالية</td><td>صاري <bdi class="n">100</bdi> م + <bdi class="n">SODAR</bdi></td><td class="num"><bdi class="n">22</bdi> شهرًا</td><td class="num">5.3</td><td class="num">0.17</td><td class="num"><strong>8.1</strong></td><td class="num">1.95</td></tr>
+              <tr><td class="id">KSB-02</td><td>خصب — مسندم، منحدر بحري</td><td>صاري <bdi class="n">100</bdi> م</td><td class="num"><bdi class="n">13</bdi> شهرًا</td><td class="num">4.2</td><td class="num">0.18</td><td class="num"><strong>6.6</strong></td><td class="num">1.85</td></tr>
+              <tr class="is-ref"><td class="id">NIZ-04</td><td>نزوى — الداخل (مرجع مقارنة)</td><td>صاري <bdi class="n">80</bdi> م</td><td class="num"><bdi class="n">12</bdi> شهرًا</td><td class="num">3.1</td><td class="num">0.22</td><td class="num"><strong>5.4</strong></td><td class="num">1.70</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-foot">قانون القدرة صالح تقريبًا حتى <bdi class="n">200 m</bdi> فوق سطح البحر في طبقة حدّية مستقرة. عند وجود نفق ريح كما في هضبة ظفار يُصحَّح بالقياس المباشر عند الارتفاع المستهدف نفسه، لا باستقراء أس القص.</p>
+      </div>
+
+      <div class="res-grid">
+        <figure class="chart-card" data-reveal>
+          <div class="chart-card__head">
+            <h3>توزيع سرعات الرياح — الدقم <bdi class="n">DQM-02</bdi></h3>
+            <p>أفق <bdi class="n">120</bdi> م · متوسط سنوي <bdi class="n">8.63</bdi> <bdi class="n">m/s</bdi> · ويبول <bdi class="n">A&nbsp;=&nbsp;9.75</bdi>، <bdi class="n">k&nbsp;=&nbsp;2.10</bdi></p>
+          </div>
+          <div class="hist" role="img" aria-label="مدرّج تكراري لتوزيع سرعات الرياح: الذروة عند 7 إلى 9 متر في الثانية بنحو 18 بالمئة من ساعات السنة.">
+            <div class="hist__plot">
+              <div class="bar" style="--h:17%"><span class="bar__v">3.5%</span></div>
+              <div class="bar" style="--h:52%"><span class="bar__v">10.8%</span></div>
+              <div class="bar" style="--h:77%"><span class="bar__v">16.0%</span></div>
+              <div class="bar is-peak" style="--h:87%"><span class="bar__v">18.0%</span></div>
+              <div class="bar" style="--h:81%"><span class="bar__v">16.9%</span></div>
+              <div class="bar" style="--h:65%"><span class="bar__v">13.5%</span></div>
+              <div class="bar" style="--h:46%"><span class="bar__v">9.5%</span></div>
+              <div class="bar" style="--h:28%"><span class="bar__v">5.9%</span></div>
+              <div class="bar" style="--h:15%"><span class="bar__v">3.2%</span></div>
+              <div class="bar" style="--h:8%"><span class="bar__v">1.6%</span></div>
+              <div class="bar" style="--h:4%"><span class="bar__v">0.7%</span></div>
+              <div class="bar" style="--h:2%"><span class="bar__v">0.3%</span></div>
+            </div>
+            <div class="hist__axis" aria-hidden="true">
+              <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span><span>12</span><span>14</span><span>16</span><span>18</span><span>20</span><span>22</span><span>24</span><span>m/s</span>
+            </div>
+          </div>
+          <figcaption>
+            <p>نسبة الساعات محسوبة من دالة كثافة ويبول <bdi class="n">f(v) = (k/A)·(v/A)^(k-1)·exp[-(v/A)^k]</bdi> على مدار <bdi class="n">8,760</bdi> ساعة. أما الطاقة فتتبع مكعب السرعة: شريطا <bdi class="n">8–12 m/s</bdi> يشكّلان <bdi class="n">30.4%</bdi> من الساعات ويحملان <bdi class="n">40.3%</bdi> من طاقة التوربين المسلَّمة، ومجمل <bdi class="n">8–16 m/s</bdi> يحمل <bdi class="n">76%</bdi> منها.</p>
+          </figcaption>
+        </figure>
+
+        <div class="res-notes">
+          <article class="note" data-reveal>
+            <h3>الموسم: ريح صيف لا شتاء</h3>
+            <p>على الساحل الشرقي وهضبة ظفار تأتي أعلى كثافة طاقة بين مايو وسبتمبر مع تيارات الخريف والمنخفض الحراري السطحي، وأدنى إنتاج في ديسمبر وفبراير. هذا يفيد المشتري الصناعي: ذروة الطلب على التبريد تتقاطع مع ذروة الريح.</p>
+            <div class="months" role="img" aria-label="حصة كل شهر من الإنتاج السنوي: الذروة يوليو بنحو 12 بالمئة، والقاع يناير بنحو 5.5 بالمئة.">
+              <div class="months__row"><span class="months__l">ينا</span><i style="--h:46%"></i><bdi class="n">5.5</bdi></div>
+              <div class="months__row"><span class="months__l">فبر</span><i style="--h:48%"></i><bdi class="n">5.8</bdi></div>
+              <div class="months__row"><span class="months__l">مار</span><i style="--h:57%"></i><bdi class="n">6.8</bdi></div>
+              <div class="months__row"><span class="months__l">أبر</span><i style="--h:67%"></i><bdi class="n">8.0</bdi></div>
+              <div class="months__row"><span class="months__l">ماي</span><i style="--h:85%"></i><bdi class="n">10.2</bdi></div>
+              <div class="months__row"><span class="months__l">يون</span><i style="--h:97%"></i><bdi class="n">11.6</bdi></div>
+              <div class="months__row is-peak"><span class="months__l">يول</span><i style="--h:100%"></i><bdi class="n">12.0</bdi></div>
+              <div class="months__row"><span class="months__l">أغس</span><i style="--h:95%"></i><bdi class="n">11.4</bdi></div>
+              <div class="months__row"><span class="months__l">سبت</span><i style="--h:83%"></i><bdi class="n">10.0</bdi></div>
+              <div class="months__row"><span class="months__l">أكت</span><i style="--h:60%"></i><bdi class="n">7.2</bdi></div>
+              <div class="months__row"><span class="months__l">نوف</span><i style="--h:48%"></i><bdi class="n">5.8</bdi></div>
+              <div class="months__row"><span class="months__l">ديس</span><i style="--h:47%"></i><bdi class="n">5.7</bdi></div>
+            </div>
+            <p class="cap">الحصة الشهرية من الطاقة السنوية، بالـ<bdi class="n">%</bdi> — نموذج تصحيح الفترة المرجعية <bdi class="n">MCP</bdi> على مدى <bdi class="n">10</bdi> سنوات.</p>
+          </article>
+
+          <article class="note" data-reveal>
+            <h3>الحرارة تنقص الكثافة</h3>
+            <p>القدرة المتاحة في المجرى الهوائي تتناسب طرديًا مع كثافة الهواء <bdi class="n">P = 0.5·ρ·A·v³</bdi>. عند <bdi class="n">40</bdi> <bdi class="n">°C</bdi> وسطح البحر تكون <bdi class="n">ρ = 1.16 kg/m³</bdi> بدل <bdi class="n">1.225 kg/m³</bdi> القياسية، أي نحو <bdi class="n">5%</bdi> أقل طاقة في كل ساعة صيفية — وهذا سبب اختيار حزمة مناخ حار وتصنيف كثافة منخفض، لا مجرد طلاء عاكس.</p>
+            <ul class="mini">
+              <li><span>درجة حرارة التصميم</span><bdi class="n">-5 … +50 °C</bdi></li>
+              <li><span>فئة الاضطراب <bdi class="n">IEC 61400-1</bdi></span><bdi class="n">IIA / low-TI</bdi></li>
+              <li><span>ذروة الرياح <bdi class="n">50</bdi> سنة (<bdi class="n">3s</bdi>)</span><bdi class="n">52.5 m/s</bdi></li>
+              <li><span>حماية</span><bdi class="n">IP55</bdi> + ترشيح رملي</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHOTO BAND ===== -->
+  <section class="band">
+    <figure class="band__fig">
+      <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/San_gorgonio_pass_wind_farm_california_pano.jpg/1920px-San_gorgonio_pass_wind_farm_california_pano.jpg"
+           alt="لقطة واسعة لمزرعة رياح برية تمتد على منخفض بين تلال جافة، مع خطوط ناقلة في المقدمة."
+           loading="lazy" width="1920" height="277">
+    </figure>
+    <div class="wrap band__content">
+      <div class="band__stats">
+        <div><bdi class="n">8–12 m/s</bdi><span>سرعة الريح التي تحمل نحو <bdi class="n">50%</bdi> من الطاقة السنوية</span></div>
+        <div><bdi class="n">3,620 h</bdi><span>ساعة حمل كامل — توربين <bdi class="n">5</bdi> م.و في الدقم</span></div>
+        <div><bdi class="n">0.16</bdi><span>أس معامل القص على سطح ساحلي خشن</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">المحفظة</p>
+          <h2 class="section__title">خمسة مشاريع برية، ببيانات إنتاج معلنة.</h2>
+        </div>
+        <p class="sec-head__note">الإنتاج المتوقع <bdi class="n">P95</bdi> بعد فقد التوافر وفقد المصفوفة (<bdi class="n">4–7%</bdi>)، وهو الرقم القابل للإدراج في اتفاقية شراء الطاقة.</p>
+      </div>
+
+      <div class="table-card" data-reveal>
+        <div class="table-scroll">
+          <table class="data">
+            <caption>محافظ مَدار — القدرة الاسمية والإنتاج السنوي المتوقع</caption>
+            <thead>
+              <tr>
+                <th scope="col">المشروع</th>
+                <th scope="col">الموقع</th>
+                <th scope="col">الحالة</th>
+                <th scope="col" class="num">القدرة <bdi class="n">MW</bdi></th>
+                <th scope="col" class="num">التوربينات</th>
+                <th scope="col" class="num">المحور <bdi class="n">m</bdi></th>
+                <th scope="col" class="num">التشغيل</th>
+                <th scope="col" class="num">الإنتاج <bdi class="n">MWh/yr</bdi></th>
+                <th scope="col" class="num">معامل السعة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="id">رأس الفيل</td><td>صور — الشرق</td><td><span class="st st--run">تشغيل</span></td>
+                <td class="num">30.0</td><td class="num">6 × 5.0</td><td class="num">110</td><td class="num">2024</td>
+                <td class="num"><strong>84,000</strong></td><td class="num">32%</td>
+              </tr>
+              <tr>
+                <td class="id">خصب الساحل</td><td>مسندم</td><td><span class="st st--run">تشغيل</span></td>
+                <td class="num">15.0</td><td class="num">5 × 3.0</td><td class="num">100</td><td class="num">2026</td>
+                <td class="num"><strong>36,100</strong></td><td class="num">28%</td>
+              </tr>
+              <tr>
+                <td class="id">قهوان الأولى</td><td>الدقم — <bdi class="n">4</bdi> كم داخلية</td><td><span class="st st--build">قيد الإنشاء</span></td>
+                <td class="num">50.0</td><td class="num">10 × 5.0</td><td class="num">120</td><td class="num">2027</td>
+                <td class="num"><strong>172,000</strong></td><td class="num">39%</td>
+              </tr>
+              <tr>
+                <td class="id">ظلم الهضبة</td><td>ظفار — <bdi class="n">900</bdi> م</td><td><span class="st st--dev">تطوير</span></td>
+                <td class="num">60.3</td><td class="num">9 × 6.7</td><td class="num">120</td><td class="num">2029</td>
+                <td class="num"><strong>289,400</strong></td><td class="num">55%</td>
+              </tr>
+              <tr>
+                <td class="id">مصيرة الشمال</td><td>جزيرة مصيرة</td><td><span class="st st--dev">تصميم</span></td>
+                <td class="num">120.0</td><td class="num">24 × 5.0</td><td class="num">140</td><td class="num">2030</td>
+                <td class="num"><strong>386,500</strong></td><td class="num">37%</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>الإجمالي</td><td>٥ مواقع</td><td>—</td>
+                <td class="num">275.3</td><td class="num">54</td><td class="num">—</td><td class="num">—</td>
+                <td class="num">967,900</td><td class="num">40%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="table-foot">معامل السعة هنا صافٍ بعد التوافر وفقد المصفوفة، ومحسوب على القدرة الاسمية الكاملة لمدة <bdi class="n">8,760</bdi> ساعة: <bdi class="n">CF = E / (P × 8,760)</bdi>.</p>
+      </div>
+
+      <div class="port-grid">
+        <figure class="port-fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Roscoe_Wind_Farm_in_West_Texas.jpg/1920px-Roscoe_Wind_Farm_in_West_Texas.jpg"
+               alt="مزرعة رياح في أرض جافة منبسطة، صفوف من التوربينات البيضاء تحت سماء صافية."
+               loading="lazy" width="1920" height="1281">
+          <figcaption>مزرعة برية في أرض جافة منبسطة — نفس نمط التربة والانحدار الخفيف الذي نجده في هضبة السوادة.</figcaption>
+        </figure>
+        <div class="port-side">
+          <article class="card" data-reveal>
+            <h3>مشترٍ صناعي خلف العداد</h3>
+            <p>خُصب الساحل متصل بشبكة <bdi class="n">33</bdi> <bdi class="n">kV</bdi> لميناء صناعي، بعقد <bdi class="n">15</bdi> سنة بالريال العُماني وسقف توريد <bdi class="n">90%</bdi> من الإنتاج المتوقع. البيع المباشر للمنشآت الكبرى متاح تنظيميًا منذ قرار هيئة تنظيم الخدمات العامة رقم <bdi class="n">54/2026</bdi>.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>ما لم يُبنَ لا يُعرض</h3>
+            <p>المشاريع المدرجة «تطوير» أو «تصميم» لا تظهر في أي رقم أثر في هذه الصفحة قبل توقيع اتفاقية شراء الطاقة. أثرنا المحسوب في قسم «الأثر» يأخذ في الاعتبار المشروعَين العاملين فقط إضافة إلى قهوان بعقده الموقّع.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TURBINES ===== -->
+  <section class="section section--tint" id="turbines">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">الآلات</p>
+          <h2 class="section__title">ثلاث فئات آلات، مختارة على المقاس الريحي للموقع.</h2>
+        </div>
+        <p class="sec-head__note">سرعة الرياح الاسمية ليست رقمًا تسويقيًا: هي ناتج القدرة الاسمية على مساحة الاكتساح (<bdi class="n">v_r = [P / (0.5·ρ·C_p·η·A)]^(1/3)</bdi>).</p>
+      </div>
+
+      <div class="turb-grid">
+        <figure class="turb-fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Wind_turbine_close-up_%284613873354%29.jpg/1920px-Wind_turbine_close-up_%284613873354%29.jpg"
+               alt="لقطة قريبة لبرج توربين رياح هوائي مع مولد وثلاث شفرات."
+               loading="lazy" width="1920" height="1440">
+          <figcaption>مولد مزدوج التغذية مع ناقل سرعتين، برج مخروطي فولاذي بمفصلات، وشفرات بطبقة حماية من التعرية الرملية.</figcaption>
+        </figure>
+
+        <div class="table-card table-card--fit" data-reveal>
+          <div class="table-scroll">
+            <table class="data data--spec">
+              <caption>ورقة مواصفات — ثلاث فئات آلات</caption>
+              <thead>
+                <tr>
+                  <th scope="col">البند</th>
+                  <th scope="col">مَدار <bdi class="n">3.0/117</bdi></th>
+                  <th scope="col">مَدار <bdi class="n">5.0/126</bdi></th>
+                  <th scope="col">مَدار <bdi class="n">6.7/154</bdi></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">القدرة الاسمية</th><td class="num"><bdi class="n">3,000 kW</bdi></td><td class="num"><bdi class="n">5,000 kW</bdi></td><td class="num"><bdi class="n">6,700 kW</bdi></td></tr>
+                <tr><th scope="row">قطر الدوار</th><td class="num">117 m</td><td class="num">126 m</td><td class="num">154 m</td></tr>
+                <tr><th scope="row">مساحة الاكتساح</th><td class="num">10,752 m²</td><td class="num">12,469 m²</td><td class="num">18,627 m²</td></tr>
+                <tr><th scope="row">الحمل النوعي</th><td class="num">279 W/m²</td><td class="num">401 W/m²</td><td class="num">360 W/m²</td></tr>
+                <tr><th scope="row">ارتفاع المحور</th><td class="num">100 m</td><td class="num">120 m</td><td class="num">120 m</td></tr>
+                <tr><th scope="row">سرعة الرياح الاسمية</th><td class="num">10.6 m/s</td><td class="num">12.0 m/s</td><td class="num">11.6 m/s</td></tr>
+                <tr><th scope="row">بدء / إيقاف التشغيل</th><td class="num"><bdi class="n">3.0 / 25</bdi></td><td class="num"><bdi class="n">3.0 / 25</bdi></td><td class="num"><bdi class="n">3.0 / 25</bdi></td></tr>
+                <tr><th scope="row">أقصى معامل قدرة <bdi class="n">C_p</bdi></th><td class="num">0.46</td><td class="num">0.46</td><td class="num">0.47</td></tr>
+                <tr><th scope="row">كثافة الهواء التصميمية</th><td class="num">1.16 kg/m³</td><td class="num">1.16 kg/m³</td><td class="num">1.16 kg/m³</td></tr>
+                <tr><th scope="row">فئة التصميم</th><td class="num">IEC I-S</td><td class="num">IEC II-S</td><td class="num">IEC III-A</td></tr>
+                <tr><th scope="row">مستوى الصوت <bdi class="n">L<sub>wA</sub></bdi></th><td class="num">102 dB(A)</td><td class="num">104 dB(A)</td><td class="num">106 dB(A)</td></tr>
+                <tr><th scope="row">خرج المولد</th><td class="num">690 V</td><td class="num">690 V</td><td class="num">690 V</td></tr>
+                <tr><th scope="row">معامل السعة المتوقع <bdi class="n">DQM-02</bdi></td><td class="num">51%</td><td class="num">43%</td><td class="num">45%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-foot">صف «معامل السعة المتوقع» قيمة إجمالية قبل فقد التوافر وفقد المصفوفة، على متوسط <bdi class="n">8.63</bdi> <bdi class="n">m/s</bdi> و<bdi class="n">k=2.10</bdi>. فئة <bdi class="n">3.0/117</bdi> تعطي أعلى معامل سعة هنا لأنها تعمل عند الاسمية <bdi class="n">30%</bdi> من ساعات السنة، لكنها تحتاج ضعف عدد التوربينات ونقطة ربط أطول؛ الاختيار ليس رقمًا واحدًا بل توازن بين <bdi class="n">MWh</bdi> وتكلفة أساس لكل ميغاواط.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GRID & PERMITTING ===== -->
+  <section class="section" id="grid">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">الشبكة والتصاريح</p>
+          <h2 class="section__title">المشروع يصبح طاقة فقط عند نقطة الربط.</h2>
+        </div>
+        <p class="sec-head__note">التردد <bdi class="n">50</bdi> <bdi class="n">Hz</bdi> · جهد النقل <bdi class="n">400</bdi>/<bdi class="n">220</bdi>/<bdi class="n">132</bdi> <bdi class="n">kV</bdi> · التوزيع <bdi class="n">33</bdi>/<bdi class="n">11</bdi> <bdi class="n">kV</bdi>.</p>
+      </div>
+
+      <div class="grid-grid">
+        <div class="grid-main">
+          <div class="table-card" data-reveal>
+            <div class="table-scroll">
+              <table class="data data--fit">
+                <caption>مسار التراخيص — الجهة، الصك، والمدة النموذجية</caption>
+                <thead>
+                  <tr><th scope="col">الخطوة</th><th scope="col">الجهة</th><th scope="col">المُخرَج</th><th scope="col" class="num">المدة</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>رخصة بناء مشروع إنتاج</td><td>هيئة تنظيم الخدمات العامة</td><td>رخصة بناء موافعة مبدئية</td><td class="num"><bdi class="n">3–6</bdi> أشهر</td></tr>
+                  <tr><td>طلب ربط بشبكة النقل</td><td>شبكة النقل الوطنية العُمانية</td><td>اتفاقية ربط + دراسة أثر الربط</td><td class="num"><bdi class="n">6–12</bdi> شهرًا</td></tr>
+                  <tr><td>تقييم الأثر البيئي</td><td>الهيئة العامة للبيئة</td><td>قرار بيئي + خطة رصد الطيور</td><td class="num"><bdi class="n">6–9</bdi> أشهر</td></tr>
+                  <tr><td>تخصيص الأرض</td><td>بلدية مسقط / هيئة المناطق الاقتصادية الخاصة</td><td>حق انتفاع <bdi class="n">25</bdi> سنة</td><td class="num"><bdi class="n">4–10</bdi> أشهر</td></tr>
+                  <tr><td>اتفاقية شراء الطاقة</td><td>المشتري الوحيد أو مشترٍ صناعي</td><td><bdi class="n">PPA</bdi> بـ<bdi class="n">20–25</bdi> سنة، بالريال العُماني</td><td class="num"><bdi class="n">9–18</bdi> شهرًا</td></tr>
+                  <tr><td>الإغلاق المالي</td><td>مقرضو المشروع</td><td>اتفاقية قرض + عقود <bdi class="n">EPC</bdi> و<bdi class="n">LTSA</bdi></td><td class="num"><bdi class="n">6–12</bdi> شهرًا</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-foot">المدد تسلسلية جزئيًا: دراسة أثر الربط تُفتح قبل الرخصة ولا بعدها، لأن سعة المحطة المجاورة هي التي تحدّد سقف المشروع.</p>
+          </div>
+
+          <div class="reqs" data-reveal>
+            <h3>ما تطلبه مدوّنة الشبكة من توربين رياح</h3>
+            <ul class="checks">
+              <li><span class="checks__ico" aria-hidden="true">✓</span> البقاء على الشبكة عند هبوط الجهد إلى <bdi class="n">0%</bdi> لمدة <bdi class="n">150</bdi> <bdi class="n">ms</bdi> (<bdi class="n">LVRT</bdi>)، مع استعادة <bdi class="n">80%</bdi> من الحمل خلال <bdi class="n">2</bdi> ثانية.</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> تشغيل مستمر عند <bdi class="n">49.5–50.2 Hz</bdi>، مع تخفيض حمل تدريجي خارج هذا النطاق وفق منحنى التردد.</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> عامل قدرة بين <bdi class="n">0.95</bdi> متأخر و<bdi class="n">0.95</bdi> متقدم، وردّ فعل على التردد المتغيّر (<bdi class="n">FSM</bdi>) بمحاكاة قصور.</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> قياس إنتاج دقيق بمعيار <bdi class="n">IEC 61000-4-30</bdi>، ورفع كل <bdi class="n">30</bdi> دقيقة إلى مركز التحكم.</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="grid-fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/DSC04737_APG_Leoben_Substation%2C_Leoben-Donawitz%2C_2026-04.jpg/1920px-DSC04737_APG_Leoben_Substation%2C_Leoben-Donawitz%2C_2026-04.jpg"
+               alt="محطة تحويل كهربائية في الهواء الطلق: مفاتيح وعوازل ومحوّلات بين هياكل معدنية."
+               loading="lazy" width="1920" height="1440">
+          <figcaption>
+            <p>محطة تحويل <bdi class="n">132/33</bdi> <bdi class="n">kV</bdi> — نقطة الربط النموذجية لمزرعة حتى <bdi class="n">60</bdi> <bdi class="n">MW</bdi>.</p>
+            <span class="grid-fig__note">مسندانا ومشغّلون صناعيون آخرون في الدقم يُعدّون طلبًا مرشّحًا خلف العداد، بقيمة <bdi class="n">15</bdi>–<bdi class="n">40</bdi> <bdi class="n">MW</bdi> للحزمة الواحدة.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALCULATOR ===== -->
+  <section class="section section--ink" id="calculator">
+    <div class="wrap calc">
+      <div class="calc__intro">
+        <p class="eyebrow eyebrow--light">أداة</p>
+        <h2 class="section__title">احسب إنتاج توربين واحد، خطوة بخطوة.</h2>
+        <p class="calc__lede">الحاسبة لا تُخرِج رقمًا من صندوق أسود: تعرض كل عملية وسيطة — مساحة الاكتساح، تصحيح الريح إلى المحور، مقياس ويبول، سرعة التصميم، ثم تكامل منحنى القدرة على توزيع الريح. افتح أي متصفح بدون جافاسكربت وستبقى القيم المرجعية مطبوعة.</p>
+        <ul class="assump">
+          <li><span>كثافة الهواء <bdi class="n">ρ</bdi></span><bdi class="n">1.16 kg/m³</bdi></li>
+          <li><span>معامل القدرة التصميمي <bdi class="n">C_p</bdi></span><bdi class="n">0.42</bdi></li>
+          <li><span>كفاءة السلسلة (مولد+محول+جامعة)</span><bdi class="n">95.5%</bdi></li>
+          <li><span>بدء / إيقاف التشغيل</span><bdi class="n">3.0 / 25 m/s</bdi></li>
+          <li><span>ساعات السنة</span><bdi class="n">8,760 h</bdi></li>
+          <li><span>استهلاك الأسرة (للمكافئ)</span><bdi class="n">6,000 kWh/yr</bdi></li>
+          <li><span>معامل انبعاث شبكة عُمان</span><bdi class="n">0.40 tCO2/MWh</bdi></li>
+        </ul>
+        <p class="calc__disclaimer">أداة هندسية توضيحية بمتصفح العميل. لا تُغني عن سلسلة قياس <bdi class="n">12</bdi> شهرًا معتمدة، ولا عن دراسة أثر الربط، ولا تُعد عرضًا تجاريًا.</p>
+      </div>
+
+      <form class="calc__form" id="calcForm" autocomplete="off">
+        <div class="field field--wide">
+          <label for="site">موقع القياس <span class="hint">يبثّ <bdi class="n">v10</bdi> و<bdi class="n">k</bdi> و<bdi class="n">α</bdi> في الحقول</span></label>
+          <select id="site" name="site">
+            <option value="0" selected>الدقم — وادي قهوان (DQM-02) · v10 = 5.8 m/s</option>
+            <option value="1">الدقم — هضبة السوادة (DQM-05) · v10 = 6.1 m/s</option>
+            <option value="2">صور — رأس الفيل (SHW-01) · v10 = 5.0 m/s</option>
+            <option value="3">ظلم — هضبة ظفار (DHF-03) · v10 = 6.4 m/s</option>
+            <option value="4">مصيرة — الهضبة الشمالية (MSN-01) · v10 = 5.3 m/s</option>
+            <option value="5">خصب — مسندم (KSB-02) · v10 = 4.2 m/s</option>
+            <option value="6">نزوى — الداخل (NIZ-04) · v10 = 3.1 m/s</option>
+            <option value="7">موقع مخصص — أدخل البيانات يدويًا</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="power">القدرة الاسمية للتوربين</label>
+          <div class="input"><input id="power" name="power" type="number" inputmode="decimal" min="300" max="20000" step="50" value="5000"><span dir="ltr">kW</span></div>
+        </div>
+        <div class="field">
+          <label for="rotor">قطر الدوار</label>
+          <div class="input"><input id="rotor" name="rotor" type="number" inputmode="decimal" min="40" max="200" step="1" value="126"><span dir="ltr">m</span></div>
+        </div>
+        <div class="field">
+          <label for="hub">ارتفاع المحور</label>
+          <div class="input"><input id="hub" name="hub" type="number" inputmode="decimal" min="60" max="180" step="5" value="120"><span dir="ltr">m</span></div>
+        </div>
+        <div class="field">
+          <label for="speed">متوسط سرعة الرياح عند <bdi class="n">10</bdi> م</label>
+          <div class="input"><input id="speed" name="speed" type="number" inputmode="decimal" min="3.5" max="12" step="0.1" value="5.8"><span dir="ltr">m/s</span></div>
+        </div>
+        <div class="field">
+          <label for="weibull">معامل شكل ويبول <bdi class="n">k</bdi></label>
+          <div class="input"><input id="weibull" name="weibull" type="number" inputmode="decimal" min="1.4" max="3.2" step="0.05" value="2.10"><span dir="ltr">k</span></div>
+        </div>
+        <div class="field">
+          <label for="shear">أس معامل القص <bdi class="n">α</bdi></label>
+          <div class="input"><input id="shear" name="shear" type="number" inputmode="decimal" min="0.08" max="0.35" step="0.01" value="0.16"><span dir="ltr">α</span></div>
+        </div>
+        <div class="field field--wide">
+          <label for="avail">معامل توافر الشبكة والعقد <span class="val" id="availOut"><bdi class="n">96.0%</bdi></span></label>
+          <input id="avail" name="avail" class="range" type="range" min="80" max="99.5" step="0.5" value="96">
+          <p class="scale"><bdi class="n">80%</bdi><bdi class="n">90%</bdi><bdi class="n">99.5%</bdi></p>
+        </div>
+      </form>
+
+      <div class="calc__steps">
+        <div class="table-scroll">
+        <table class="steps-table">
+          <caption class="sr-only">خطوات الاحتساب الوسيطة</caption>
+          <tbody>
+            <tr><th scope="row"><bdi class="n">1</bdi> مساحة الاكتساح <bdi class="n">A = πD²/4</bdi></th><td id="sArea">12,469 m²</td></tr>
+            <tr><th scope="row"><bdi class="n">2</bdi> الحمل النوعي <bdi class="n">P/A</bdi></th><td id="sLoad">401 W/m²</td></tr>
+            <tr><th scope="row"><bdi class="n">3</bdi> الريح عند المحور <bdi class="n">v10 · (h/10)^α</bdi></th><td id="sHub">8.63 m/s</td></tr>
+            <tr><th scope="row"><bdi class="n">4</bdi> مقياس ويبول <bdi class="n">A_w = v_avg / gamma(1 + 1/k)</bdi></th><td id="sScale">9.75 m/s</td></tr>
+            <tr><th scope="row"><bdi class="n">5</bdi> سرعة التصميم <bdi class="n">v_r = [P/(0.5·ρ·C_p·η·A)]^(1/3)</bdi></th><td id="sRated">11.99 m/s</td></tr>
+            <tr><th scope="row"><bdi class="n">6</bdi> متوسط القدرة <bdi class="n">P_avg = mean[P(v) weighted by f(v)]</bdi></th><td id="sAvg">2,152 kW</td></tr>
+            <tr><th scope="row"><bdi class="n">7</bdi> معامل السعة الإجمالي</th><td id="sGross">43.0%</td></tr>
+            <tr><th scope="row"><bdi class="n">8</bdi> معامل السعة الصافي (بعد التوافر)</th><td id="sNet">41.3%</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="curve">
+          <p class="curve__title">منحنى القدرة المبسّط المستخدم في التكامل <span>نسبة من القدرة الاسمية</span></p>
+          <div class="curve__grid" id="curveGrid">
+            <div class="cell"><div class="cell__bar"><i style="--h:0%"></i></div><b>3</b><span>0%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:2%"></i></div><b>4</b><span>2%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:6%"></i></div><b>5</b><span>6%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:11%"></i></div><b>6</b><span>11%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:19%"></i></div><b>7</b><span>19%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:29%"></i></div><b>8</b><span>29%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:41%"></i></div><b>9</b><span>41%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:57%"></i></div><b>10</b><span>57%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:77%"></i></div><b>11</b><span>77%</span></div>
+            <div class="cell"><div class="cell__bar"><i style="--h:100%"></i></div><b>12+</b><span>100%</span></div>
+          </div>
+          <p class="curve__cap">تقريب مكعّبي بين بدء التشغيل وسرعة التصميم، ثم ثبات على الاسمية حتى <bdi class="n">25</bdi> <bdi class="n">m/s</bdi> (<bdi class="n">Manwell</bdi>).</p>
+        </div>
+      </div>
+
+      <div class="calc__out" id="calcOut" aria-live="polite">
+        <div class="out-row out-row--main">
+          <span>الإنتاج السنوي المتوقع</span>
+          <strong id="oMwh">18,100 <i>MWh</i></strong>
+        </div>
+        <div class="out-row"><span>معامل السعة الصافي</span><strong id="oCf">41.3%</strong></div>
+        <div class="out-row"><span>ساعات الحمل الكامل المكافئة</span><strong id="oFlh">3,620 h</strong></div>
+        <div class="out-row"><span>أسر مكافئة <small><bdi class="n">6,000 kWh/yr</bdi></small></span><strong id="oHh">3,017</strong></div>
+        <div class="out-row"><span>ثاني أكسيد الكربون المتجنّب <small><bdi class="n">0.40 t/MWh</bdi></small></span><strong id="oCo2">7,240 t</strong></div>
+        <p class="out-note" id="oNote">التوزيع مُغطًّى حتى <bdi class="n">40</bdi> <bdi class="n">m/s</bdi>؛ كل القيم مشتقة من الحقول أعلاه دون معاملات معايرة مخفية.</p>
+        <p class="out-check"><span>تحقق</span><bdi class="n" id="oCheck">2,152 kW × 8,760 h × 0.96 ÷ 1,000 = 18,100 MWh</bdi></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMPACT ===== -->
+  <section class="section" id="impact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">الأثر</p>
+          <h2 class="section__title">تحويل ميغاواط ساعة إلى بيوت وانبعاثات — بمعاملات مكتوبة.</h2>
+        </div>
+        <p class="sec-head__note">الأرقام على <bdi class="n">3</bdi> مشاريع بعقود موقّعة أو قيد تشغيل، لا على المحفظة كلها.</p>
+      </div>
+
+      <div class="impact-grid">
+        <div class="table-card table-card--fit" data-reveal>
+          <div class="table-scroll">
+            <table class="data data--calc">
+              <caption>سلسلة التحويل، من الإنتاج إلى الأثر</caption>
+              <tbody>
+                <tr><th scope="row">الإنتاج السنوي للمشاريع الموقّعة</th><td class="num"><bdi class="n">292,000 MWh</bdi></td><td class="why">رأس الفيل <bdi class="n">84,000</bdi> + قهوان <bdi class="n">172,000</bdi> + خصب <bdi class="n">36,100</bdi></td></tr>
+                <tr><th scope="row">÷ استهلاك الأسرة</th><td class="num"><bdi class="n">6,000 kWh/yr</bdi></td><td class="why">متوسط منزلي كهربائي في عُمان مع تبريد صيفي؛ لا يشمل وقود النقل أو الطبخ.</td></tr>
+                <tr><th scope="row">= أسر مكافئة</th><td class="num"><bdi class="n">48,700</bdi> <bdi class="n">households</bdi></td><td class="why"><bdi class="n">292,000,000 ÷ 6,000</bdi></td></tr>
+                <tr><th scope="row">× معامل انبعاث الشبكة</th><td class="num"><bdi class="n">0.40 tCO2/MWh</bdi></td><td class="why">مزيج عُمان غالبيًا غازي مع توليد لامركزي؛ النطاق الموثوق <bdi class="n">0.35–0.45</bdi> حسب سنة المرجع وكفاءة الدورة.</td></tr>
+                <tr><th scope="row">= انبعاث متجنّب</th><td class="num"><bdi class="n">116,800 tCO2/yr</bdi></td><td class="why"><bdi class="n">292,000 × 0.40</bdi></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-foot">المعاملات معلنة لأنها قابلة للاختلاف: لو أخذت <bdi class="n">0.45</bdi> بدل <bdi class="n">0.40</bdi> ارتفع الأثر إلى <bdi class="n">131,400</bdi> طن، ولو كانت الأسرة <bdi class="n">8,000</bdi> <bdi class="n">kWh</bdi> انخفض المكافئ إلى <bdi class="n">36,500</bdi> أسرة.</p>
+        </div>
+
+        <div class="impact-side">
+          <article class="card" data-reveal>
+            <h3>سنة واحدة من قهوان</h3>
+            <p><bdi class="n">172,000</bdi> م.و.س تغذّي <bdi class="n">28,700</bdi> أسرة، وتتجنّب <bdi class="n">68,800</bdi> طن <bdi class="n">CO2</bdi>، وتملأ <bdi class="n">43.5%</bdi> من حاجة التبريد الصباحية لميناء الدقم في أشهر الذروة. كلها أرقام من صف واحد في جدول المحافظ أعلاه.</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3>ما لا ندّعيه</h3>
+            <p>لا نحسب أراضٍ زراعية ولا «آلاف السيارات». لا نخلط بين قدرة مركّبة وإنتاج فعلي. ولا نُسند لمشروع أثرًا قبل توقيع اتفاقية شراء الطاقة — لهذا تختلف أرقام هذا القسم عن مجموع المحفظة <bdi class="n">967,900</bdi> <bdi class="n">MWh</bdi>.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="section section--tint" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">مسار الشراكة</p>
+          <h2 class="section__title">ست خطوات من قطعة الأرض إلى ميغاواط مُسلَّم.</h2>
+        </div>
+        <p class="sec-head__note">المدة الكاملة النموذجية لموقع بعقد موقّع: <bdi class="n">36–54</bdi> شهرًا، أكثر من نصفها قياس وتصاريح.</p>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">01</span>
+          <div>
+            <h3>فرز الموقع</h3>
+            <p>مراجعة أطلس الرياح، ملكية الأرض واستخدامها، الأقمار الصناعية للميل والانحدار، وأقرب نقطة ربط على <bdi class="n">132</bdi> أو <bdi class="n">400</bdi> <bdi class="n">kV</bdi>. المُخرَج: مذكّرة بصفحتين وسقف قدرة مبدئي. <bdi class="n">2–3</bdi> أسابيع.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">02</span>
+          <div>
+            <h3>قياس <bdi class="n">12</bdi> شهرًا على الأقل</h3>
+            <p>صاري أو ليدار عند ارتفاع المحور المستهدف، بمعدل كل <bdi class="n">10</bdi> دقائق، مع تصحيح الفترة المرجعية على سجل <bdi class="n">10</bdi> سنوات. لا يُقبل رقم إنتاج قبل اكتمال دورة سنوية كاملة.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">03</span>
+          <div>
+            <h3>دراسة أثر الربط</h3>
+            <p>طلب رسمي إلى مشغّل الشبكة: سعة الربط المتاحة، مستوى القصر، متطلبات <bdi class="n">LVRT</bdi> والاستجابة للتردد، وجدول إيقاف مخطط. المُخرَج: خطاب ربط غير ملزم يحدّد سقف المشروع.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">04</span>
+          <div>
+            <h3>تصاريح ورخصة</h3>
+            <p>رخصة بناء من هيئة تنظيم الخدمات العامة، قرار بيئي مع رصد موسمي للطيور والخفافيش، وحق انتفاع الأرض. في المناطق الاقتصادية الخاصة تُضاف موافقة الهيئة المختصة.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">05</span>
+          <div>
+            <h3>اتفاقية شراء الطاقة</h3>
+            <p>مع المشتري الوحيد في مزاد وطني، أو بيع مباشر لمشترٍ صناعي بموجب الإطار الجديد. مدة <bdi class="n">20–25</bdi> سنة، بسعر ثابت بالريال العُماني، مع بنود انقطاع حدّية وعقوبات على نقص الإنتاج.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" dir="ltr">06</span>
+          <div>
+            <h3>الإغلاق المالي ثم التسليم</h3>
+            <p>عقد <bdi class="n">EPC</bdi> بعربون أداء، وعقد صيانة طويل الأجل مع المصنّع بضمان إنتاج. من الصبّ الأول للأساس إلى أول ميغاواط على الشبكة: <bdi class="n">14–20</bdi> شهرًا.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head sec-head--tight">
+        <div>
+          <p class="eyebrow">أسئلة فنية</p>
+          <h2 class="section__title">قبل أن ترسل بيانات موقعك.</h2>
+        </div>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>لماذا لا تكفي خرائط أطلس الرياح؟</summary>
+          <p>لأن الطاقة تتناسب مع مكعب السرعة: خطأ <bdi class="n">5%</bdi> في متوسط السرعة يعني خطأ يقارب <bdi class="n">15%</bdi> في الإنتاج، وهو ما يكفي لقلب جدوى القرض. الأطلس يعطي ترتيب المواقع، والقياس المحلي يعطي الرقم. لذلك لا نطلب سعرًا في اتفاقية شراء الطاقة قبل <bdi class="n">12</bdi> شهرًا من البيانات المُصحَّحة.</p>
+        </details>
+        <details>
+          <summary>كم توربينًا في الهكتار، وهل تتداخل الظلال الريحية؟</summary>
+          <p>نرتّب المصفوفة على <bdi class="n">5D</bdi> باتجاه الريح السائدة و<bdi class="n">3D</bdi> عرضًا (<bdi class="n">D</bdi> قطر الدوار)، فيصبح فقد المصفوفة <bdi class="n">4–7%</bdi> على مواقعنا الساحلية. هذا الفقد مطبَّق في جدول المحفظة، وغير مطبَّق في الحاسبة لأنها توربين واحد.</p>
+        </details>
+        <details>
+          <summary>ماذا يحدث عند انخفاض الجهد أو فصل الخط؟</summary>
+          <p>التوربين مطالب بالبقاء متصلًا حتى هبوط الجهد إلى <bdi class="n">0%</bdi> لمدة <bdi class="n">150</bdi> <bdi class="n">ms</bdi> ثم استعادة <bdi class="n">80%</bdi> من الحمل خلال <bdi class="n">2</bdi> ثانية. إذا فصل الخط تُطبق حدود معدل صعود منظم (<bdi class="n">RAMP</bdi>) الذي يمنع إعادة تحميل دفعة واحدة، وهو بند يُختبر قبل التشغيل التجاري.</p>
+        </details>
+        <details>
+          <summary>هل يؤثر موسم الخريف على الطيور؟</summary>
+          <p>رصدنا في ظلم يتركّز على <bdi class="n">3</bdi> مواسم هجرة، ونشغّل إبطاءً ليليًا اختياريًا (<bdi class="n">curtailment</bdi>) يقلّص الإنتاج بنحو <bdi class="n">1–2%</bdi> في الأسابيع الحساسة. القرار البيئي يُلزم بالتقارير الفصلية، وهذا البند مُسعَّر في نموذج الإنتاج.</p>
+        </details>
+        <details>
+          <summary>ماذا يحدث للتوربينات بعد <bdi class="n">25</bdi> سنة؟</summary>
+          <p>خطة إنهاء خدمة موقّتة مع الرخصة: تفكيك البرج والمولد (فولاذ ونحاس وأرضيات نادرة قابلة للتدوير بنسبة تتجاوز <bdi class="n">90%</bdi> بالكتلة)، واسترداد الأساس الخرساني إلى منسوب الأرض. الشفرات المركّبة تُعالج في منشأة إعادة تدوير متعاقَد عليها خارج السلطنة، مع سجل وزن مُسلَّم للجهة المنظمة.</p>
+        </details>
+        <details>
+          <summary>هل تعملون بالهيدروجين الأخضر؟</summary>
+          <p>كطلب صناعي محتمل، لا كتقنية لدينا. منتجّو الهيدروجين في الدقم (منهم مشروع مسندانا) يستهلكون كهرباء على مدى <bdi class="n">24</bdi> ساعة بملايين الميغاواط ساعة، وهذا نوع مشتركٍ يفيد التفاوض على حزمة رياح + شمسية + تخزين أكثر مما يفيد عقد رياح منفرد.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="wrap cta__inner">
+      <div class="cta__copy">
+        <h2>أرسل سجل رياح موقعك، ونعيدك بمنحنى قدرة.</h2>
+        <p>يكفينا ملف <bdi class="n">CSV</bdi> بسلسلة سرعة بمعدل كل عشر دقائق، وارتفاع، وإحداثيات، أو إحداثيات ونبدأ من أطلس ثم نركّب صاري قياس. الاستجابة خلال <bdi class="n">5</bdi> أيام عمل.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--solid btn--lg" href="#calculator">ارجع إلى الحاسبة</a>
+        <a class="btn btn--link btn--link--light" href="#contact">بيانات التواصل<span aria-hidden="true"> ←</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="brand__name brand__name--lg">مَدار</span>
+      <p>مطوّر طاقة رياح برية — مسقط، سلطنة عُمان. مشاريع على الشبكة الوطنية واستهلاك صناعي مباشر.</p>
+      <p class="footer__loc">الحي الدبلوماسي، شارع السلطان قابوس، مسقط <bdi class="n">131</bdi>، سلطنة عُمان<br>
+      <span dir="ltr">development@madar.om</span> · <span dir="ltr">+968 24 00 00 00</span></p>
+    </div>
+    <nav class="footer__col" aria-label="الموارد">
+      <h4>الموارد</h4>
+      <a href="#resource">محطات القياس</a>
+      <a href="#resource">توزيع ويبول</a>
+      <a href="#portfolio">جدول المحافظ</a>
+      <a href="#calculator">حاسبة الإنتاج</a>
+    </nav>
+    <nav class="footer__col" aria-label="الأطر">
+      <h4>الأطر</h4>
+      <a href="#grid">التراخيص</a>
+      <a href="#grid">مدوّنة الشبكة</a>
+      <a href="#process">مسار الشراكة</a>
+      <a href="#impact">معاملات التحويل</a>
+    </nav>
+    <nav class="footer__col" aria-label="الشركة">
+      <h4>الشركة</h4>
+      <a href="#faq">أسئلة فنية</a>
+      <a href="#turbines">فئات الآلات</a>
+      <a href="#">ملف المشاريع (<bdi class="n">PDF</bdi>)</a>
+      <a href="#">سياسة الخصوصية</a>
+    </nav>
+  </div>
+  <div class="wrap footer__base">
+    <p>© <bdi class="n">2026</bdi> مَدار لتطوير طاقة الرياح ش.م.م. الأرقام هندسية تقديرية ولا تُعد عرضًا ملزمًا.</p>
+    <p class="footer__credit">من صناعة <span dir="ltr">Tenvora</span></p>
+  </div>
+  <div class="wrap footer__attr">
+    <h4>تراخيص الصور — ويكيميديا كومنز</h4>
+    <ul>
+      <li>صورة الغلاف (توربينات): <a href="https://commons.wikimedia.org/wiki/File:Afsluitdijk_-_wind_turbines.jpg" rel="license noopener" target="_blank">Afsluitdijk – wind turbines</a> · <bdi class="n">CC BY 4.0</bdi></li>
+      <li>الشريط الواسع (ممر رياح): <a href="https://commons.wikimedia.org/wiki/File:San_gorgonio_pass_wind_farm_california_pano.jpg" rel="license noopener" target="_blank">San Gorgonio Pass wind farm</a> · <bdi class="n">CC BY-SA 3.0</bdi></li>
+      <li>مزرعة برية: <a href="https://commons.wikimedia.org/wiki/File:Roscoe_Wind_Farm_in_West_Texas.jpg" rel="license noopener" target="_blank">Roscoe Wind Farm, West Texas</a> · <bdi class="n">CC BY-SA 4.0</bdi></li>
+      <li>لقطة التوربين: <a href="https://commons.wikimedia.org/wiki/File:Wind_turbine_close-up_(4613873354).jpg" rel="license noopener" target="_blank">Wind turbine close-up</a> · <bdi class="n">CC BY 2.0</bdi></li>
+      <li>محطة التحويل: <a href="https://commons.wikimedia.org/wiki/File:DSC04737_APG_Leoben_Substation,_Leoben-Donawitz,_2026-04.jpg" rel="license noopener" target="_blank">APG Leoben Substation</a> · <bdi class="n">CC BY-SA 4.0</bdi></li>
+    </ul>
+    <p>لا تُصوِّر أي صورة أعلاه موقعًا عُمانيًا، ولا تُنسب إلى مشاريع مَدار.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
