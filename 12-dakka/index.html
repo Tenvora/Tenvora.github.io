@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دكّاية — محمصة مختص في الطائف</title>
+<meta name="description" content="دكّاية: محمصة قهوة مختص على ارتفاع 1,875 مترًا في الطائف. دفتر تحميص يومي، ملفات تحميص تفاعلية، حاسبة تحضير بالدلة وV60، وقائمة موسم بأسعار بالريال.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#" aria-label="دكّاية — الصفحة الرئيسية">
+      <svg class="brand__mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+        <path d="M14 3.4c4.9 0 8.4 3.6 8.4 8.1 0 4.9-3.9 9.4-8.4 12.1C9.5 20.9 5.6 16.4 5.6 11.5 5.6 7 9.1 3.4 14 3.4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M14 4.6c-2.6 3.4-2.6 12 0 18.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      <span class="brand__name">دكّاية</span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#altitude">الارتفاع</a>
+      <a href="#lots">اللوتات</a>
+      <a href="#roast">ملفات التحميص</a>
+      <a href="#brew">حاسبة التحضير</a>
+      <a href="#menu">قائمة الموسم</a>
+      <a href="#visit">الزيارة</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--quiet" href="tel:+966551478890" dir="ltr">+966 55 147 8890</a>
+      <a class="btn btn--solid btn--sm" href="#menu">قائمة اليوم</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="افتح القائمة">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#altitude">الارتفاع</a>
+    <a href="#lots">اللوتات</a>
+    <a href="#roast">ملفات التحميص</a>
+    <a href="#brew">حاسبة التحضير</a>
+    <a href="#menu">قائمة الموسم</a>
+    <a href="#visit">الزيارة</a>
+    <a class="btn btn--solid" href="#roast">جرّب ملف التحميص</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO: دفتر تحميص اليوم ===== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="chip" data-reveal><span class="chip__dot" aria-hidden="true"></span> المحمَص يعمل الآن · دفعة واحدة على النار</p>
+        <h1 data-reveal>نحمص على ارتفاع<br><bdi>1,875</bdi> مترًا، في الطائف.</h1>
+        <p class="lede" data-reveal>الماء هنا يغلي عند <bdi>93.5°C</bdi> لا عند <bdi>100°C</bdi>؛ وهذا يغيّر كل شيء: الاستخلاص، زمن التطوير في التحميص، ودرجة الإسقاط. دفتر التحميص منشور كل صباح قبل أن تُفتح الأبواب.</p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--solid btn--lg" href="#roast">افتح ملفّات التحميص</a>
+          <a class="btn btn--link" href="#brew">حاسبة الدلة و<bdi>V60</bdi><span aria-hidden="true"> ←</span></a>
+        </div>
+        <ul class="hero__notes" data-reveal>
+          <li>تحميص أسبوعي: <bdi>3</bdi> دفعات</li>
+          <li>راحة الحبوب <bdi>7</bdi> أيام قبل البيع</li>
+          <li>الطحن عند الطلب</li>
+        </ul>
+        <p class="hero__meta" data-reveal>
+          <span>سجلّ اليوم</span>
+          <bdi>22/11/2026</bdi> · <bdi>06:40</bdi> ص · محمّصة <bdi>15</bdi> كغ أسطوانية
+        </p>
+      </div>
+
+      <div class="log" data-reveal>
+        <div class="log__top">
+          <div>
+            <p class="log__eyebrow">دفتر التحميص</p>
+            <h2 class="log__title">إثيوبيا · غوجي · شاكيسو</h2>
+          </div>
+          <span class="pill pill--live">متوسط · على البار</span>
+        </div>
+        <dl class="log__grid">
+          <div><dt>رقم اللوت</dt><dd><bdi>ETH-GUJI-07</bdi></dd></div>
+          <div><dt>المنشأ</dt><dd>إثيوبيا · غوجي</dd></div>
+          <div><dt>الارتفاع</dt><dd><bdi>2,050</bdi> م</dd></div>
+          <div><dt>المعالجة</dt><dd>طبيعي على الأسرّة</dd></div>
+          <div><dt>الصنف</dt><dd><bdi>74158</bdi> · <bdi>74110</bdi></dd></div>
+          <div><dt>الحصاد</dt><dd>نوفمبر – يناير</dd></div>
+          <div><dt>وزن اللوت الأخضر</dt><dd><bdi>240</bdi> كغ</dd></div>
+          <div><dt>تاريخ التحميص</dt><dd><bdi>22</bdi> نوفمبر <bdi>2026</bdi></dd></div>
+          <div><dt>درجة البداية</dt><dd><bdi>205°C</bdi></dd></div>
+          <div><dt>درجة الإسقاط</dt><dd><bdi>212°C</bdi></dd></div>
+        </dl>
+        <figure class="log__fig">
+          <svg class="curve" id="heroCurve" viewBox="0 0 660 250" role="img" aria-label="منحنى تحميص دفعة اليوم: حرارة الحبة مقابل الزمن، من بداية التحميص حتى الإسقاط"></svg>
+          <figcaption>منحنى دفعة اليوم · حرارة الحبة (°C) مقابل الزمن (د:ث)</figcaption>
+        </figure>
+        <dl class="log__times">
+          <div><dt>نقطة التحوّل</dt><dd><bdi>01:35</bdi> · <bdi>92°C</bdi></dd></div>
+          <div><dt>الفرقعة الأولى</dt><dd><bdi>08:50</bdi> · <bdi>196°C</bdi></dd></div>
+          <div><dt>زمن التطوير</dt><dd><bdi>02:10</bdi> (<bdi>19.7%</bdi>)</dd></div>
+          <div><dt>الكلي</dt><dd><bdi>11:00</bdi></dd></div>
+        </dl>
+        <div class="log__foot">
+          <p><span>أخضر داخل</span><strong><bdi>12.00</bdi> كغ</strong></p>
+          <p><span>محَمَّص خارج</span><strong><bdi>10.10</bdi> كغ</strong></p>
+          <p><span>فقد الوزن</span><strong><bdi>15.8%</bdi></strong></p>
+          <p><span>أجاترون</span><strong><bdi>58</bdi></strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOTS STRIP ===== -->
+  <section class="trust">
+    <div class="wrap">
+      <p class="trust__label">منشأ هذا الموسم على رفوفنا</p>
+      <ul class="trust__list">
+        <li>إثيوبيا · غوجي</li><li>كينيا · نييري</li><li>كولومبيا · هويلا</li>
+        <li>اليمن · حراز</li><li>البرازيل · سيرادو</li><li>رواندا · نيونغويكي</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== الارتفاع ===== -->
+  <section class="section" id="altitude">
+    <div class="wrap split">
+      <figure class="split__fig" data-reveal>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Al-Hada_mountain_road%2C_al-Taif%2C_Saudi_Arabia_%282%29.jpg/1920px-Al-Hada_mountain_road%2C_al-Taif%2C_Saudi_Arabia_%282%29.jpg"
+             alt="طريق جبال الهدا في الطائف عند ارتفاع يقارب 1,875 مترًا" loading="lazy" decoding="async" width="1920" height="1280">
+        <figcaption>طريق الهدا · الطائف، على سفح السروات</figcaption>
+      </figure>
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>لماذا الطائف</p>
+        <h2 class="section__title" data-reveal>المحمصة ليست في عمّان ولا في الرياض؛ إنها هنا لأن الهواء أخفّ.</h2>
+        <p data-reveal>مرّت قهوة المخا عبر الطائف في طريق القوافل إلى مكة، وكان الدكاكين على الطريق تُحمِّص الحبوب في مقالي نحاسية وتَدُكّها في المدقة — من هنا اسم «دكّاية»: موضع الدَكّ، ومقدّمة البيت التي يُقدَّم عليها الفنجان.</p>
+        <p data-reveal>اليوم نحمص على الأسطوانة بنفس المنطق، لكن الرقم الذي يختلف هو الارتفاع. كلما صعدنا، انخفض ضغط الهواء وانخفضت معه درجة غليان الماء، فاضطبطنا نحن على حرارة أقل واستخلاص أبطأ.</p>
+        <ul class="facts" data-reveal>
+          <li><span>ارتفاع المحمَص</span><strong><bdi>1,875</bdi> م</strong></li>
+          <li><span>غليان الماء عندنا</span><strong><bdi>93.5°C</bdi></strong></li>
+          <li><span>الفرق عن سطح البحر</span><strong><bdi>−6.5°C</bdi></strong></li>
+          <li><span>تحميصات الأسبوع</span><strong><bdi>3</bdi> دفعات</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== اللوتات الخضراء ===== -->
+  <section class="section section--tint" id="lots">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>المخزون الأخضر</p>
+      <h2 class="section__title" data-reveal>ستة لوتات، ووزنٌ حقيقي لكل واحد منها.</h2>
+      <div class="lots__head" data-reveal>
+        <p>نشتري بالأكياس (<bdi>30</bdi> كغ للمغربل، <bdi>60</bdi> كغ للكيس العادي)، ونكتب على كل لوت تاريخ الحصاد ودرجة التذوق حسب بروتوكول <bdi>SCA</bdi>. ما ينتهي ينتهي — لا نستبدله بآخر في منتصف الموسم.</p>
+        <figure class="lots__fig">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/WAE_-_Coffee_cherries_drying_in_Wae_Rebo%2C_Flores%2C_Indonesia%2C_2019.jpg/1920px-WAE_-_Coffee_cherries_drying_in_Wae_Rebo%2C_Flores%2C_Indonesia%2C_2019.jpg"
+               alt="ثمار البن وهي تجفف على الأسرّة المرتفعة بعد القطف" loading="lazy" decoding="async" width="1920" height="1274">
+          <figcaption>تجفيف على الأسرّة المرتفعة · معالجة طبيعية</figcaption>
+        </figure>
+      </div>
+
+      <div class="tablewrap" data-reveal>
+        <table class="lots">
+          <caption class="sr-only">قائمة اللوتات الخضراء المتاحة في المحمصة هذا الموسم</caption>
+          <thead>
+            <tr>
+              <th scope="col">اللوت</th>
+              <th scope="col">المنشأ</th>
+              <th scope="col">المعالجة</th>
+              <th scope="col">الارتفاع</th>
+              <th scope="col">الصنف</th>
+              <th scope="col">الحصاد</th>
+              <th scope="col">المتبقي</th>
+              <th scope="col">تذوق <bdi>SCA</bdi></th>
+              <th scope="col">كيس <bdi>250</bdi> غ</th>
+              <th scope="col">التحميص</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="lot"><bdi>ETH-GUJI-07</bdi><small>شاكيسو</small></td>
+              <td>إثيوبيا · غوجي</td><td>طبيعي على الأسرّة</td><td><bdi>2,050</bdi> م</td>
+              <td><bdi>74158</bdi></td><td>نوفمبر – يناير</td><td><bdi>184</bdi> كغ</td>
+              <td class="score"><bdi>87.50</bdi></td><td><bdi>78</bdi> ريال</td><td>فاتح · متوسط</td>
+            </tr>
+            <tr>
+              <td class="lot"><bdi>KEN-NYERI-05</bdi><small>موكو</small></td>
+              <td>كينيا · نييري</td><td>غسيل مزدوج</td><td><bdi>1,800</bdi> م</td>
+              <td><bdi>SL28</bdi> · <bdi>SL34</bdi></td><td>أكتوبر – ديسمبر</td><td><bdi>96</bdi> كغ</td>
+              <td class="score"><bdi>86.75</bdi></td><td><bdi>88</bdi> ريال</td><td>فاتح</td>
+            </tr>
+            <tr>
+              <td class="lot"><bdi>COL-HUILA-12</bdi><small>بيتلانيا</small></td>
+              <td>كولومبيا · هويلا</td><td>مغسول <bdi>18</bdi> ساعة</td><td><bdi>1,750</bdi> م</td>
+              <td>كاستيّو</td><td>أكتوبر – ديسمبر</td><td><bdi>240</bdi> كغ</td>
+              <td class="score"><bdi>85.25</bdi></td><td><bdi>72</bdi> ريال</td><td>متوسط</td>
+            </tr>
+            <tr>
+              <td class="lot"><bdi>YEM-HARAZ-03</bdi><small>عُشّار</small></td>
+              <td>اليمن · حراز</td><td>غسيل تقليدي</td><td><bdi>1,900</bdi> م</td>
+              <td>أحمدي (عُرفي)</td><td>فبراير – أبريل</td><td><bdi>58</bdi> كغ</td>
+              <td class="score"><bdi>84.00</bdi></td><td><bdi>125</bdi> ريال</td><td>فاتح</td>
+            </tr>
+            <tr>
+              <td class="lot"><bdi>RWA-NYONG-02</bdi><small>كيوفو</small></td>
+              <td>رواندا · نيونغويكي</td><td>مغسول</td><td><bdi>1,950</bdi> م</td>
+              <td>بوربون أحمر</td><td>مارس – يونيو</td><td><bdi>132</bdi> كغ</td>
+              <td class="score"><bdi>85.75</bdi></td><td><bdi>76</bdi> ريال</td><td>فاتح · متوسط</td>
+            </tr>
+            <tr>
+              <td class="lot"><bdi>BRA-CERR-09</bdi><small>باترونيه</small></td>
+              <td>البرازيل · سيرادو</td><td>طبيعي منزوع</td><td><bdi>1,150</bdi> م</td>
+              <td>ياتيرابا</td><td>يونيو – أغسطس</td><td><bdi>300</bdi> كغ</td>
+              <td class="score"><bdi>83.50</bdi></td><td><bdi>58</bdi> ريال</td><td>غامق</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tablecap">الأسعار بالريال السعودي لكيس <bdi>250</bdi> غ، محمَّص طازجًا ومطحون عند الطلب. الضريبة مضافة عند المحاسبة.</p>
+    </div>
+  </section>
+
+  <!-- ===== ملفات التحميص (تجريبي) ===== -->
+  <section class="section" id="roast">
+    <div class="wrap">
+      <div class="roast__head">
+        <div class="roast__intro">
+          <p class="eyebrow" data-reveal>نموذج داخل المتصفح</p>
+          <h2 class="section__title" data-reveal>غيّر ملفّ التحميص، وتتغيّر معه الرئة والفنجان.</h2>
+          <p data-reveal>الملفات الثلاثة هي ما نحمصه فعلًا لهذا اللوت الإثيوبي. اختر واحدًا: يُعاد رسم منحنى حرارة الحبة، وتُحدَّث ملاحظات التذوق وأشرطة القوام والحموضة وأرقام التطوير من نفس جدول التحميص المستخدم في المحمصة.</p>
+          <ul class="rules" data-reveal>
+            <li><span>محمّصة أسطوانية</span><bdi>15</bdi> كغ</li>
+            <li><span>الدفعة المرجعية</span><bdi>ETH-GUJI-07</bdi></li>
+            <li><span>حرارة البداية</span><bdi>205°C</bdi></li>
+            <li><span>الفرقعة الأولى</span><bdi>196°C</bdi></li>
+            <li><span>قياس الأجاترون</span>حبوب كاملة</li>
+          </ul>
+        </div>
+        <figure class="roast__fig" data-reveal>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/D%C3%BClmen%2C_Privatr%C3%B6sterei_Schr%C3%B6er_--_2018_--_2.jpg/1920px-D%C3%BClmen%2C_Privatr%C3%B6sterei_Schr%C3%B6er_--_2018_--_2.jpg"
+               alt="محمّصة أسطوانية داخل محمصة صغيرة أثناء عملها" loading="lazy" decoding="async" width="1920" height="1283">
+          <figcaption>محمّصة أسطوانية · نفس الطراز الذي نعمل عليه</figcaption>
+        </figure>
+      </div>
+
+      <div class="prof" data-reveal>
+        <div class="prof__bar" role="group" aria-label="اختر ملف التحميص">
+          <button class="prof__btn" type="button" data-profile="light" aria-pressed="false">
+            <bdi>74</bdi><span>فاتح</span>
+          </button>
+          <button class="prof__btn is-on" type="button" data-profile="medium" aria-pressed="true">
+            <bdi>58</bdi><span>متوسط</span>
+          </button>
+          <button class="prof__btn" type="button" data-profile="dark" aria-pressed="false">
+            <bdi>42</bdi><span>غامق</span>
+          </button>
+          <p class="prof__hint">الأرقام فوق الأزرار هي درجة الأجاترون (<bdi>Agtron</bdi>) لحبّة كاملة.</p>
+        </div>
+
+        <div class="prof__body">
+          <figure class="prof__curve">
+            <svg class="curve curve--big" id="profCurve" viewBox="0 0 660 320" role="img" aria-label="منحنى تحميص ملف التحميص المختار: حرارة الحبة مقابل الزمن"></svg>
+            <figcaption id="profCurveCap">منحنى حرارة الحبة مقابل الزمن · ملف متوسط</figcaption>
+          </figure>
+
+          <div class="prof__read">
+            <p class="prof__name" id="profName">تحميص متوسط</p>
+            <p class="prof__lede" id="profLede">نُنزل الحبة بعد الفرقعة الأولى بدقيقة وعشر ثوانٍ: السكر يبدأ الكراملية دون أن يضيع حمض الفاكهة.</p>
+
+            <ul class="notes" id="profNotes" aria-label="ملاحظات التذوق"></ul>
+
+            <div class="bars" id="profBars" role="img" aria-label="أشرطة الحموضة والقوام والحلاوة والمرارة"></div>
+
+            <dl class="spec" id="profSpec"></dl>
+
+            <p class="prof__use" id="profUse"></p>
+          </div>
+        </div>
+
+        <figure class="prof__beans">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Roasted_coffee_beans_on_the_surface._01.jpg/1920px-Roasted_coffee_beans_on_the_surface._01.jpg"
+               alt="حبوب قهوة محمَّصة منتشرة على سطح طاولة التبريد" loading="lazy" decoding="async" width="1920" height="1280">
+          <figcaption id="beansCap">حبّ من دفعة اليوم على طاولة التبريد · لون السطح مطابق للأجاترون</figcaption>
+        </figure>
+
+        <div class="prof__buy">
+          <p><span>كيس <bdi>250</bdi> غ · نفس اللوت</span><strong><bdi>78</bdi> ريال</strong></p>
+          <p><span>يُشحن بعد راحة</span><strong><bdi>7</bdi> أيام من التحميص</strong></p>
+          <p><span>نافذة الذروة</span><strong>بين <bdi>7</bdi> و<bdi>21</bdi> يومًا</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== عملية التحميص ===== -->
+  <section class="band">
+    <figure class="band__fig">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/A_worker_at_the_roastery_checks_on_the_progress_of_coffee_beans_in_the_roasting_machine.jpg/1920px-A_worker_at_the_roastery_checks_on_the_progress_of_coffee_beans_in_the_roasting_machine.jpg"
+           alt="عامل يتابع تقدّم تحميص الحبوب داخل أسطوانة المحمّصة" loading="lazy" decoding="async" width="1920" height="1280">
+    </figure>
+    <div class="wrap band__content">
+      <ul class="band__stats">
+        <li><strong><bdi>12.00</bdi> كغ</strong><span>الدفعة الواحدة أخضر</span></li>
+        <li><strong><bdi>10.10</bdi> كغ</strong><span>ناتج بعد الإسقاط</span></li>
+        <li><strong><bdi>19.7%</bdi></strong><span>نسبة زمن التطوير</span></li>
+        <li><strong><bdi>212°C</bdi></strong><span>درجة الإسقاط · متوسط</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="process">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>من الكيس إلى الفنجان</p>
+      <h2 class="section__title" data-reveal>أربع مراحل، وأرقام مسجّلة في كل واحدة.</h2>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__num" aria-hidden="true"><bdi>01</bdi></span>
+          <div>
+            <h3>استلام الأخضر وفرزه</h3>
+            <p>نفرز عيّنة من كل طبلة (<bdi>300</bdi> حبة) ونحسب الرطوبة بالميزان الكهربائي؛ المقبول بين <bdi>10%</bdi> و<bdi>12%</bdi>. خارج هذا النطاق لا نحمص الكمية.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" aria-hidden="true"><bdi>02</bdi></span>
+          <div>
+            <h3>تحميص بمسار مقيّد</h3>
+            <p>نسجّل حرارة الحبة كل <bdi>15</bdi> ثانية. درجة البداية <bdi>205°C</bdi>، نقطة التحوّل عند <bdi>01:35</bdi>، والفرقعة الأولى عند <bdi>196°C</bdi> — بعدها يُحدَّد الملف.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" aria-hidden="true"><bdi>03</bdi></span>
+          <div>
+            <h3>تبريد وراحة</h3>
+            <p>التبريد في الطاولة الهوائية خلال <bdi>3:30</bdi> دقائق إلى أقل من <bdi>40°C</bdi>. ثم راحة <bdi>7</bdi> أيام للمرشَّح و<bdi>10</bdi> أيام للإسبريسو حتى ينقضي الغاز ثاني.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num" aria-hidden="true"><bdi>04</bdi></span>
+          <div>
+            <h3>تعبئة بطحن عند الطلب</h3>
+            <p>كيس أحادي الاتجاه بصمام، عليه تاريخ التحميص ورقم اللوت ودرجة الأجاترون. لا نطحن للزبون قبل أن يطلب طريقة التحضير.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== حاسبة التحضير ===== -->
+  <section class="section" id="brew">
+    <div class="wrap brew">
+      <div class="brew__intro">
+        <p class="eyebrow" data-reveal>نموذج داخل المتصفح</p>
+        <h2 class="section__title" data-reveal>احسب الوصفة كما نكتبها على كيسك.</h2>
+        <p data-reveal>أدخل البن أو الماء، والآخر يحسب من نسبة التحضير المختارة. درجات الحرارة مكتوبة على أساس غليان الطائف (<bdi>93.5°C</bdi>)، لا على أساس <bdi>100°C</bdi>.</p>
+        <ul class="rules" data-reveal>
+          <li><span>النسبة المرجعية للمرشَّح</span><bdi>1:16</bdi></li>
+          <li><span>النسبة المرجعية للدلّة</span><bdi>1:15</bdi></li>
+          <li><span>امتصاص الطحن للماء</span><bdi>2</bdi> مل لكل غرام</li>
+          <li><span>نقص الغلي الهادئ في الدلّة</span><bdi>12%</bdi></li>
+          <li><span>الهيل في الدلّة</span><bdi>25%</bdi> من وزن البن</li>
+        </ul>
+        <figure class="brew__fig" data-reveal>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/A_dallah_of_Arabic_coffee.jpg/1920px-A_dallah_of_Arabic_coffee.jpg"
+               alt="دلّة نحاسية تقديم القهوة العربية في فناجين صغيرة" loading="lazy" decoding="async" width="1920" height="1280">
+          <figcaption>الدلّة النحاسية · التحضير الذي لا يُقاس بالميزان وحده</figcaption>
+        </figure>
+        <p class="brew__disclaimer">أداة توضيحية داخل الصفحة؛ تُطبَع الوصفة النهائية على كيس كل طلب.</p>
+      </div>
+
+      <div class="brew__panel">
+        <div class="brew__methods" role="group" aria-label="اختر طريقة التحضير">
+          <button class="meth is-on" type="button" data-m="v60" aria-pressed="true"><bdi>V60</bdi><span>مرشَّح</span></button>
+          <button class="meth" type="button" data-m="dallah" aria-pressed="false"><span class="ar">دلّة</span><span>قهوة عربية</span></button>
+          <button class="meth" type="button" data-m="press" aria-pressed="false"><span class="ar">فرن ضغط</span><span>فرد برس</span></button>
+        </div>
+
+        <div class="brew__calc">
+          <div class="field">
+            <label for="dose">وزن البن</label>
+            <div class="input"><input id="dose" type="number" inputmode="decimal" min="1" max="500" step="0.5" value="20"><span dir="ltr">g</span></div>
+          </div>
+          <div class="field">
+            <label for="yieldWater">كمية الماء</label>
+            <div class="input"><input id="yieldWater" type="number" inputmode="decimal" min="50" max="4000" step="5" value="320"><span dir="ltr">ml</span></div>
+          </div>
+          <div class="field field--ratios">
+            <label id="ratioLabel">نسبة التحضير</label>
+            <div class="ratios" id="ratios" role="group" aria-labelledby="ratioLabel"></div>
+          </div>
+        </div>
+
+        <div class="brew__out" id="brewOut" role="region" aria-live="polite" aria-label="نتيجة حساب التحضير">
+          <div class="out-row out-row--main"><span>الماء المطلوب</span><strong><bdi id="oWater">—</bdi> مل</strong></div>
+          <div class="out-row"><span>وزن البن</span><strong><bdi id="oDose">—</bdi> غ</strong></div>
+          <div class="out-row"><span>النسبة الفعلية</span><strong dir="ltr" id="oRatio">—</strong></div>
+          <div class="out-row"><span>الكمية في الأكواب</span><strong><bdi id="oServed">—</bdi> مل</strong></div>
+          <div class="out-row"><span>عدد الحصص</span><strong><bdi id="oCups">—</bdi> <em id="oCupsUnit">كوبًا</em></strong></div>
+          <div class="out-grid">
+            <div><span>الطحن</span><strong><bdi id="oGrind">—</bdi> µm</strong><em id="oGrindName">—</em></div>
+            <div><span>حرارة الماء</span><strong><bdi id="oTemp">—</bdi> °C</strong><em id="oTempNote">—</em></div>
+            <div><span>الزمن الكلي</span><strong><bdi id="oTime">—</bdi></strong><em id="oTimeNote">—</em></div>
+          </div>
+          <ol class="brew__steps" id="brewSteps"></ol>
+          <p class="out-cap" id="brewNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== قائمة الموسم ===== -->
+  <section class="section section--tint" id="menu">
+    <div class="wrap">
+      <div class="menu__head">
+        <div>
+          <p class="eyebrow" data-reveal>شتاء <bdi>2026</bdi> · الطائف</p>
+          <h2 class="section__title" data-reveal>لوحة البار، محدَّثة هذا الأسبوع.</h2>
+          <p data-reveal>اضغط أي صنف لتضعه في حسابك؛ يُضاف ضريبة القيمة المضافة <bdi>15%</bdi> تلقائيًا. الأسعار بالريال السعودي.</p>
+        </div>
+        <div class="menu__cats" role="group" aria-label="تصفية القائمة" data-reveal>
+          <button class="cat is-on" type="button" data-cat="all" aria-pressed="true">الكل</button>
+          <button class="cat" type="button" data-cat="filter" aria-pressed="false">مرشَّح</button>
+          <button class="cat" type="button" data-cat="espresso" aria-pressed="false">إسبريسو</button>
+          <button class="cat" type="button" data-cat="dallah" aria-pressed="false">دلّة وبلدي</button>
+          <button class="cat" type="button" data-cat="cold" aria-pressed="false">بارد</button>
+          <button class="cat" type="button" data-cat="bakery" aria-pressed="false">مخبوزات</button>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="board">
+          <h3 class="board__title">
+            <span>دكّاية</span>
+            <span class="board__sub">قائمة الموسم · <bdi>22</bdi> نوفمبر <bdi>2026</bdi></span>
+          </h3>
+          <ul class="board__list" id="boardList"></ul>
+          <p class="board__note">الأسعار غير شاملة ضريبة القيمة المضافة <bdi>15%</bdi> · الحليب البقري أساس كل مشروب بالحليب، واللوز أو الشوفان <bdi>+6</bdi> ريال.</p>
+        </div>
+
+        <aside class="order" aria-label="حساب طلبك">
+          <h3 class="order__title">حسابك <span class="order__count" id="orderCount"> فارغ</span></h3>
+          <ul class="order__rows" id="orderRows"></ul>
+          <p class="order__empty" id="orderEmpty">لم تختر شيئًا بعد. اضغط على صنف في اللوحة.</p>
+          <dl class="order__totals">
+            <div><dt>المجموع</dt><dd><bdi id="tSub">0.00</bdi> ريال</dd></div>
+            <div><dt>ضريبة القيمة المضافة <bdi>15%</bdi></dt><dd><bdi id="tVat">0.00</bdi> ريال</dd></div>
+            <div class="is-total"><dt>الإجمالي</dt><dd><bdi id="tTotal">0.00</bdi> ريال</dd></div>
+          </dl>
+          <button class="btn btn--ghost btn--sm" type="button" id="orderClear">تفريغ الحساب</button>
+          <p class="order__hint">تجريبي بالكامل — لا يُرسَل شيء إلى أي نظام.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== أصوات ===== -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>من على الطاولة</p>
+      <h2 class="section__title" data-reveal>ثلاثة أشخاص يطلبون نفس اللوت كل أسبوع.</h2>
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <blockquote>أشتري الفاتح منهم للدلّة، وهي أول مرة أقبل بنًّا محمَّصًا في البيت بدل شراء المحلّ. الهيل عندهم لا يسرق القهوة.</blockquote>
+          <figcaption><span class="mono-av">غح</span><b>غيمة الحربي</b><i>زبونة · حي شهار</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>نستخدم متوسط غوجي في المقهى منذ ثمانية أسابيع. لا دفعة اختلفت عن التي قبلها أكثر من درجتين في درجة الإسقاط.</blockquote>
+          <figcaption><span class="mono-av">مق</span><b>مازن القحطاني</b><i>شريك · مقهى السدس، الحوية</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>كتبوا على الكيس تاريخ التحميص ودرجة الأجاترون وطريقة التحضير المقترحة. هذه وحدها سبب أني أترك ما أشربه هنا.</blockquote>
+          <figcaption><span class="mono-av">نع</span><b>نجلاء العتيبي</b><i>هاوية تحضير · أضم</i></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الأسئلة ===== -->
+  <section class="section section--tint" id="faq">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow" data-reveal>أسئلة تُسأل عند الطاولة</p>
+      <h2 class="section__title" data-reveal>قبل أن تشتري كيسًا.</h2>
+      <div class="faq">
+        <details>
+          <summary>لماذا تختلف درجاتكم عن الوصفات المنشورة في اليوتيوب؟</summary>
+          <p>لأننا على ارتفاع <bdi>1,875</bdi> مترًا. الماء يغلي هنا عند <bdi>93.5°C</bdi>، فالغلاية لا تعطيك <bdi>96°C</bdi> مهما ضبطتها. ننزل بالحرارة المكتوبة في الوصفات نحو درجتين ونعوضها بطحن أنعم قليلًا أو زمن أطول.</p>
+        </details>
+        <details>
+          <summary>متى أفتح الكيس؟</summary>
+          <p>المرشَّح يبدأ جيدًا من اليوم <bdi>7</bdi> بعد التحميص، والإسبريسو من اليوم <bdi>10</bdi>. النافذة المثالية بين اليوم <bdi>7</bdi> واليوم <bdi>21</bdi>؛ بعد ذلك تخفت الروائح حتى لو بقيت القهوة صالحة.</p>
+        </details>
+        <details>
+          <summary>هل تحمّصون للبن اليمنيين؟</summary>
+          <p>نعم، لوت حراز الحالي بـ<bdi>58</bdi> كغ متبقية، ونحمّشه فاتحًا لأنه الأنسب للدلّة. ينفد عادة قبل نهاية الموسم، ولا نضمن عودة نفس المزرعة.</p>
+        </details>
+        <details>
+          <summary>أطحنون لي الكيس؟</summary>
+          <p>نطحن عند الطلب حسب أداتك، ونسألك عنها قبل الطحن. إن أردته حبوبًا كاملًا فالأفضل، لأن الطحن يفقد عطره في ساعات لا في أيام.</p>
+        </details>
+        <details>
+          <summary>هل تبيعون بالجملة للمقاهي؟</summary>
+          <p>نعم من <bdi>12</bdi> كغ شهريًا، مع جلسة ضبط على أداة المحل وتقرير تحميص لكل دفعة. التفاوض يبدأ من عيّنة <bdi>1</bdi> كغ مجانية.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الزيارة ===== -->
+  <section class="cta" id="visit">
+    <div class="wrap cta__inner">
+      <p class="eyebrow eyebrow--onink" data-reveal>المحمَص والبار</p>
+      <h2>تعال اشرب فنجانًا على نار المحمّصة.</h2>
+      <p>التحميص صباحًا من <bdi>06:00</bdi>، والبار يفتح بعده بساعة. الدورات التذوقية كل خميس <bdi>20:00</bdi> بمقاعد <bdi>8</bdi>.</p>
+      <dl class="cta__info">
+        <div><dt>العنوان</dt><dd>شارع الأمير منصور بن مقرن، حي شهار، الطائف <bdi>26513</bdi></dd></div>
+        <div><dt>السبت – الخميس</dt><dd><bdi>07:00</bdi> ص – <bdi>23:00</bdi> م</dd></div>
+        <div><dt>الجمعة</dt><dd><bdi>14:00</bdi> م – <bdi>23:00</bdi> م</dd></div>
+        <div><dt>للطلبات والجملة</dt><dd dir="ltr">+966 55 147 8890</dd></div>
+      </dl>
+      <div class="cta__actions">
+        <a class="btn btn--solid btn--lg" href="#roast">جرّب ملفات التحميص</a>
+        <a class="btn btn--link btn--link--light" href="#brew">احسب وصفتك</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="brand__name">دكّاية</span>
+      <p>محمصة قهوة مختص في الطائف، على ارتفاع <bdi>1,875</bdi> مترًا. تحميص أسبوعي، ودفتر منشور كل صباح.</p>
+      <p class="footer__loc">حي شهار · الطائف · المملكة العربية السعودية</p>
+    </div>
+    <nav class="footer__col" aria-label="المحمصة">
+      <h4>المحمصة</h4>
+      <a href="#altitude">الارتفاع</a><a href="#lots">اللوتات الخضراء</a><a href="#roast">ملفات التحميص</a><a href="#process">مراحل العمل</a>
+    </nav>
+    <nav class="footer__col" aria-label="البار">
+      <h4>البار</h4>
+      <a href="#menu">قائمة الموسم</a><a href="#brew">حاسبة التحضير</a><a href="#visit">الزيارة والدورات</a>
+    </nav>
+    <nav class="footer__col" aria-label="تواصل">
+      <h4>تواصل</h4>
+      <a href="tel:+966551478890" dir="ltr">+966 55 147 8890</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#visit">الجملة للمقاهي</a>
+    </nav>
+  </div>
+  <div class="wrap footer__base">
+    <p>© <bdi>2026</bdi> دكّاية. جميع الحقوق محفوظة.</p>
+    <p class="footer__credit">من صناعة <span dir="ltr">Tenvora</span></p>
+    <p class="footer__attr">صورة: ويكيميديا كومنز · CC BY-SA —
+      <a href="https://commons.wikimedia.org/wiki/File:A_worker_at_the_roastery_checks_on_the_progress_of_coffee_beans_in_the_roasting_machine.jpg" rel="license noopener" target="_blank">محمّصة</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:D%C3%BClmen, Privatr%C3%B6sterei Schr%C3%B6er -- 2018 -- 2.jpg" rel="license noopener" target="_blank">أسطوانة التحميص</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_on_the_surface._01.jpg" rel="license noopener" target="_blank">حبّ محمَّص</a> ·
+      <a href="https://commons.wikimedia.org/wiki/File:WAE_-_Coffee_cherries_drying_in_Wae_Rebo,_Flores,_Indonesia,_2019.jpg" rel="license noopener" target="_blank">تجفيف الثمار</a> —
+      و CC BY <bdi>2.0</bdi لـ
+      <a href="https://commons.wikimedia.org/wiki/File:Al-Hada_mountain_road,_al-Taif,_Saudi_Arabia_(2).jpg" rel="license noopener" target="_blank">الهدا · الطائف</a> و
+      <a href="https://commons.wikimedia.org/wiki/File:A_dallah_of_Arabic_coffee.jpg" rel="license noopener" target="_blank">الدلّة</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>زيتون — تعاونية زيت الزيتون في نابلس</title>
+<meta name="description" content="زيتون تعاونية مزارعين في نابلس: تعصر زيت الزيتون على البارد، وتحلّله، وتبيعه بالدينار والدولار. حاسبة المعصرة تحسب لك كمية الزيت باللترات ورسوم العصر قبل أن تحرّك قطافك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#demo">تخطَّ إلى حاسبة المعصرة</a>
+
+<header class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="#top" data-load style="--d:0">
+      <span class="brand__word">زيتون</span>
+      <span class="brand__domain"><bdi dir="ltr">zaytoun.ps</bdi></span>
+    </a>
+    <nav class="nav" aria-label="التنقّل الرئيسي">
+      <a href="#problem">الحكاية</a>
+      <a href="#process">من الشجرة إلى التنك</a>
+      <a href="#demo">حاسبة المعصرة</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#faq">أسئلة</a>
+    </nav>
+    <a class="btn btn--solid" href="#cta" data-load style="--d:60">احجز عصرتك</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ════ HERO ════ -->
+  <section class="hero">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow" data-load style="--d:120">
+          <span class="eyebrow__mark" aria-hidden="true"></span>
+          نابلس · موسم <bdi dir="ltr">2026</bdi> · عصرة أولى على البارد
+        </p>
+        <h1 data-load style="--d:180">نعصر زيت مزارعي نابلس،<br>ونرجع الفرق لجيوبهم.</h1>
+        <p class="lede" data-load style="--d:300">
+          <bdi dir="ltr">142</bdi> مزارعاً ومزارعة يملكون المعصرة نفسها. نستلم القطاف بالوزن الشرعي،
+          نعصره على البارد خلال <bdi dir="ltr">24</bdi> ساعة، نحلّل الحموضة والبوليفينول في مختبر،
+          ثم نبيع الزيت مباشرة للأهالي والمغتربين والمنظمات — بدل أربع حلقات سمسرة
+          تقتطع ثمن السنة كاملة.
+        </p>
+        <div class="hero__actions" data-load style="--d:380">
+          <a class="btn btn--solid" href="#demo">احسب قطافك</a>
+          <a class="btn btn--quiet" href="#pricing">قائمة الأسعار بالشيقل والدولار</a>
+        </div>
+        <p class="hero__note" data-load style="--d:440">
+          الحقل مفتوح للعصر من <bdi dir="ltr">10</bdi> تشرين الأول إلى <bdi dir="ltr">20</bdi> تشرين الثاني.
+          التسلّم بالساعة، والدفع نقداً أو تحويلاً.
+        </p>
+      </div>
+
+      <figure class="shot shot--hero" data-load style="--d:240">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Olive_harvest.jpg/1280px-Olive_harvest.jpg"
+             alt="مزارعون يقطفون الزيتون باليد والسلالم في قرية قفين، شمال الضفة الغربية"
+             width="1280" height="960" loading="lazy" decoding="async">
+        <figcaption>
+          قطاف يدوي في قفين — شمال الضفة. لا منشار، لا ضربة عود: الحبّة تنزل على البرش.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ════ TRUST STRIP ════ -->
+  <section class="strip" aria-label="أرقام التعاونية" data-reveal>
+    <div class="strip__row">
+      <p class="stat"><bdi dir="ltr">142</bdi><span>مزارعاً عضواً في <bdi dir="ltr">6</bdi> قرى حول نابلس</span></p>
+      <p class="stat"><bdi dir="ltr">680</bdi><span>دونماً مزروعاً زيتوناً، <bdi dir="ltr">80%</bdi> منه بعلّي</span></p>
+      <p class="stat"><bdi dir="ltr">2,940</bdi><span>صندوقاً خرج من المستودع في موسم <bdi dir="ltr">2025</bdi></span></p>
+      <p class="stat"><bdi dir="ltr">15%</bdi><span>نسبة المعصرة من الزيت — لا خصم رطوبة ولا وزن ناقص</span></p>
+    </div>
+  </section>
+
+  <!-- ════ PROBLEM ════ -->
+  <section class="section section--problem" id="problem">
+    <div class="wrap split" data-reveal>
+      <div class="split__text">
+        <h2 class="title">الفلوس ما بتطلع من الشجرة.<br>بتطلع من الطريق بينها وبين القنينة.</h2>
+        <p>
+          المزارع في بيت فوريك وعصيرة الشمالية يبيع قطافه على الطريق — «البالة» —
+          بمبلغ <bdi dir="ltr">3.5–4.5</bdi> شيقل للكيلوغرام، ويُحمَّل أحياناً خصم رطوبة
+          وصل إلى <bdi dir="ltr">12%</bdi>. الزيت نفسه يُباع في المدينة بستة وستين شيقل للتر.
+        </p>
+        <p>
+          أي أن نحو <bdi dir="ltr">55%</bdi> من ثمن السنة يذهب لمن لم يلمس شجرة: جامع، ثم وسط،
+          ثم معصرة خاصة تقاس بالعين، ثم موزّع، ثم صاحب محل. القطاف نفسه، والفرق كله في الطريق.
+        </p>
+        <p class="aside">
+          المبلغ أدناه هو ما يبقى فعلياً في جيب المزارع من <bdi dir="ltr">500</bdi> كغ
+          من الزيتون النبالي — مرة يبيعه على الطريق، ومرة يمرّه داخل التعاونية.
+        </p>
+      </div>
+
+      <div class="split__panel">
+        <div class="compare">
+          <svg class="compare__chart" viewBox="0 0 480 196" role="img"
+               aria-label="مقارنة بالشيقل: بيع القطاف على الطريق يعطي 2000، وتمريره عبر التعاونية يعطي 4609">
+            <g fill="#D8CFBB">
+              <rect x="20" y="26" width="190" height="144"></rect>
+              <rect x="270" y="26" width="190" height="144"></rect>
+            </g>
+            <g fill="#6E6A5C">
+              <rect x="20" y="105.8" width="190" height="64.2"></rect>
+            </g>
+            <g fill="#211E18">
+              <rect x="270" y="26" width="190" height="144"></rect>
+              <text x="20" y="16" font-size="13" font-weight="600">2,000</text>
+              <text x="270" y="16" font-size="13" font-weight="600">4,609</text>
+            </g>
+            <g fill="none">
+              <path d="M20 170 H460" stroke="#6E6A5C" stroke-width="1.5" fill="none"></path>
+            </g>
+          </svg>
+          <p class="compare__legend">
+            <span class="lg lg--ink" aria-hidden="true"></span>
+            صافي قيمة التعاونية: <bdi dir="ltr">63.75</bdi> لتراً + <bdi dir="ltr">310</bdi> كغ مركة = بالشيقل
+          </p>
+          <p class="compare__legend">
+            <span class="lg lg--muted" aria-hidden="true"></span>
+            بيع البالة: <bdi dir="ltr">500</bdi> كغ × <bdi dir="ltr">4</bdi> شواقل = بالشيقل
+          </p>
+        </div>
+
+        <figure class="shot">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Nabulsi_soap.jpg/1280px-Nabulsi_soap.jpg"
+               alt="ألواح صابون نابلسي المصنوع من زيت الزيتون مرتّصة في مستودع"
+               width="1280" height="853" loading="lazy" decoding="async">
+          <figcaption>صابون نابلسي: المركة والزيوت منخفضة الرتبة لا ترمى — تروح لمعامل الصابون.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SOLUTION PANEL ════ -->
+  <section class="section section--panel">
+    <div class="wrap" data-reveal>
+      <div class="panel">
+        <div class="panel__head">
+          <h2 class="title">ما تسويه التعاونية، ببساطة</h2>
+          <p class="kicker">تسع عضويات في الهيئة الإدارية — أربعة منها مزارعون منتخبون،
+            وقرارات الموسم تتخذ بالاجتماع لا بالاتصال.</p>
+        </div>
+        <ul class="dothe">
+          <li>
+            <h3>نستلم بالوزن، مش بالتقدير</h3>
+            <p>ميزان معتمد بختمين، وبلاغ تسلّم مطبوع باسم المزارع والصنف والوزن.
+               الوزن بيتسجل قدامك، والفرق بين <bdi dir="ltr">13%</bdi> و <bdi dir="ltr">16%</bdi>
+               استخلاص هو عشر صناديق — مش تفصيل.</p>
+          </li>
+          <li>
+            <h3>عصر خلال يوم واحد</h3>
+            <p>من البرشة إلى المطرحة أقل من <bdi dir="ltr">24</bdi> ساعة، على حرارة ما بتتعدى
+               <bdi dir="ltr">27</bdi> درجة مئوية. هذا اللي بيخلّي الزيت يُسمّى «على البارد»
+               فعلاً، وبيحافظ على البوليفينول والرائحة.</p>
+          </li>
+          <li>
+            <h3>تحليل ورقم دفعة</h3>
+            <p>كل تنك يطلع بشهادة: الحموضة بنسبة مئوية، ورقم البيروكسيد، والبوليفينول
+               بملليغرام لكل كيلوغرام. رقم الدفعة مطبوع على القنّينة، وتقدر تتحقق منه في المستودع.</p>
+          </li>
+          <li>
+            <h3>رسم العصر واضح وعيني</h3>
+            <p><bdi dir="ltr">15%</bdi> من الزيت للمعصرة، و <bdi dir="ltr">70%</bdi> من صافي ربح الموسم
+               بيتوزّع على الأعضاء بحسب حصصهم من الأرض، والباقي صيانة وصندوق طوارئ للحريق والصقيع.</p>
+          </li>
+          <li>
+            <h3>بيع مباشر بلا سمسرة</h3>
+            <p>مستودع في شارع تل، وتوصيل داخل المدينة، وشحن مبرّد للمغتربين في
+               شيكاغو وبرلين، وعقود صناديق للمنظمات بـ <bdi dir="ltr">600</bdi> لتر للدفعة.</p>
+          </li>
+          <li>
+            <h3>الفرق بالسعر بيظهر لكل عضو</h3>
+            <p>لو بيع القطاف على الطريق كان يعطي <bdi dir="ltr">2,000</bdi> شيقل، فالعضو ياخذ
+               ما يعادل <bdi dir="ltr">4,609</bdi> شيقل عن الكمية نفسها — والفرق مش سر.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ PROCESS ════ -->
+  <section class="section" id="process">
+    <div class="wrap" data-reveal>
+      <h2 class="title">من الشجرة إلى التنك — <bdi dir="ltr">6</bdi> محطات، وكل محطة عليها ختم</h2>
+      <ol class="steps">
+        <li>
+          <h3>قطاف</h3>
+          <p>تشرين الأول وتشرين الثاني. يدوي بالمنصّ والسلّم على البرش، والممنوع ضرب الشجرة
+             بالعصيغ لأن الحبّة المكسورة ترفع الحموضة قبل ما توصل المعصرة.</p>
+        </li>
+        <li>
+          <h3>وزن</h3>
+          <p>الميزان عند باب المعصرة، وبلاغ باسم المزارع والصنف والوزن بالكيلو.
+             نسخة بيضل معه ونسخة عند المحاسب.</p>
+        </li>
+        <li>
+          <h3>فرز</h3>
+          <p>ورق، أغصان، وحبّة أرضية منفصلة. الحبّة اللي لمست الأرض بتروح على رتبة
+             الصابون — ما بتدخل تنك الممتاز.</p>
+        </li>
+        <li>
+          <h3>عصر على البارد</h3>
+          <p>غسيل، مطرحة حديدية، ثم فرامة العجين ومركز لولا على <bdi dir="ltr">27</bdi> درجة.
+             العصرة الأولى تطلع وحدها؛ اللي بعدها يُسجَّل دفعة منفصلة.</p>
+        </li>
+        <li>
+          <h3>تحليل وتعبئة</h3>
+          <p>حموضة وبيروكسيد وبوليفينول، ثم تخزين تحت الأزوت في تنك معتّم، وتعبئة
+             بسعة <bdi dir="ltr">500</bdi> مل و <bdi dir="ltr">750</bdi> مل و <bdi dir="ltr">5</bdi> لتر.</p>
+        </li>
+        <li>
+          <h3>توزيع</h3>
+          <p>مستودع تل، توصيل داخل نابلس وبلداتها، صناديق للمغتربين، وعقود
+             سنوية للجمعيات والمطابخ الخيرية.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════ INTERACTIVE DEMO ════ -->
+  <section class="section section--demo" id="demo">
+    <div class="wrap" data-reveal>
+      <div class="demo">
+        <div class="demo__head">
+          <h2 class="title title--tight">حاسبة المعصرة</h2>
+          <p class="demo__sub">أدخل وزن قطافك، اختر الصنف والطريقة، والجدول بيتقلب مع كل تغيير.
+            الأرقام هي نفسها المستعملة في بلاغ التسلّم الورقي — بلا إنترنت ولا تخزين.</p>
+        </div>
+
+        <form class="demo__form" id="calcForm" autocomplete="off">
+          <div class="field">
+            <label for="kilos">وزن الزيتون المورَد</label>
+            <div class="input-row">
+              <input type="number" id="kilos" name="kilos" value="500" min="20" max="20000" step="5"
+                     inputmode="numeric" class="num" dir="ltr" style="unicode-bidi:isolate">
+              <span class="unit">كغ</span>
+            </div>
+            <div class="chips" role="group" aria-label="أوزان جاهزة">
+              <button type="button" class="chip" data-kilos="250">250</button>
+              <button type="button" class="chip" data-kilos="500">500</button>
+              <button type="button" class="chip" data-kilos="1000">1,000</button>
+              <button type="button" class="chip" data-kilos="2000">2,000</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cultivar">الصنف</label>
+            <select id="cultivar" name="cultivar">
+              <option value="nabali" selected>نابلي بلدي</option>
+              <option value="souri">سوري</option>
+              <option value="kanaani">كنعاني</option>
+              <option value="mix">خليط المشايات</option>
+            </select>
+            <p class="hint" id="cultivarHint">الاستخلاص النموذجي <bdi dir="ltr">15%</bdi> وزنًا.</p>
+          </div>
+
+          <div class="field">
+            <label for="method">طريقة العصر</label>
+            <select id="method" name="method">
+              <option value="first" selected>عصرة أولى على البارد</option>
+              <option value="second">عصرة ثانية بالماء الساخن</option>
+              <option value="third">عصرة ثالثة — رتبة الصابون</option>
+            </select>
+            <p class="hint">حرارة العجين في الأولى ما بتتعدى <bdi dir="ltr">27</bdi> درجة.</p>
+          </div>
+
+          <div class="field">
+            <label for="fee">رسم العصر عيني</label>
+            <div class="input-row">
+              <input type="number" id="fee" name="fee" value="15" min="8" max="25" step="0.5"
+                     inputmode="decimal" class="num" dir="ltr" style="unicode-bidi:isolate">
+              <span class="unit">%</span>
+            </div>
+            <p class="hint">المتعارف عليه في التعاونية <bdi dir="ltr">15%</bdi> من الزيت.</p>
+          </div>
+
+          <div class="field">
+            <label for="rate">سعر التجزئة للتر</label>
+            <div class="input-row">
+              <input type="number" id="rate" name="rate" value="65" min="20" max="120" step="1"
+                     inputmode="numeric" class="num" dir="ltr" style="unicode-bidi:isolate">
+              <span class="unit">شيقل</span>
+            </div>
+            <p class="hint">بيتحرك لحاله مع الرتبة، وتقدر تثبّته.</p>
+          </div>
+        </form>
+
+        <div class="table-scroll">
+          <table class="results" aria-describedby="explain">
+            <caption class="sr-only">نتيجة حساب المعصرة، تتحدّث مع كل تغيير في المدخلات</caption>
+            <colgroup>
+              <col><col><col><col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">البند</th>
+                <th scope="col">الحساب</th>
+                <th scope="col">الكمية</th>
+                <th scope="col">بالشيقل</th>
+              </tr>
+            </thead>
+            <tbody aria-live="polite">
+              <tr>
+                <th scope="row">الزيت الخام المتوقع</th>
+                <td class="formula" id="f-oil">—</td>
+                <td class="num" id="v-oil">—</td>
+                <td class="num" id="m-oil">—</td>
+              </tr>
+              <tr>
+                <th scope="row">رسم العصر للتعاونية</th>
+                <td class="formula" id="f-fee">—</td>
+                <td class="num" id="v-fee">—</td>
+                <td class="num" id="m-fee">—</td>
+              </tr>
+              <tr>
+                <th scope="row">صافي الزيت للمزارع</th>
+                <td class="formula" id="f-net">—</td>
+                <td class="num" id="v-net">—</td>
+                <td class="num" id="m-net">—</td>
+              </tr>
+              <tr>
+                <th scope="row">المركة لمعامل الصابون</th>
+                <td class="formula" id="f-pomace">—</td>
+                <td class="num" id="v-pomace">—</td>
+                <td class="num" id="m-pomace">—</td>
+              </tr>
+              <tr>
+                <th scope="row">ما يعادله بالتعبئة</th>
+                <td class="formula">الصندوق <bdi dir="ltr">30</bdi> لتراً · الجود <bdi dir="ltr">12.5</bdi> لتراً</td>
+                <td class="num" id="v-pack">—</td>
+                <td class="num">—</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row">إجمالي ما يبقى للمزارع</th>
+                <td class="formula">زيت + مركة</td>
+                <td class="num" id="t-litres">—</td>
+                <td class="num" id="t-value">—</td>
+              </tr>
+              <tr class="usd-row">
+                <th scope="row">بالدولار الأمريكي</th>
+                <td class="formula" id="usd-note">—</td>
+                <td class="num">—</td>
+                <td class="num" id="t-usd">—</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <p class="demo__explain" id="explain">—</p>
+
+        <div class="demo__meta">
+          <p><span class="dot dot--ink" aria-hidden="true"></span> نسب الاستخلاص النموذجية في نابلس:
+            نابلي <bdi dir="ltr">15%</bdi> · سوري <bdi dir="ltr">16%</bdi> · كنعاني <bdi dir="ltr">13%</bdi> ·
+            خليط المشايات <bdi dir="ltr">14%</bdi> — نموذج موسم <bdi dir="ltr">2025</bdi>.</p>
+          <p><span class="dot dot--muted" aria-hidden="true"></span> المركة: نحو <bdi dir="ltr">62%</bdi>
+            من وزن الحبّة ثفل رطب، وسعرها التعاقدي <bdi dir="ltr">1.50</bdi> شيقل لكل كيلوغرام.</p>
+          <p><span class="dot dot--muted" aria-hidden="true"></span> سعر الصرف المعروض
+            <bdi dir="ltr">3.60</bdi> شيقل لكل دولار — تقريبي، للتوضيح فقط.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ PHOTOGRAPHIC BAND ════ -->
+  <section class="band" aria-label="صور من الموسم" data-reveal>
+    <div class="band__grid">
+      <figure class="shot shot--band">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Olive_terraces_with_dry-stone_retaining_walls_near_Fornalutx.jpg/1280px-Olive_terraces_with_dry-stone_retaining_walls_near_Fornalutx.jpg"
+             alt="مدرّجات زيتون على منحدر بجدران حجرية جافة"
+             width="1280" height="853" loading="lazy" decoding="async">
+        <figcaption>المشايات البعلية على الصخور: جذع معمر و <bdi dir="ltr">7</bdi> لترات في السنة، بس زيتو طعمه تاني.</figcaption>
+      </figure>
+      <figure class="shot shot--band">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Olive_press_0723.jpg/1280px-Olive_press_0723.jpg"
+             alt="معصرة زيتون تقليدية بحجر طاحن وآلة عصر"
+             width="1280" height="960" loading="lazy" decoding="async">
+        <figcaption>المطرحة الحجرية القديمة — احنا على الحديد والفرامة، بس الحرفة نفسها.</figcaption>
+      </figure>
+      <figure class="shot shot--band">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nablus_old_city_24.jpg/1280px-Nablus_old_city_24.jpg"
+             alt="زقاق في البلدة القديمة في نابلس بمبانٍ حجرية ومقاعد"
+             width="1280" height="720" loading="lazy" decoding="async">
+        <figcaption>مستودعنا في البلدة القديمة — باب حجري، وسوق بالمعين والدينار.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ════ PRICING / SPECS ════ -->
+  <section class="section" id="pricing">
+    <div class="wrap" data-reveal>
+      <h2 class="title">الرتب والمواصفات</h2>
+      <p class="section__lede">كل رتبة مش اسم تسويقي — هي رقم حموضة ورقم بوليفينول مطبوعان على شهادة الدفعة.
+        السعر بالشيقل أولاً، والدولار تحته بسعر <bdi dir="ltr">3.60</bdi>.</p>
+
+      <div class="table-scroll">
+        <table class="prices">
+          <thead>
+            <tr>
+              <th scope="col">الرتبة</th>
+              <th scope="col">المصدر</th>
+              <th scope="col">الحموضة</th>
+              <th scope="col">البوليفينول</th>
+              <th scope="col">لتر واحد</th>
+              <th scope="col">جود <bdi dir="ltr">12.5</bdi> لتراً</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ذهبية بكّرة</th>
+              <td>عصرة أولى على البارد، حصاد مبكّر في تشرين الأول</td>
+              <td class="num"><bdi dir="ltr">≤ 0.3%</bdi></td>
+              <td class="num"><bdi dir="ltr">≥ 250 mg/kg</bdi></td>
+              <td class="price"><bdi dir="ltr">78.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$21.67</bdi></span></td>
+              <td class="price"><bdi dir="ltr">975.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$270.83</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">ممتازة بكّرة</th>
+              <td>عصرة أولى على البارد، صفر نبالي وسوري</td>
+              <td class="num"><bdi dir="ltr">≤ 0.8%</bdi></td>
+              <td class="num"><bdi dir="ltr">≥ 150 mg/kg</bdi></td>
+              <td class="price"><bdi dir="ltr">65.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$18.06</bdi></span></td>
+              <td class="price"><bdi dir="ltr">812.50</bdi> شيقل<span class="usd"><bdi dir="ltr">$225.69</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">بلدية</th>
+              <td>عصرة ثانية، ماء أسخن واستخلاص أكثر</td>
+              <td class="num"><bdi dir="ltr">≤ 2.0%</bdi></td>
+              <td class="num"><bdi dir="ltr">≥ 60 mg/kg</bdi></td>
+              <td class="price"><bdi dir="ltr">48.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$13.33</bdi></span></td>
+              <td class="price"><bdi dir="ltr">600.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$166.67</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">رتبة الصابون</th>
+              <td>حبّة أرضية وعصرة ثالثة — لمعامل الصابون النابلسي</td>
+              <td class="num"><bdi dir="ltr">&gt; 3.0%</bdi></td>
+              <td class="num">—</td>
+              <td class="price"><bdi dir="ltr">34.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$9.44</bdi></span></td>
+              <td class="price"><bdi dir="ltr">425.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$118.06</bdi></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">سلالم الصناديق — للأهالي، للمغتربين، وللمنظمات</h3>
+      <div class="table-scroll">
+        <table class="prices prices--tiers">
+          <thead>
+            <tr>
+              <th scope="col">العبوة</th>
+              <th scope="col">الحجم الصافي</th>
+              <th scope="col">لمين</th>
+              <th scope="col">سعر اللتر</th>
+              <th scope="col">الإجمالي</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">خلّة</th>
+              <td class="num"><bdi dir="ltr">5.0</bdi> لتراً</td>
+              <td>بيت يصرف على السنة</td>
+              <td class="num"><bdi dir="ltr">65</bdi> شيقل</td>
+              <td class="price"><bdi dir="ltr">325.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$90.28</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">جود</th>
+              <td class="num"><bdi dir="ltr">12.5</bdi> لتراً</td>
+              <td>تعبئة العائلة السنوية</td>
+              <td class="num"><bdi dir="ltr">62</bdi> شيقل</td>
+              <td class="price"><bdi dir="ltr">775.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$215.28</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">صندوق أهالٍ</th>
+              <td class="num"><bdi dir="ltr">6</bdi> خلّات = <bdi dir="ltr">30.0</bdi> لتراً</td>
+              <td>توصيل داخل نابلس وبلداتها</td>
+              <td class="num"><bdi dir="ltr">58</bdi> شيقل</td>
+              <td class="price"><bdi dir="ltr">1,740.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$483.33</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">صندوق اغتراب</th>
+              <td class="num"><bdi dir="ltr">12</bdi> قنّينة × <bdi dir="ltr">0.75</bdi> = <bdi dir="ltr">9.0</bdi> لتراً</td>
+              <td>شحن مبرّد، كرتون مقوّى مضغوط</td>
+              <td class="num"><bdi dir="ltr">72</bdi> شيقل</td>
+              <td class="price"><bdi dir="ltr">648.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$180.00</bdi></span></td>
+            </tr>
+            <tr>
+              <th scope="row">طبق منظمات</th>
+              <td class="num"><bdi dir="ltr">20</bdi> صندوقاً = <bdi dir="ltr">600</bdi> لتراً</td>
+              <td>جمعيات ومطابخ خيرية، بعقد موسمي</td>
+              <td class="num"><bdi dir="ltr">54</bdi> شيقل</td>
+              <td class="price"><bdi dir="ltr">32,400.00</bdi> شيقل<span class="usd"><bdi dir="ltr">$9,000.00</bdi></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footnote">
+        «الجود» و«الخلّة» اصطلاح السوق هنا: الجود <bdi dir="ltr">12.5</bdi> لتراً، والخلّة
+        <bdi dir="ltr">5</bdi> لترات. أسعار الجود في جدول الرتب محسوبة على سعر اللتر من دون
+        خصم العبوة الكبيرة. الفاتورة بتصدر بالشيقل؛ الدولار للتقريب فقط، والتوصيل خارج
+        المحافظة على حساب الطالب.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ VOICES ════ -->
+  <section class="section section--voices">
+    <div class="wrap" data-reveal>
+      <h2 class="title">ناس من السلسلة</h2>
+      <ul class="voices">
+        <li class="voice">
+          <span class="avatar" aria-hidden="true">س</span>
+          <div class="voice__body">
+            <p class="quote">«كنت أعطي القطاف على الطريق وأسمع (خصم رطوبة). هون الوزن
+              مكتوب قدامي، وفي الآخر رجعتلي <bdi dir="ltr">9</bdi> جودات من أصل
+              <bdi dir="ltr">62</bdi> كغ.»</p>
+            <p class="who">أم سامر — مزارعة، <bdi dir="ltr">32</bdi> دونماً في بيت فوريك، عضوة منذ <bdi dir="ltr">2019</bdi></p>
+          </div>
+        </li>
+        <li class="voice">
+          <span class="avatar" aria-hidden="true">خ</span>
+          <div class="voice__body">
+            <p class="quote">«أرسلت <bdi dir="ltr">4</bdi> صناديق إلى شيكاغو. وصل الزيت بارد التعبئة،
+              وعليه رقم الدفعة وتاريخ العصر. ولادي أول مرة شربوا زيت له طعم.»</p>
+            <p class="who">خالد العبسي — مغترب من نابلس، <bdi dir="ltr">12</bdi> سنة في الولايات المتحدة</p>
+          </div>
+        </li>
+        <li class="voice">
+          <span class="avatar" aria-hidden="true">ن</span>
+          <div class="voice__body">
+            <p class="quote">«نشتري <bdi dir="ltr">600</bdi> لتر كل موسم لثلاث مطابخ خيرية.
+              طلبنا شهادة حموضة، وصلتنا في يوم — بهالشفافية ما في مفاوضات صعبة.»</p>
+            <p class="who">نورا حجة — منسّقة مشتريات، جمعية أهلية في طولكرم</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ════ FAQ ════ -->
+  <section class="section" id="faq">
+    <div class="wrap wrap--narrow" data-reveal>
+      <h2 class="title title--tight">أسئلة بيتكرر سؤالها</h2>
+      <div class="faq">
+        <details>
+          <summary>شو الفرق بين العصرة الأولى على البارد واللي بعدها؟</summary>
+          <p>العصرة الأولى تطلع من العجين قبل ما ينضافله ماء أسخن: أقل كمية، بس أعلى
+            بوليفينول وأدنى حموضة — عادة تحت <bdi dir="ltr">0.8%</bdi>. الثانية تستخدم الماء
+            الساخن لاستخلاص ما تبقّى، وبتطيح الرتبة، والثالثة بتروح رتبة صابون.
+            «على البارد» يعني حرارة العجين ما تعدّت <bdi dir="ltr">27</bdi> درجة، مش مجاز.</p>
+        </details>
+        <details>
+          <summary>ليش نسبة الزيت بتختلف من صنف لثاني؟</summary>
+          <p>النبالي البلدي بيعطي حولي <bdi dir="ltr">15%</bdi> وزنًا، السوري <bdi dir="ltr">16%</bdi>،
+            والكنعاني — الصنف المستحدث — <bdi dir="ltr">13%</bdi>. فوقها سنة الحمل، والري أو
+            البعل، وموعد القطاف. قطاف تشرين الأول بيطلع أغزر بالرائحة وأقل باللتر.</p>
+        </details>
+        <details>
+          <summary>كم بتاخذون رسم عصر، وبعمله شو؟</summary>
+          <p><bdi dir="ltr">15%</bdi> من الزيت عينية — مش على الوزن ولا على تقدير.
+            من صافي ربح الموسم: <bdi dir="ltr">70%</bdi> توزيع على الأعضاء بحصصهم،
+            <bdi dir="ltr">20%</bdi> صيانة المكائن والمازوت، <bdi dir="ltr">10%</bdi> صندوق طوارئ.</p>
+        </details>
+        <details>
+          <summary>كيف أقرا شهادة الحموضة والبوليفينول؟</summary>
+          <p>الحموضة (نسبة حمض الأولييك) كل ما نزلت كل ما كان الزيت أوفر وأطزى؛ الممتاز عندنا
+            تحت <bdi dir="ltr">0.8%</bdi>. البوليفينول بملليغرام لكل كيلوغرام هو اللي بيعطيك
+            المرارة والحرقة بالحلق — وفوق <bdi dir="ltr">250</bdi> يعلّم الرتبة الذهبية.</p>
+        </details>
+        <details>
+          <summary>هل بتشحنوا للخارج، وبيجّي الزيت تام؟</summary>
+          <p>صندوق الاغتراب <bdi dir="ltr">12</bdi> قنّينة سعة <bdi dir="ltr">750</bdi> مل، كرتون مضغوط
+            بلا تحصيل حراري. الشحن جوي، <bdi dir="ltr">7–12</bdi> يوم عمل، ويوصل بشهادة منشأ
+            ورقم دفعة. أمريكا وكندا وأوروبا.</p>
+        </details>
+        <details>
+          <summary>بدّي أعصر عندي — شو بدّي جيب معي؟</summary>
+          <p>برش نظيف تحت الشجرة، بلا أكياس نايلون سودا لأن الحبّة بتخمر فيها بالساعة.
+            جيّب هويتك وسجل الأرض، والدفع نقداً أو تحويلاً قبل التعبئة،
+            أو على المديّة لعضو بموسمين.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CLOSING CTA ════ -->
+  <section class="section section--cta" id="cta">
+    <div class="wrap" data-reveal>
+      <div class="cta">
+        <div class="cta__text">
+          <h2 class="title title--light">الحقل مفتوح من <bdi dir="ltr">10</bdi> تشرين الأول إلى <bdi dir="ltr">20</bdi> تشرين الثاني</h2>
+          <p>احجز دور المعصرة بمكالمة، أو اطلب صندوقاً للأهل في المدينة
+            أو طبقاً للمنظمة. ما في حجز أونلاين — في رقم بيتفرّغ له واحد من الإدارة.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--solid nb" href="tel:+97092345678" dir="ltr" style="unicode-bidi:isolate">+970 9 234 5678</a>
+          <a class="btn btn--ghost" href="mailto:sabah@zaytoun.ps?subject=%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B5%D8%B1">راسلنا للموسم</a>
+          <p class="cta__hours">المستودع: الأحد إلى الخميس <bdi dir="ltr">8:00–17:00</bdi>، السبت <bdi dir="ltr">9:00–14:00</bdi> · شارع تل، نابلس</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <p class="brand__word brand__word--lg">زيتون</p>
+      <p>تعاونية مزارعي زيت الزيتون · نابلس، فلسطين</p>
+      <p><bdi dir="ltr" class="nb">zaytoun.ps</bdi><br>رقم تسجيل الجمعيات <bdi dir="ltr" class="nb">PC-4417</bdi></p>
+    </div>
+
+    <div class="footer__col">
+      <h3>الصور ورخصها</h3>
+      <ul class="credits">
+        <li>قطاف الزيتون، قرية قفين — <bdi dir="ltr" class="nb">Orrling · CC BY-SA 3.0</bdi><br>
+          <bdi dir="ltr">File:Olive harvest.jpg</bdi></li>
+        <li>معصرة زيتون، الناصرة — <bdi dir="ltr" class="nb">James Emery · CC BY 2.0</bdi><br>
+          <bdi dir="ltr">File:Olive press 0723.jpg</bdi></li>
+        <li>مدرّجات زيتون بعلية — <bdi dir="ltr" class="nb">Kai Schreiber · CC BY-SA 2.0</bdi><br>
+          <bdi dir="ltr">File:Olive terraces with dry-stone retaining walls near Fornalutx.jpg</bdi></li>
+        <li>البلدة القديمة، نابلس — <bdi dir="ltr" class="nb">Mohammad Hijjawi · CC BY-SA 4.0</bdi><br>
+          <bdi dir="ltr">File:Nablus old city 24.jpg</bdi></li>
+        <li>صابون نابلسي بزيت الزيتون — <bdi dir="ltr" class="nb">Davidbena · CC BY-SA 4.0</bdi><br>
+          <bdi dir="ltr">File:Nabulsi soap.jpg</bdi></li>
+      </ul>
+      <p class="credits__note">كل الصور أعمال مصوّرة حقيقية من <bdi dir="ltr">commons.wikimedia.org</bdi>
+        ومنشورة برخص <bdi dir="ltr">Creative Commons</bdi> المذكورة.</p>
+    </div>
+
+    <div class="footer__col">
+      <h3>نبع الأرقام</h3>
+      <p>نسب الاستخلاص وأسعار الموسم من سجلّات التعاونية الداخلية لموسم
+        <bdi dir="ltr">2025</bdi>؛ المواصفات المرجعية للحموضة والبوليفينول وفق
+        مجلس زيت الزيتون الدولي. حاسبة المعصرة توضيحية ولا تغني عن وزن التسلّم.</p>
+      <p class="madeby">من صناعة <bdi dir="ltr">Tenvora</bdi></p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ياسمين — دار ضيافة شامية في دمشق القديمة</title>
+<meta name="description" content="دار ياسمين: ثلاث غرف حول يافا واحدة داخل أسور دمشق القديمة، على بعد أمتار من الباب الشرقي. أسعار بالدولار والليرة السورية، وحجز بالتقويم مباشرة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#" aria-label="ياسمين — دار الضيافة، الصفحة الرئيسية">
+      <svg class="brand__mark" viewBox="0 0 28 28" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M14 4.6v5.2M14 18.2v5.2M4.6 14h5.2M18.2 14h5.2M7.4 7.4l3.6 3.6M17 17l3.6 3.6M20.6 7.4 17 11M11 17l-3.6 3.6"/>
+        </g>
+        <circle class="brand__core" cx="14" cy="14" r="3.1"/>
+      </svg>
+      <span class="brand__name">ياسمين</span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#house">البيت</a>
+      <a href="#rooms">الغرف</a>
+      <a href="#booking">الحجز</a>
+      <a href="#place">الموقع</a>
+      <a href="#faq">أسئلة</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--quiet" href="tel:+963112223344">اتصال</a>
+      <a class="btn btn--solid btn--sm" href="#booking">احجز ليلة</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="افتح القائمة">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#house">البيت</a>
+    <a href="#rooms">الغرف</a>
+    <a href="#booking">الحجز</a>
+    <a href="#place">الموقع</a>
+    <a href="#faq">أسئلة</a>
+    <a class="btn btn--solid" href="#booking">احجز ليلة</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: the house plan is the hero, not a photo -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="chip" data-reveal><span class="chip__dot" aria-hidden="true"></span> دار ضيافة من <bdi>٣</bdi> غرف داخل أسور دمشق</p>
+        <h1 data-reveal>إقامةٌ في بيتٍ شاميّ،<br>لا في فندق.</h1>
+        <p class="lede" data-reveal>مدخلٌ من زقاقٍ ضيّق بلا لافتة، يافا مبلّطةٌ بأعمدةٍ كلسية، بحرةٌ في المنتصف لا يصمت ماؤها، ومظلةُ ليمونٍ تُشرب تحتها القهوة بعد المغرب. ثلاث غرفٌ فقط — والليل يُحجز بالتقويم، لا بالوساطة.</p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--solid btn--lg" href="#booking">اختر غرفتك وتواريخك</a>
+          <a class="btn btn--link" href="#house">تجوّل في البيت<span aria-hidden="true"> ←</span></a>
+        </div>
+        <ul class="hero__notes" data-reveal>
+          <li>الدفع دولار أو ليرة بسعر يوم الوصول</li>
+          <li>فطور شامي على حافة اليافا</li>
+          <li>بلا بطاقة ائتمانية</li>
+        </ul>
+      </div>
+
+      <figure class="hero__plan" data-reveal>
+        <svg class="plan" viewBox="0 0 640 560" role="img" aria-label="مخطط دار ياسمين: مدخل من الزقاق إلى يافا مربعة تتوسطها البحرة، وتلتف حولها القاعة والغرف ومظلة الليمون">
+          <!-- signature: the shami arch, traced once on load -->
+          <g class="arch" aria-hidden="true">
+            <path class="arch__line" pathLength="1" fill="none" stroke-linecap="round" stroke-width="2.5"
+              d="M56 540 V215 C56 135 140 72 320 44 C500 72 584 135 584 215 V540"/>
+            <path class="arch__line arch__line--in" pathLength="1" fill="none" stroke-linecap="round" stroke-width="1.2" opacity=".7"
+              d="M70 540 V218 C70 145 148 84 320 58 C492 84 570 145 570 218 V540"/>
+            <circle class="arch__finial" cx="320" cy="34" r="4.5"/>
+          </g>
+          <!-- the plan -->
+          <rect class="p-wall" x="150" y="190" width="340" height="292" rx="3"/>
+          <rect class="p-room" x="164" y="204" width="152" height="62"/>
+          <text class="p-label" x="240" y="241">قاعة</text>
+          <rect class="p-room" x="328" y="204" width="150" height="62"/>
+          <text class="p-label" x="403" y="241">غرفة</text>
+          <rect class="p-court" x="164" y="278" width="314" height="132"/>
+          <text class="p-label p-label--lg" x="320" y="300">يافا</text>
+          <g class="p-cols" aria-hidden="true">
+            <circle cx="186" cy="312" r="3.6"/><circle cx="224" cy="312" r="3.6"/><circle cx="262" cy="312" r="3.6"/>
+            <circle cx="378" cy="312" r="3.6"/><circle cx="416" cy="312" r="3.6"/><circle cx="454" cy="312" r="3.6"/>
+            <circle cx="186" cy="380" r="3.6"/><circle cx="224" cy="380" r="3.6"/>
+            <circle cx="416" cy="380" r="3.6"/><circle cx="454" cy="380" r="3.6"/>
+          </g>
+          <rect class="p-water" x="292" y="322" width="58" height="56" rx="2"/>
+          <text class="p-label p-label--sm" x="321" y="404">بحرة</text>
+          <rect class="p-room" x="164" y="422" width="76" height="46"/>
+          <text class="p-label p-label--sm" x="202" y="450">مدخل</text>
+          <path class="p-door" d="M240 468 A38 38 0 0 0 202 430" fill="none"/>
+          <rect class="p-shade" x="330" y="422" width="148" height="46"/>
+          <g class="p-trellis" aria-hidden="true">
+            <path d="M330 433 H478 M330 445 H478 M330 457 H478" fill="none"/>
+            <path d="M366 422 V468 M404 422 V468 M442 422 V468" fill="none"/>
+          </g>
+          <text class="p-label p-label--sm" x="404" y="452">مظلة الليمون</text>
+        </svg>
+        <figcaption class="plan-legend">
+          <p><b>مدخل</b> من الزقاق بلا لافتة — جرس نحاسي فقط</p>
+          <p><b>يافا</b> باحة مبلّطة، أعمدة كلسية وإيوانان</p>
+          <p><b>قاعة</b> سقفٌ خشبي وعجمٌ على الجدران</p>
+          <p><b>بحرة</b> حوض رخام وماءٌ جارٍ دائمًا</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FACTS STRIP -->
+  <section class="facts">
+    <div class="wrap facts__inner">
+      <p><bdi>٣</bdi> غرف حول يافا واحدة</p>
+      <p><bdi>٤٠٠</bdi> م إلى الباب الشرقي</p>
+      <p>خزائن ماءٍ تكفي <bdi>٤٨</bdi> ساعة انقطاع</p>
+      <p>فطورٌ شاميٌّ مشمول بالليل</p>
+    </div>
+  </section>
+
+  <!-- THE HOUSE: photographic band + why -->
+  <section class="section" id="house">
+    <div class="wrap">
+      <p class="eyebrow">البيت</p>
+      <h2 class="section__title">أربعون عامًا من بيوت الضيافة لا تعرفها دمشق — وأربعمئة عام يعرفها هذا البيت.</h2>
+      <div class="house__intro">
+        <p data-reveal>بُني البيت في العقد الأخير من القرن التاسع عشر، واشتراه الجدّ عام <bdi>١٩٣٦</bdi> بدفعاتٍ على ثلاث سنوات. صار اليوم دار ضيافة صغيرة: ثلاث غرف، مطبخ واحد، ويافٌ يسمع فيها صوت البحرة من كل باب.</p>
+        <p data-reveal>السعر بالدولار أو ما يعادله ليراتٍ سوريات بسعر يوم الوصول، والفطور على حافة اليافا إن سمح الطقس، وإلا ففي القاعة تحت السقف المرسوم.</p>
+      </div>
+      <figure class="band" data-reveal>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Damascus_Tekkiye_complex_courtyard_7893.jpg/1920px-Damascus_Tekkiye_complex_courtyard_7893.jpg"
+             alt="رواقٌ أعمدة في فناء دمشقي حجري" loading="lazy" width="1920" height="1278">
+        <figcaption>الأروقة الكلسية كما في بيوت دمشق القديمة — الحجر الجيري وأقواس المداخيل</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WALKTHROUGH: hotspots swap photo + caption -->
+  <section class="section section--tint" id="tour">
+    <div class="wrap">
+      <p class="eyebrow">جولة في البيت</p>
+      <h2 class="section__title">اضغط الركن — تراه.</h2>
+      <div class="tour">
+        <div class="tour__tabs" role="tablist" aria-label="أركان البيت">
+          <button class="tour__tab is-on" role="tab" aria-selected="true" id="tab-yafa" data-pane="pane-house" data-corner="yafa">اليافا</button>
+          <button class="tour__tab" role="tab" aria-selected="false" id="tab-qaa" data-pane="pane-house" data-corner="qaa" tabindex="-1">القاعة</button>
+          <button class="tour__tab" role="tab" aria-selected="false" id="tab-bahra" data-pane="pane-house" data-corner="bahra" tabindex="-1">البحرة</button>
+          <button class="tour__tab" role="tab" aria-selected="false" id="tab-shade" data-pane="pane-house" data-corner="shade" tabindex="-1">مظلة الليمون</button>
+        </div>
+        <figure class="tour__fig" id="pane-house" role="tabpanel" aria-labelledby="tab-yafa">
+          <div class="tour__imgwrap">
+            <img id="tourImg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Traditional_courtyard_caf%C3%A9_surrounded_by_olive_trees_in_Old_Damascus%2C_Syria.jpg/1920px-Traditional_courtyard_caf%C3%A9_surrounded_by_olive_trees_in_Old_Damascus%2C_Syria.jpg"
+              alt="باحة دمشقية تقليدية تحيط بها أشجار الزيتون" loading="eager" width="1920" height="1080">
+          </div>
+          <figcaption>
+            <h3 id="tourTitle">اليافا — قلب البيت</h3>
+            <p id="tourCap">مبلّطة بحجرٍ كلسيٍ بلّله الماء كل فجر. إيوانان متقابلان وثلاثة مدرجاتٍ حول البحرة؛ هنا يُقدَّم الفطور، وهنا تُغلق الأبواب بعد العاشرة.</p>
+            <p class="tour__meta" id="tourMeta">تقع في وسط الدار — كل غرفة تفتح عليها</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS + BOOKING DEMO -->
+  <section class="section" id="rooms">
+    <div class="wrap">
+      <p class="eyebrow">الغرف والحجز</p>
+      <h2 class="section__title">ثلاث غرف، وأسعارها كما هي — لا موسمية ولا رسوم خفية.</h2>
+
+      <div class="booking">
+        <form class="booking__rooms" id="roomPick" aria-label="اختر غرفة وتواريخ">
+          <fieldset class="roomset">
+            <legend class="sr-only">الغرف</legend>
+            <label class="room is-feat">
+              <input type="radio" name="room" value="yafa" checked>
+              <span class="room__body">
+                <span class="room__badge">الأكثر حجزًا</span>
+                <span class="room__head"><b>جناح اليافا</b><span class="room__price"><bdi>$70</bdi> · <bdi>980,000</bdi> ل.س</span></span>
+                <span class="room__specs">
+                  <span>على اليافا</span><span>حمام خاص رخام</span><span><bdi>٤٦</bdi> م<bdi>٢</bdi></span><span>سّرير مزدوج + دفّانان</span>
+                </span>
+                <span class="room__note">إيوانٌ خاص يفتح على البحرة، وسقفٌ عجَمٌ رمّم عام <bdi>٢٠١٩</bdi>.</span>
+              </span>
+            </label>
+            <label class="room">
+              <input type="radio" name="room" value="yasmin">
+              <span class="room__body">
+                <span class="room__head"><b>قاعة الياسمين</b><span class="room__price"><bdi>$45</bdi> · <bdi>630,000</bdi> ل.س</span></span>
+                <span class="room__specs">
+                  <span>على اليافا</span><span>حمام خاص</span><span><bdi>٣٢</bdi> م<bdi>٢</bdi></span><span>حتى ٣ أشخاص</span>
+                </span>
+                <span class="room__note">الغرفة التي كانت قاعةَ الطعام القديمة — شبابيكها الثلاثة كلُّها على اليافا.</span>
+              </span>
+            </label>
+            <label class="room">
+              <input type="radio" name="room" value="babsharqi">
+              <span class="room__body">
+                <span class="room__head"><b>غرفة باب شرقي</b><span class="room__price"><bdi>$32</bdi> · <bdi>448,000</bdi> ل.س</span></span>
+                <span class="room__specs">
+                  <span>على الشارع</span><span>دُش خاص</span><span><bdi>٢٤</bdi> م<bdi>٢</bdi></span><span>شرفةٌ صغيرة</span>
+                </span>
+                <span class="room__note">أرخص غرفة وأصدق إطلالة: مئذنة، ثم بيوتٌ متلاصقة حتى الباب الشرقي.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="field field--guests">
+            <label for="guests">عدد الضيوف</label>
+            <select id="guests">
+              <option value="1">١</option>
+              <option value="2" selected>٢</option>
+              <option value="3">٣</option>
+            </select>
+          </div>
+          <p class="booking__disc">الأسعار لليلةٍ واحدة وتشمل الفطور والماء الساخن. الإلغاء مجاني حتى <bdi>٣</bdi> أيام قبل الوصول.</p>
+        </form>
+
+        <div class="booking__demo">
+          <div class="cal" aria-label="تقويم الإتاحة">
+            <div class="cal__head">
+              <h3>تشرين الثاني <bdi>٢٠٢٦</bdi></h3>
+              <p class="cal__legend"><span class="sq sq--free">متاح</span><span class="sq sq--booked">محجوز</span><span class="sq sq--sel">إقامتك</span></p>
+            </div>
+            <div class="cal__grid" id="calGrid"></div>
+          </div>
+          <div class="summary" id="summary" aria-live="polite">
+            <div class="sum-row"><span>الغرفة</span><strong id="sRoom">—</strong></div>
+            <div class="sum-row"><span>الوصول</span><strong class="num" id="sIn">—</strong></div>
+            <div class="sum-row"><span>المغادرة</span><strong class="num" id="sOut">—</strong></div>
+            <div class="sum-row"><span>عدد الليالي × سعر الليلة</span><strong class="num" id="sCalc">—</strong></div>
+            <div class="sum-row sum-row--main"><span>الإجمالي</span><strong class="num" id="sTotal">$—</strong></div>
+            <div class="sum-row"><span>ما يعادله بالليرة السورية</span><strong class="num" id="sSyp">—</strong></div>
+            <p class="sum-cap" id="sCap">انقر تاريخ وصولٍ ثم تاريخ مغادرة في التقويم.</p>
+            <button class="btn btn--solid btn--block" id="bookBtn" disabled>أثبت الطلب</button>
+            <p class="sum-ref" id="sRef" hidden></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLACE -->
+  <section class="place" id="place">
+    <figure class="place__fig">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bab_Sharqi_Street%2C_Damascus.jpg/1920px-Bab_Sharqi_Street%2C_Damascus.jpg"
+           alt="شارع باب شرقي في دمشق القديمة" loading="lazy" width="1920" height="1440">
+    </figure>
+    <div class="wrap place__body">
+      <p class="eyebrow eyebrow--light">الموقع</p>
+      <h2 class="section__title">داخل السور، على بعد أربع دقائق مشيًا من الباب الشرقي.</h2>
+      <ul class="place__list">
+        <li><span>الباب الشرقي</span><bdi class="num">٤٠٠ م</bdi></li>
+        <li><span>الجامع الأموي</span><bdi class="num">١٫٢ كم</bdi></li>
+        <li><span>سوق الحميدية</span><bdi class="num">٩٠٠ م</bdi></li>
+        <li><span>مطار دمشق</span><bdi class="num">٣٥ دقيقة</bdi></li>
+      </ul>
+      <p class="place__addr">دمشق القديمة — متفرّعٌ من شارع باب شرقي؛ المدخل بلا لافتة، جرسٌ نحاسي ورقمه <bdi>١٤</bdi>. أقرب موقفٍ للسيارات عند السوق؛ الزقاق نفسه لا يدخله إلا المشي.</p>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">من النزلاء</p>
+      <h2 class="section__title">ثلاث إقامات، كما كتبها أصحابها.</h2>
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <blockquote>بتنا في جناح اليافا. استيقظنا على صوت البحرة قبل المنبّه، والفطور كان جبنًا شاميًا وزيتًا من معرة مصرين.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">لم</span><b>لينا م.</b><i>بيروت · ليلتان</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>انقطع الماء بعد المغرب كما توقعت، لكن الخزائن كانت مملوءة من النهار. في الشام هذه هي الضيافة الفعلية.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">عس</span><b>عمر س.</b><i>عمّان · أربع ليالٍ</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>دفعنا ما يعادل السعر ليراتٍ بسعر يوم الوصول من دون أي نقاش. غرفة باب شرقي تستردّ ثمنها من شرفتها وحدها.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">كر</span><b>كرم ح.</b><i>بغداد · ثلاث ليالٍ</i></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tint" id="faq">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">أسئلة قبل الوصول</p>
+      <h2 class="section__title">كل ما يُسأل عنه عادة.</h2>
+      <div class="faq">
+        <details>
+          <summary>كيف يتم الدفع — بالدولار أم الليرة؟</summary>
+          <p>كلاهما مقبول. السعر معلَنٌ بالدولار، ويُقبل ما يعادله ليراتٍ سوريات بسعر يوم الوصول المتفق عليه عند الحجز. لا بطاقات ائتمانية في الدار؛ الدفع نقدًا عند المفتاح.</p>
+        </details>
+        <details>
+          <summary>كيف أصل من مطار دمشق؟</summary>
+          <p>المطار على بعد نحو <bdi>٣٥</bdi> دقيقة بالسيارة. نتفق مع سائقٍ ثابت يصل بكم إلى طرف الزقاق، ثم نمشي معكم آخر <bdi>٢٠٠</bdi> م — سيارات الأجرة الكبيرة لا تدخل داخل السور.</p>
+        </details>
+        <details>
+          <summary>والماء والكهرباء؟</summary>
+          <p>للدار خزائن ماءٍ بسعة تكفي <bdi>٤٨</bdi> ساعة انقطاع، تُعبأ قبل المغرب حسب جدول الحي. الماء الساخن من سخّانٍ مركزي، وفي الشتاء مدفأة غازٌ في كل غرفة.</p>
+        </details>
+        <details>
+          <summary>هل الفطور مشمول ومتى؟</summary>
+          <p>نعم: جبنٌ شامي، زيتون، مربى الليمون من مظلة الدار، خبزٌ من فرن الحي، وشايٌ على الجمر. يُقدَّم على حافة اليافا بين <bdi>٨</bdi> و<bdi>١٠</bdi> صباحًا، أو في القاعة إن مُطر.</p>
+        </details>
+        <details>
+          <summary>متى ألغي حجزى؟</summary>
+          <p>الإلغاء مجاني حتى <bdi>٣</bdi> أيام قبل الوصول. بعدها تُحجز ليلةٌ واحدة ولا تُعاد — وهي القاعدة المعتمدة في الدار منذ فتحها.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta__inner">
+      <h2>ليلةٌ على اليافا تكفي لتقرر.</h2>
+      <p>ثلاث غرف فقط؛ إن كان التقويم مفتوحًا في تاريخك فالحجز مؤكدٌ بالهاتف خلال ساعة.</p>
+      <div class="cta__actions">
+        <a class="btn btn--solid btn--lg" href="#booking">افتح التقويم</a>
+        <p class="cta__phone" dir="ltr">+963 11 222 3344</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="brand__name">ياسمين</span>
+      <p>دار ضيافة شامية — ثلاث غرف حول يافا، داخل أسور دمشق القديمة.</p>
+      <p class="footer__loc">دمشق · سوريا</p>
+    </div>
+    <nav class="footer__col" aria-label="الدار">
+      <h4>الدار</h4>
+      <a href="#house">تاريخ البيت</a><a href="#tour">جولة الأركان</a><a href="#rooms">الغرف والأسعار</a><a href="#booking">التقويم</a>
+    </nav>
+    <nav class="footer__col" aria-label="تواصل">
+      <h4>تواصل</h4>
+      <a href="#place">الموقع والاتجاهات</a><a href="#faq">سياسة الإلغاء</a><a href="#">واتساب الحجز</a>
+    </nav>
+  </div>
+  <div class="wrap footer__base">
+    <p>© <bdi>٢٠٢٦</bdi> دار ياسمين — دمشق.</p>
+    <p class="footer__credit">من صناعة <span dir="ltr">Tenvora</span></p>
+    <p class="footer__attr">صورة: <a href="https://commons.wikimedia.org/wiki/File:Traditional_courtyard_caf%C3%A9_surrounded_by_olive_trees_in_Old_Damascus,_Syria.jpg" rel="license noopener" target="_blank">ويكيميديا كومنز · CC BY-SA</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

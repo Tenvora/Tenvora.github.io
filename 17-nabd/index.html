@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نبض — مناطق النبض وخطة التدريب الأسبوعية في بيروت</title>
+<meta name="description" content="نبض يحسب مناطق التدريب لديك بطريقة كارفونن من العمر ونبض الراحة، ثم يبني خطة أسبوعية تتكيّف مع تعافيك وطقس بيروت وأوقات الصلاة. من بيروت، لرياضييها.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="topbar" id="أعلى">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#أعلى">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">نبض</span>
+      <span class="brand-domain"><bdi dir="ltr">nabd.lb</bdi></span>
+    </a>
+    <nav class="topnav" aria-label="أقسام الصفحة">
+      <a href="#المشكلة">لماذا القوالب تفشل</a>
+      <a href="#طريقة-العمل">كيف يعمل</a>
+      <a href="#الحاسبة">احسب مناطقك</a>
+      <a href="#الأسعار">الأسعار</a>
+      <a href="#أسئلة">أسئلة</a>
+    </nav>
+    <a class="btn btn-ghost btn-sm" href="#الحاسبة">الحاسبة</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">من كورنيش المزوار إلى مضمار الأنصار</p>
+        <h1 class="reveal">خطتك مبنية على نبضك، لا على قالب جاهز</h1>
+        <p class="lede reveal">
+          نبض يأخذ عمرك ونبض راحتك، فيحسب مناطق التدريب الأربعة بمعادلة كارفونن،
+          ثم يوزّع دقائق أسبوعك بينها ويعدّل الخطة كل أحد حسب تعافيك.
+          الشاشة التي أمامك هي نفسها شاشة التطبيق — لا لوحة تحكم، ولا حساب، ولا إنترنت أثناء الجري.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#الحاسبة">احسب مناطق النبض</a>
+          <a class="btn btn-quiet" href="#شاشة-اليوم">شاشة اليوم كما هي</a>
+        </div>
+        <p class="hero-fine reveal">
+          يعمل على أندرويد و iOS · الأسعار بالدولار الأمريكي ·
+          <bdi dir="ltr">GPS</bdi> محلي، والبيانات تبقى على جهازك
+        </p>
+      </div>
+
+      <div class="hero-device reveal" id="شاشة-اليوم">
+        <div class="phone">
+          <div class="phone-screen">
+
+            <div class="statusbar">
+              <bdi dir="ltr" class="status-time">06:42</bdi>
+              <span class="status-place">بيروت · <bdi dir="ltr">EET</b></span>
+              <span class="status-icons" aria-hidden="true">
+                <svg viewBox="0 0 20 12" width="20" height="12"><g fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"></rect><rect x="5" y="5.5" width="3" height="6.5" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="0.5" width="3" height="11.5" rx="1"></rect></g></svg>
+                <svg viewBox="0 0 16 12" width="16" height="12"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1.5 4.2A9 9 0 0 1 14.5 4.2"></path><path d="M4 6.8A5.6 5.6 0 0 1 12 6.8"></path></g><g fill="currentColor"><circle cx="8" cy="9.8" r="1.3"></circle></g></svg>
+                <svg viewBox="0 0 24 12" width="24" height="12"><g fill="none" stroke="currentColor" stroke-width="1.2"><rect x="0.6" y="1" width="19" height="10" rx="2.4"></rect><path d="M21.6 4.4v3.2"></path></g><g fill="currentColor"><rect x="2.4" y="2.8" width="12.4" height="6.4" rx="1.2"></rect></g></svg>
+              </span>
+            </div>
+
+            <div class="screen-head">
+              <div>
+                <p class="screen-kicker">جلسة اليوم</p>
+                <h2 class="screen-title">إيقاع الكورنيش</h2>
+                <p class="screen-date">الأحد · <bdi dir="ltr">16</bdi> تشرين الثاني · <bdi dir="ltr">06:20</b> انطلاقًا من سان جورج</p>
+              </div>
+              <span class="screen-chip">المنطقة <bdi dir="ltr">2</bdi></span>
+            </div>
+
+            <div class="session-card">
+              <div class="session-goal">
+                <span class="lbl">نطاق الهدف</span>
+                <bdi dir="ltr" class="big"><b>136</b>–<b>149</b> bpm</bdi>
+              </div>
+              <ul class="session-stats">
+                <li><span class="lbl">المدة</span><bdi dir="ltr" class="v">42 min</bdi></li>
+                <li><span class="lbl">المسافة</span><bdi dir="ltr" class="v">5.00 km</bdi></li>
+                <li><span class="lbl">متوسط النبض</span><bdi dir="ltr" class="v">141 bpm</bdi></li>
+              </ul>
+            </div>
+
+            <figure class="trace-figure">
+              <figcaption>
+                <span>تتبّع النبض · الجلسة المنتهية</span>
+                <bdi dir="ltr">42 min</bdi>
+              </figcaption>
+              <svg class="trace" viewBox="0 0 260 96" role="img" aria-label="رسم ثابت لتتبّع النبض خلال جلسة اليوم: يرتفع من 96 نبضة في الإحماء إلى نطاق 136–149 نبضة في الجري ثم يهبط في التهدئة">
+                <g fill="#E6E3DC"><rect x="0" y="52" width="260" height="26" rx="4"></rect></g>
+                <g fill="none" stroke="#191A1C" stroke-opacity=".10" stroke-width="1">
+                  <path d="M0 24h260"></path><path d="M0 52h260"></path><path d="M0 78h260"></path>
+                </g>
+                <g fill="none" stroke="#C4453D" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline fill="none" points="2,80 14,79 22,76 30,74 38,70 44,66 50,60 56,54 62,50 68,48 74,46 80,44 86,45 92,43 98,42 104,44 110,41 116,40 122,42 128,39 134,38 140,41 146,37 152,36 158,39 164,35 170,34 176,37 182,33 188,35 194,32 200,36 206,34 212,38 218,36 224,42 230,48 236,58 242,66 248,72 254,76 258,78"></polyline>
+                </g>
+                <g fill="#191A1C" fill-opacity=".55">
+                  <text x="4" y="20" font-size="8" style="direction:ltr" font-family="'IBM Plex Mono',monospace">180</text>
+                  <text x="4" y="49" font-size="8" style="direction:ltr" font-family="'IBM Plex Mono',monospace">150</text>
+                  <text x="4" y="92" font-size="8" style="direction:ltr" font-family="'IBM Plex Mono',monospace">120</text>
+                  <text x="222" y="92" font-size="8" style="direction:ltr" font-family="'IBM Plex Mono',monospace">06:42</text>
+                </g>
+              </svg>
+              <p class="trace-note">الرسم ثابت بعد انتهاء الجلسة: لا نبض متحرك ولا حلقات نابضة في التطبيق.</p>
+            </figure>
+
+            <div class="splits">
+              <p class="block-title">الأزمنة التجزئية</p>
+              <ul>
+                <li><bdi dir="ltr">km 1</bdi><bdi dir="ltr">5:52</bdi><bdi dir="ltr">138</bdi></li>
+                <li><bdi dir="ltr">km 2</bdi><bdi dir="ltr">5:48</bdi><bdi dir="ltr">141</bdi></li>
+                <li><bdi dir="ltr">km 3</bdi><bdi dir="ltr">5:44</bdi><bdi dir="ltr">144</bdi></li>
+                <li><bdi dir="ltr">km 4</bdi><bdi dir="ltr">5:51</bdi><bdi dir="ltr">143</bdi></li>
+                <li><bdi dir="ltr">km 5</bdi><bdi dir="ltr">6:02</bdi><bdi dir="ltr">140</bdi></li>
+              </ul>
+              <p class="splits-foot">المجموع <bdi dir="ltr">29:17</bdi> داخل المنطقة · الإحماء والتهدئة <bdi dir="ltr">10 min</bdi> في المنطقة <bdi dir="ltr">1</bdi></p>
+            </div>
+
+            <div class="recovery">
+              <div class="recovery-head">
+                <p class="block-title">استعداد اليوم</p>
+                <bdi dir="ltr" class="score">78<span>/100</span></bdi>
+              </div>
+              <div class="bar" role="img" aria-label="استعداد اليوم 78 من 100: تعافٍ جيد"><bdi dir="ltr" class="bar-fill" style="--pct:78%"></bdi></div>
+              <p class="recovery-note">نوم <bdi dir="ltr">6 h 20 m</bdi> · نبض راحتك <bdi dir="ltr">58 bpm</bdi> (أقل بـ<bdi dir="ltr">3</bdi> من متوسط الأسبوع) — الخطة محفوظة كما هي.</p>
+            </div>
+
+            <p class="screen-offline">وضع الطائرة يعمل: المسار والنبض محفوظان على الجهاز، والمزامنة عند عودة الشبكة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust">
+    <div class="wrap">
+      <ul class="trust-list">
+        <li>
+          <bdi dir="ltr" class="trust-num">12,400</bdi>
+          <span>رياضي نشط شهريًا</span>
+        </li>
+        <li>
+          <bdi dir="ltr" class="trust-num">341,800</bdi>
+          <span>جلسة مسجّلة منذ إطلاق النسخة الأولى</span>
+        </li>
+        <li>
+          <bdi dir="ltr" class="trust-num">81%</bdi>
+          <span>متوسط الالتزام بعد <bdi dir="ltr">8</bdi> أسابيع</span>
+        </li>
+      </ul>
+      <p class="trust-foot">أرقام من خادم نبض حتى نهاية تشرين الأول <bdi dir="ltr">2026</bdi>، وتُعرض كما هي دون عدّاد متحرك.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem" id="المشكلة">
+    <div class="wrap split">
+      <div class="split-head">
+        <p class="kicker">المشكلة</p>
+        <h2>القالب الجاهز لا يعرف نبض راحتك</h2>
+      </div>
+      <div class="split-body">
+        <p>
+          ابحث عن «خطة جري لأسبوع» وستجد الجدول نفسه: <bdi dir="ltr">4</bdi> أسابيع، <bdi dir="ltr">3</bdi> جلسات،
+          «اركض <bdi dir="ltr">70%</bdi> من جهدك». المشكلة أن <bdi dir="ltr">70%</bdi> من الجهد ليست رقمًا واحدًا.
+        </p>
+        <ul class="problem-list">
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <p>عدّاء من الأشرفية نبض راحته <bdi dir="ltr">52 bpm</bdi>، وموظف من الحمرا نبض راحته <bdi dir="ltr">76 bpm</bdi>؛
+            معادلة <bdi dir="ltr">220</bdi> − العمر وحدها تضعهما في الساق نفسها من التكرار، وهما لا يتعافيان بالسرعة نفسها.</p>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <p>النسبة من أقصى نبض وحدها تبالغ في تقدير الشدة لأصحاب اللياقة العالية وتُهونها لمن نبض راحتك مرتفع؛
+            كارفونن يدخل نبض الراحة في الحساب فيصحّح الطرفين.</p>
+          </li>
+          <li>
+            <span class="dot" aria-hidden="true"></span>
+            <p>لا جدول جاهز يسألك عن زحمة كورنيش المنارة، ولا عن ليلة عمل انتهت <bdi dir="ltr">02:00</bdi>،
+            ولا عن يوم صيام في رمضان حيث الشدة نفسها تُقرأ بنبض أعلى <bdi dir="ltr">6–8</bdi> نبضات.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOLUTION ============ -->
+  <section class="solution">
+    <div class="wrap">
+      <div class="solution-panel">
+        <div class="solution-head">
+          <p class="kicker">الحل</p>
+          <h2>أربعة أرقام تدخل، وخطة تخرج في نهايتها</h2>
+        </div>
+        <div class="solution-grid">
+          <article class="card">
+            <bdi dir="ltr" class="card-idx">01</bdi>
+            <h3>قياس</h3>
+            <p>نبض الراحة يُحسب من <bdi dir="ltr">7</bdi> ليالٍ من النوم (أدنى قيمة في الليلة، لا متوسطها)،
+            وأقصى نبض يُعاير من أعلى <bdi dir="ltr">30</bdi> ثانية مسجّلة في تلال الحمرا بدل التقدير النظري.</p>
+          </article>
+          <article class="card">
+            <bdi dir="ltr" class="card-idx">02</bdi>
+            <h3>مناطق</h3>
+            <p>أربع مناطق على احتياطي النبض: تعافي <bdi dir="ltr">50–60%</bdi>، حرق دهون <bdi dir="ltr">60–70%</bdi>،
+            كارديو <bdi dir="ltr">70–80%</bdi>، حد أقصى <bdi dir="ltr">80–90%</bdi> — بالنبضات لا بـ«الشعور».</p>
+          </article>
+          <article class="card">
+            <bdi dir="ltr" class="card-idx">03</bdi>
+            <h3>خطة</h3>
+            <p>توزيع دقائق الأسبوع بين المناطق وفق نسبة <bdi dir="ltr">80/20</bdi> المعتمدة في تدريب التحمّل،
+            مع جلسة جودة واحدة أسبوعيًا ويوم راحة كامل لا يُلمس.</p>
+          </article>
+          <article class="card">
+            <bdi dir="ltr" class="card-idx">04</bdi>
+            <h3>تكيّف</h3>
+            <p>كل أحد <bdi dir="ltr">19:00</bdi> بتوقيت بيروت تُراجع الجلسة السابقة: إن خرجت عن النطاق أكثر من
+            <bdi dir="ltr">15%</bdi> من الوقت، تُخفَّض الشدة أو تُعاد جدولة الجلسة.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process" id="طريقة-العمل">
+    <div class="wrap">
+      <p class="kicker">طريقة العمل</p>
+      <h2>من النبض إلى الخطة في أربع خطوات</h2>
+      <ol class="steps">
+        <li class="step reveal">
+          <bdi dir="ltr" class="step-num">01</bdi>
+          <h3>قياس</h3>
+          <p>سوار معتمد أو الهاتف في الجيب. أوّل <bdi dir="ltr">14</bdi> يومًا بلا أهداف: يجمع نبض الراحة وأقصى نبض فقط.</p>
+          <span class="step-arrow" aria-hidden="true">←</span>
+        </li>
+        <li class="step reveal">
+          <bdi dir="ltr" class="step-num">02</bdi>
+          <h3>تحديد المناطق</h3>
+          <p>معادلة كارفونن على نبضك أنت، وتُحدَّث المناطق تلقائيًا كل <bdi dir="ltr">28</bdi> يومًا أو عند تغيّر نبض الراحة بأكثر من <bdi dir="ltr">5</bdi> نبضات.</p>
+          <span class="step-arrow" aria-hidden="true">←</span>
+        </li>
+        <li class="step reveal">
+          <bdi dir="ltr" class="step-num">03</bdi>
+          <h3>خطة</h3>
+          <p>اختر هدفك: صحّة، وزن، أو سباق. تتوزّع الدقائق على المناطق، وتُثبَّت جلسة الجودة يوم الثلاثاء قرب الكورنيش.</p>
+          <span class="step-arrow" aria-hidden="true">←</span>
+        </li>
+        <li class="step reveal">
+          <bdi dir="ltr" class="step-num">04</bdi>
+          <h3>تكيّف أسبوعي</h3>
+          <p>كل أحد تُراجع الجلسة السابقة وتُبنى التالية: تقدّم <bdi dir="ltr">5–10%</bdi> أسبوعيًا، وحماية من التدرّب الزائد بعد ليلتين نوم أقل من <bdi dir="ltr">6 h</bdi>.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="demo" id="الحاسبة">
+    <div class="wrap">
+      <p class="kicker">جرّبها الآن · بلا حساب وبلا إنترنت</p>
+      <h2>احسب مناطق النبض</h2>
+      <p class="section-lede">
+        هذه هي الحاسبة نفسها الموجودة داخل التطبيق: أدخل عمرك ونبض راحتك، واختر النطاق الذي تريده،
+        فتحسب لك حدود المناطق بالدقات، والدقائق التي ستمضيها داخل كل منطقة في الجلسة، وتقدير الحرق الأسبوعي.
+      </p>
+
+      <div class="demo-grid">
+        <form class="demo-form card" id="hrForm" autocomplete="off">
+          <div class="field">
+            <label for="age">العمر</label>
+            <div class="input-line">
+              <input type="number" id="age" name="age" value="32" min="14" max="85" step="1" inputmode="numeric">
+              <span class="unit">سنة</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rhr">نبض الراحة</label>
+            <div class="input-line">
+              <input type="number" id="rhr" name="rhr" value="58" min="35" max="100" step="1" inputmode="numeric">
+              <span class="unit">n bpm</span>
+            </div>
+            <p class="hint">أدنى نبض لك أثناء النوم، لا نبضك وأنت جالس على الأريكة.</p>
+          </div>
+
+          <fieldset class="field">
+            <legend>النطاق المطلوب</legend>
+            <div class="band-picker">
+              <label class="band-opt"><input type="radio" name="band" value="0"><span>تعافي<bdi dir="ltr">50–60%</bdi></span></label>
+              <label class="band-opt"><input type="radio" name="band" value="1" checked><span>حرق دهون<bdi dir="ltr">60–70%</bdi></span></label>
+              <label class="band-opt"><input type="radio" name="band" value="2"><span>كارديو<bdi dir="ltr">70–80%</bdi></span></label>
+              <label class="band-opt"><input type="radio" name="band" value="3"><span>حدّ أقصى<bdi dir="ltr">80–90%</bdi></span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="mins">دقائق التدريب في الأسبوع <span class="opt">(اختياري)</span></label>
+            <div class="input-line">
+              <input type="number" id="mins" name="mins" value="180" min="30" max="900" step="15" inputmode="numeric">
+              <span class="unit">min / أسبوع</span>
+            </div>
+            <p class="hint">توصية منظمة الصحة الصحية: <bdi dir="ltr">150–300 min</bdi> أسبوعيًا من الشدة المتوسطة.</p>
+          </div>
+
+          <div class="formula" aria-hidden="true">
+            <bdi dir="ltr">Target = (220 − age − RHR) × % + RHR</bdi>
+          </div>
+        </form>
+
+        <div class="demo-out">
+          <div class="out-head">
+            <div class="out-band">
+              <p class="lbl">النطاق الموصى به اليوم</p>
+              <p class="out-band-value"><bdi dir="ltr" id="outBand">136–149 bpm</bdi></p>
+              <p class="out-band-name" id="outBandName">حرق الدهون · المنطقة 2</p>
+            </div>
+            <ul class="out-mini">
+              <li><span class="lbl">أقصى نبض مقدَّر</span><bdi dir="ltr" id="outMax">188 bpm</bdi></li>
+              <li><span class="lbl">احتياطي النبض</span><bdi dir="ltr" id="outHrr">130 bpm</bdi></li>
+              <li><span class="lbl">متوسط الهدف للجلسة</span><bdi dir="ltr" id="outAvg">143 bpm</bdi></li>
+            </ul>
+          </div>
+
+          <div class="table-scroll">
+            <table class="zones">
+              <caption>حدود المناطق بمعادلة كارفونن — تُعاد الحسبة مع كل إدخال</caption>
+              <thead>
+                <tr>
+                  <th scope="col">المنطقة</th>
+                  <th scope="col">من احتياطي النبض</th>
+                  <th scope="col">الأدنى</th>
+                  <th scope="col">الأقصى</th>
+                  <th scope="col">دقائق/جلسة</th>
+                  <th scope="col">حرق/دقيقة</th>
+                </tr>
+              </thead>
+              <tbody id="zoneRows"></tbody>
+            </table>
+          </div>
+
+          <ul class="out-plan">
+            <li>
+              <span class="lbl">بنية الجلسة</span>
+              <bdi dir="ltr" id="outSession">45 min</bdi>
+              <span class="sub">إحماء <bdi dir="ltr">5 min</bdi> · داخل النطاق <bdi dir="ltr" id="outInZone">35 min</bdi> · تهدئة <bdi dir="ltr">5 min</bdi></span>
+            </li>
+            <li>
+              <span class="lbl">الجلسات الأسبوعية</span>
+              <bdi dir="ltr" id="outSessions">4</bdi>
+              <span class="sub">تُشتق من دقائق الأسبوع، بحدّين <bdi dir="ltr">2–6</bdi></span>
+            </li>
+            <li>
+              <span class="lbl">تقدير الحرق الأسبوعي</span>
+              <bdi dir="ltr" id="outKcal">858 kcal</bdi>
+              <span class="sub">داخل النطاق · والإجمالي <bdi dir="ltr" id="outKcalAll">1,029 kcal</bdi></span>
+            </li>
+          </ul>
+
+          <p class="demo-note">
+            الحرق محسوب بمعادلة الأيض المكافئ <bdi dir="ltr" class="eq">kcal/min = METs × 3.5 × weight ÷ 200</bdi>
+            حيث الوزن بالكيلوغرام، بافتراض <bdi dir="ltr">70 kg</bdi>؛ داخل التطبيق يُستخدم وزنك المسجّل.
+            أقصى نبض هنا مقدّر نظريًا، ونبض يعايره من قياساتك الميدانية بمعادلة تاكاها
+            <bdi dir="ltr" class="eq">208 − 0.7 × age</bdi> إن سمحت بياناتك.
+            في رمضان تُخفَّض الشدة <bdi dir="ltr">15%</bdi> تلقائيًا وتُعاد الجلسات إلى ما قبل الإفطار أو بعد التراويح.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHOTO BAND ============ -->
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">أين يتدرّب الناس فعلًا</p>
+      <h2>مسارات معروفة، لا صور مخزّنة</h2>
+      <div class="band-grid">
+        <figure class="shot shot-wide reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Beirut_Corniche%2C_Beirut%2C_Lebanon.jpg/1280px-Beirut_Corniche%2C_Beirut%2C_Lebanon.jpg" alt="ممشى الكورنيش في بيروت في النهار: ناخيل وأعمدة إنارة وأشخاص يمشون بمحاذاة البحر مع المباني في الخلفية" loading="lazy" width="1280" height="960">
+          <figcaption><bdi dir="ltr">6.4 km</bdi> · سان جورج ↔ الرملة البيضاء · مسطّح، رياح بحرية تخفّف الحرارة <bdi dir="ltr">3–4 °C</bdi> عن الجميزة</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/All-weather_running_track.jpg/1280px-All-weather_running_track.jpg" alt="مضمار جري مطاطي أحمر اللون بمساراته البيضاء وأرقام الانطلاق واحد واثنان وثلاثة" loading="lazy" width="1280" height="853">
+          <figcaption>المضمار · <bdi dir="ltr">400 m</bdi> للفة · أفضلية للجلسات المتقطعة لأن الإيقاع لا يتغيّر بالإشارات</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Dumbells_and_free_weights_in_a_gym.jpg/1280px-Dumbells_and_free_weights_in_a_gym.jpg" alt="رفّ أوزان في صالة رياضية عليه دمبل سوداء مرتبة بالأثقال مع مقاعد تدريب رمادية" loading="lazy" width="1280" height="929">
+          <figcaption>القوة · <bdi dir="ltr">2</bdi> جلسات أسبوعيًا في الجميزة أو الأشرفية تقلّل إصابات الركبة <bdi dir="ltr">≈ 30%</bdi></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing" id="الأسعار">
+    <div class="wrap">
+      <p class="kicker">ما تحصل عليه</p>
+      <h2>محتوى التطبيق، وبسعر يعرفه اللبناني</h2>
+      <div class="incl-grid">
+        <ul class="incl">
+          <li>مناطق كارفونن الأربع، تُحدَّث تلقائيًا</li>
+          <li>خطة أسبوعية تتكيّف كل أحد <bdi dir="ltr">19:00</bdi></li>
+          <li>شاشة جلسة كاملة بلا إنترنت، ومزامنة عند العودة</li>
+          <li>تنبيه اهتزازي عند الخروج من النطاق <bdi dir="ltr" class="eq">±5 bpm</bdi></li>
+          <li>أزمنة تجزئية لكل كيلومتر + درجة تعافٍ صباحية</li>
+          <li>جدولة تراعي أوقات الصلاة ونهار رمضان</li>
+          <li>مسارات جاهزة: الكورنيش، مضمار الأنصار، حديقة الصنائع</li>
+          <li>تصدير <bdi dir="ltr">GPX</bdi> و <bdi dir="ltr">CSV</bdi> لملفك، بلا قفل</li>
+        </ul>
+        <div class="plans">
+          <article class="plan card">
+            <h3>تجرّب</h3>
+            <p class="price"><bdi dir="ltr">0 $</bdi></p>
+            <p class="price-sub">لأجل غير مسمّى</p>
+            <ul>
+              <li>حاسبة المناطق</li>
+              <li><bdi dir="ltr">3</bdi> جلسات مسجّلة</li>
+              <li>سجلّ محلي فقط</li>
+            </ul>
+            <a class="btn btn-quiet btn-block" href="#الحاسبة">ابدأ من الحاسبة</a>
+          </article>
+          <article class="plan card plan-hot">
+            <span class="plan-flag">الأكثر اختيارًا</span>
+            <h3>انتساب</h3>
+            <p class="price"><bdi dir="ltr">6 $</bdi><span class="per">/شهر</span></p>
+            <p class="price-sub">أو <bdi dir="ltr">54 $</bdi> سنويًا · ما يعادل نحو <bdi dir="ltr">894,000</bdi> ل.ل</p>
+            <ul>
+              <li>الخطة التكيّفية كاملة</li>
+              <li>سوار بلوتوث + الهاتف</li>
+              <li>تقارير شهرية بالبريد</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#أسئلة">اشترك شهريًا</a>
+          </article>
+          <article class="plan card">
+            <h3>فرق ومدربون</h3>
+            <p class="price"><bdi dir="ltr">14 $</bdi><span class="per">/شهر</span></p>
+            <p class="price-sub">لحتى <bdi dir="ltr">12</bdi> متدرّبًا في المجموعة</p>
+            <ul>
+              <li>خطط جماعية للمضمار</li>
+              <li>متابعة نطاقات الفريق حيّة</li>
+              <li>تقارير أداء لكل متدرّب</li>
+            </ul>
+            <a class="btn btn-quiet btn-block" href="#أسئلة">تواصل معنا</a>
+          </article>
+        </div>
+      </div>
+      <p class="price-foot">الدولار هو سعر الدفع الفعلي في لبنان اليوم؛ يمكن الدفع أيضًا بالليرة على سعر <bdi dir="ltr">149,000</bdi> ل.ل لكل دولار، أو عبر تحويل <bdi dir="ltr">Omtlinn</bdi> و <bdi dir="ltr">Whish</bdi> و <bdi dir="ltr">e-Cash</bdi> في مراكز الجميزة والحمرا والدوحة.</p>
+    </div>
+  </section>
+
+  <!-- ============ VOICES ============ -->
+  <section class="voices">
+    <div class="wrap">
+      <p class="kicker">من يستخدمه</p>
+      <h2>ثلاثة نبضات، ثلاث خطط مختلفة</h2>
+      <ul class="voice-list">
+        <li class="voice card reveal">
+          <span class="mono-avatar" aria-hidden="true">ك ح</span>
+          <blockquote>
+            «كنت أركض وأحس أنني أنفّس بصعوبة، ثم اكتشفت أن نبض راحتي <bdi dir="ltr">66</bdi> لا <bdi dir="ltr">54</bdi>.
+            نزل نطاق الهدف بي <bdi dir="ltr">9</bdi> نبضات، وصرت أنهي <bdi dir="ltr">10 km</bdi> دون أن أفقد كلامي.»
+          </blockquote>
+          <p class="voice-meta"><strong>كارين ح.</strong> · عدّاءة هاوية · الجميزة</p>
+        </li>
+        <li class="voice card reveal">
+          <span class="mono-avatar" aria-hidden="true">ز ب</span>
+          <blockquote>
+            «التكيّف الأسبوعي هو الفارق. بعد ليلتين نوم <bdi dir="ltr">5 h</bdi> قدّم لي الجلسة يومًا كاملًا بدل أن يتركني
+            أُكمل خطة مكسورة. هذا قرار كنت أتخذه بنفسي دائمًا وأخطئ.»
+          </blockquote>
+          <p class="voice-meta"><strong>زياد ب.</strong> · <bdi dir="ltr">3</bdi> صالات أسبوعيًا · الأشرفية</p>
+        </li>
+        <li class="voice card reveal">
+          <span class="mono-avatar" aria-hidden="true">ر ن</span>
+          <blockquote>
+            «في رمضان نقل كل الجلسات إلى <bdi dir="ltr">18:15</bdi> وخفّف الشدة <bdi dir="ltr">15%</bdi>. أول مرة أجد تطبيقًا
+            يعرف أن الصيام يرفع النبض نفسه <bdi dir="ltr">6–8</bdi> نبضات.»
+          </blockquote>
+          <p class="voice-meta"><strong>رالف ن.</strong> · مضمار الأنصار · الطريق المطار</p>
+        </li>
+      </ul>
+      <p class="voices-foot">الأسماء مختصرة بحرفين كما يفعل المستخدمون، والصور رموز حرفية لا وجوه: لا نضع صورًا لأشخاص لم يوافقوا على نشرها.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="أسئلة">
+    <div class="wrap faq-wrap">
+      <div class="faq-head">
+        <p class="kicker">أسئلة تُسأل فعلًا</p>
+        <h2>قبل أن تثق بالرقم</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>لماذا معادلة <bdi dir="ltr">220</bdi> − العمر وهي معروفة بعدم دقّتها؟</summary>
+          <div class="ans">
+            <p>لأنها النقطة التي يفهمها الجميع، ولأنها بداية لا نهاية. بعد <bdi dir="ltr">14</bdi> يومًا يستبدلها نبض
+            بأقصى نبض معاير من قياساتك، بسقف نظري من معادلة تاكاها، والفارق عادةً <bdi dir="ltr">6–8 bpm</bdi>. كل منطقة تُعرض عليك بالنبضات، لا بالنسبة المئوية.</p>
+          </div>
+        </details>
+        <details>
+          <summary>كيف يقيس نبض الراحة، ولماذا يهمّني؟</summary>
+          <div class="ans">
+            <p>يأخذ أدنى نبض مسجّل أثناء النوم على مدى <bdi dir="ltr">7</bdi> ليالٍ. نبض الراحة هو ما يفصل بين
+            كارفونن والنسبة البسيطة: بنبض راحة <bdi dir="ltr">58</bdi> وعمرك <bdi dir="ltr">32</bdi> يصبح نطاق حرق الدهون
+            <bdi dir="ltr">136–149 bpm</bdi>، أما النسبة البسيطة من أقصى نبض على النسب نفسها فتعطي <bdi dir="ltr">113–132 bpm</bdi> —
+            أي أدنى بـ<bdi dir="ltr">17</bdi> نبضة عند الحد الأعلى وبـ<bdi dir="ltr">23</bdi> عند الأدنى، مع نطاق أوسع بـ<bdi dir="ltr">6</bdi> نبضات.</p>
+          </div>
+        </details>
+        <details>
+          <summary>هل يعمل بلا شبكة في نفق سليم أو على المرتفعات؟</summary>
+          <div class="ans">
+            <p>نعم. الجلسة كاملة — المناطق، المؤقت، الاهتزاز عند الخروج من النطاق، والأزمنة التجزئية — تعمل على الجهاز.
+            المزامنة والسحب لاحقًا عند عودة الشبكة. لا يوجد «يرجى الاتصال بالإنترنت» في منتصف تكرار.</p>
+          </div>
+        </details>
+        <details>
+          <summary>ماذا يتغيّر في رمضان وحول أوقات الصلاة؟</summary>
+          <div class="ans">
+            <p>ينقل نبض نافذة الجلسات إلى <bdi dir="ltr">90</bdi> دقيقة قبل الإفطار أو بعد التراويح، ويخفّض الشدة
+            <bdi dir="ltr">15%</bdi> في نهار الصيام، ويذكّر بالترطيب <bdi dir="ltr">500 ml</bdi> قبل الإفطار بساعة.
+            مواعيد الصلاة تُحسب لبيروت (<bdi dir="ltr">EET/EEST</bdi>، <bdi dir="ltr">UTC+2/+3</bdi>) وتُستثنى من التنبيهات.</p>
+          </div>
+        </details>
+        <details>
+          <summary>أي جهاز أحتاج؟ وهل الهاتف وحده يكفي؟</summary>
+          <div class="ans">
+            <p>سوار بلوتوث يعطي نبضًا مستمرًا هو الأفضل للدقة (<bdi dir="ltr">± 2–3 bpm</bdi>).
+            الهاتف في الجيب يعمل بالتسارع ويعطي <bdi dir="ltr">± 4–6 bpm</bdi> — كافٍ للمشي والركض البطيء،
+            غير كافٍ للجلسات المتقطعة. حزام الصدر مدعوم لمن يريده.</p>
+          </div>
+        </details>
+        <details>
+          <summary>أين أركض في بيروت؟ وهل هناك مسارات جاهزة؟</summary>
+          <div class="ans">
+            <p>خمسة مسارات مبنية داخل التطبيق: كورنيش المنارة ↔ الرملة البيضاء <bdi dir="ltr">6.4 km</bdi>،
+            حلقة حديقة الصنائع <bdi dir="ltr">2.1 km</bdi>، تلال الحمرا <bdi dir="ltr">+48 m</bdi> صعودًا،
+            مضمار نادي الأنصار <bdi dir="ltr">400 m</bdi>، ودرج حديقة الأشرفية لتدريج القوة.
+            كل مسار له نصيب من الظل وأوقات الازدحام المعروفة.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="closing">
+    <div class="wrap closing-grid">
+      <figure class="shot shot-city reveal">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Beirut_skyline%2C_Beirut%2C_Lebanon.jpg/1280px-Beirut_skyline%2C_Beirut%2C_Lebanon.jpg" alt="أفق بيروت من جهة المرفأ: طريق سريع بين المباني السكنية والتجارية مع جبال لبنان في الخلفية تحت سماء مغبرة" loading="lazy" width="1280" height="720">
+        <figcaption>بيروت من جهة المرفأ، نظرًا غربًا · <bdi dir="ltr">3,200</bdi> جلسة مسجّلة هذا الشهر داخل المدينة</figcaption>
+      </figure>
+      <div class="closing-copy">
+        <h2>ابدأ من رقمين تعرفهما</h2>
+        <p>عمرك ونبض راحتك. الباقي — المناطق، الخطة، والتعديل الأسبوعي — يحسبه نبض على جهازك،
+        ويُريك الشاشة نفسها التي رأيتها في أعلى هذه الصفحة.</p>
+        <div class="closing-actions">
+          <a class="btn btn-primary" href="#الحاسبة">احسب مناطق النبض</a>
+          <a class="btn btn-quiet" href="#الأسعار">الأسعار والمحتوى</a>
+        </div>
+        <p class="closing-fine">نسخة <bdi dir="ltr">2.4</bdi> · بيروت <bdi dir="ltr">UTC+3</bdi> صيفًا · بلا إعلانات وبلا بيع بيانات</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <p class="brand-word big">نبض</p>
+      <p>تدريب بالنبض من بيروت. صفر لوحة تحكم، صفر تسجيل دخول، وصفر رسوم مخفية.</p>
+      <p class="footer-made">من صناعة <strong>Tenvora</strong></p>
+    </div>
+    <nav class="footer-col" aria-label="روابط المنتج">
+      <p>المنتج</p>
+      <a href="#الحاسبة">حاسبة المناطق</a>
+      <a href="#شاشة-اليوم">شاشة الجلسة</a>
+      <a href="#طريقة-العمل">كيف تبني الخطة</a>
+      <a href="#الأسعار">الأسعار</a>
+    </nav>
+    <nav class="footer-col" aria-label="موارد">
+      <p>موارد</p>
+      <a href="#أسئلة">الأسئلة الشائعة</a>
+      <a href="#المشكلة">لماذا كارفونن</a>
+      <a href="#أسئلة">دقّة الأجهزة</a>
+      <a href="#أسئلة">مسارات بيروت</a>
+    </nav>
+    <div class="footer-col footer-credits">
+      <p>الصور وحقوقها</p>
+      <ul>
+        <li>«<bdi dir="ltr">Beirut Corniche, Beirut, Lebanon</bdi>» · <bdi dir="ltr">Vyacheslav Argenberg</bdi> · <bdi dir="ltr">CC BY 4.0</bdi> · <a href="https://commons.wikimedia.org/wiki/File:Beirut_Corniche,_Beirut,_Lebanon.jpg">wikimedia</a></li>
+        <li>«<bdi dir="ltr">All-weather running track</bdi>» · <bdi dir="ltr">Mk2010</bdi> · <bdi dir="ltr">CC BY-SA 4.0</bdi> · <a href="https://commons.wikimedia.org/wiki/File:All-weather_running_track.jpg">wikimedia</a></li>
+        <li>«<bdi dir="ltr">Dumbells and free weights in a gym</bdi>» · <bdi dir="ltr">KeepActive Australia</bdi> · <bdi dir="ltr">CC BY-SA 4.0</bdi> · <a href="https://commons.wikimedia.org/wiki/File:Dumbells_and_free_weights_in_a_gym.jpg">wikimedia</a></li>
+        <li>«<bdi dir="ltr">Beirut skyline, Beirut, Lebanon</bdi>» · <bdi dir="ltr">Vyacheslav Argenberg</bdi> · <bdi dir="ltr">CC BY 4.0</bdi> · <a href="https://commons.wikimedia.org/wiki/File:Beirut_skyline,_Beirut,_Lebanon.jpg">wikimedia</a></li>
+      </ul>
+      <p class="footer-src">جميع الصور من ويكيميديا كومنز، بحمول كسول ونسبها الأصلية.</p>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p>© <bdi dir="ltr">2026</bdi> نبض · <bdi dir="ltr">nabd.lb</bdi> · بيروت، لبنان</p>
+    <p>صفحة عرض ثابتة: <bdi dir="ltr">HTML</bdi> و <bdi dir="ltr">CSS</bdi> و <bdi dir="ltr">JS</bdi> فقط، بلا خلفية ولا لوحة إدارية.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

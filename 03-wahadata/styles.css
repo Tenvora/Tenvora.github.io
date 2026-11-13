@@ -27,7 +27,7 @@
 
   --font-display:"Noto Kufi Arabic","IBM Plex Sans Arabic",system-ui,sans-serif;
   --font-body:"IBM Plex Sans Arabic","Noto Kufi Arabic",system-ui,sans-serif;
-  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+  --font-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
 
   --r-sm:6px; --r-md:10px; --r-lg:14px;
   --wrap:1240px;
