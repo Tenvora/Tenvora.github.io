@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  /* ═══════════════ 1. REVEAL ═══════════════ */
+  /* reveal */
   var revealables = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 
   function show(el) {
@@ -41,7 +41,7 @@
     revealables.forEach(show);
   }
 
-  /* ═══════════════ 2. STICKY NAV ═══════════════ */
+  /* sticky nav */
   var burger = document.getElementById("burger");
   var nav = document.getElementById("nav");
   if (burger && nav) {
@@ -57,7 +57,7 @@
     });
   }
 
-  /* ═══════════════ 3. EDITION CALCULATOR ═══════════════ */
+  /* edition calculator */
 
   /* بيانات العناوين: عدد الكلمات بعد التحقيق وعدد الصفحات وشهود النص */
   var TITLES = [

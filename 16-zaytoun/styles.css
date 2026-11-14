@@ -1,7 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   زيتون — تعاونية زيت الزيتون، نابلس
-   Paper/ink surfaces, one grove-green accent, El Messiri + Plex
-   ═══════════════════════════════════════════════════════════ */
+/* زيتون — تعاونية زيت الزيتون، نابلس */
 
 :root {
   --paper:      #EFE9DE;
@@ -24,7 +21,7 @@
   --font-body: "IBM Plex Sans Arabic", "El Messiri", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", "IBM Plex Sans Arabic", ui-monospace, SFMono-Regular, monospace;
 
-  --ease: cubic-bezier(.22, .61, .21, 1);
+  --ease: cubic-bezier(.2,.8,.25,1);
   --dur: 700ms;
   --wrap: 1180px;
   --gutter: clamp(20px, 4.2vw, 56px);
@@ -115,7 +112,7 @@ bdi { unicode-bidi: isolate; }
 }
 .wrap--narrow { max-inline-size: 880px; }
 
-/* ── motion: load choreography + one scroll reveal ────────── */
+/* motion: load choreography + one scroll reveal */
 html.js [data-load] {
   opacity: 0;
   transform: translateY(14px);
@@ -145,7 +142,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
   }
 }
 
-/* ── sticky bar ───────────────────────────────────────────── */
+/* sticky bar */
 .topbar {
   position: sticky;
   inset-block-start: 0;
@@ -179,7 +176,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .nav a { padding-block: 4px; border-block-end: 1px solid transparent; }
 .nav a:hover { color: var(--ink); border-block-end-color: var(--muted); }
 
-/* ── buttons ──────────────────────────────────────────────── */
+/* buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -198,7 +195,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .btn--quiet { color: var(--ink); box-shadow: var(--shadow-1); border-block-end: 1px solid var(--muted); border-radius: 0; }
 .btn--ghost { background: var(--paper); color: var(--ink); box-shadow: var(--shadow-2); }
 
-/* ── hero ─────────────────────────────────────────────────── */
+/* hero */
 .hero {
   max-inline-size: var(--wrap);
   margin-inline: auto;
@@ -230,7 +227,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-block: 26px 18px; }
 .hero__note { font-size: .88rem; color: var(--muted); max-inline-size: 44ch; }
 
-/* ── photographs ──────────────────────────────────────────── */
+/* photographs */
 .shot {
   margin: 0;
   display: grid;
@@ -250,7 +247,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
   max-inline-size: 48ch;
 }
 
-/* ── trust strip ──────────────────────────────────────────── */
+/* trust strip */
 .strip {
   background: var(--paper-2);
   box-shadow: inset 0 1px 0 rgba(33, 30, 24, .06), inset 0 -1px 0 rgba(33, 30, 24, .05);
@@ -282,9 +279,9 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .stat span bdi { font-family: var(--font-mono); font-size: .95em; }
 .stat span { font-size: .85rem; line-height: 1.65; color: var(--muted); }
 
-/* ── generic section ──────────────────────────────────────── */
+/* generic section */
 .section {
-  padding-block: clamp(52px, 7vw, 104px);
+  padding-block: clamp(66px,7.8vw,135px);
 }
 .section > .wrap > .title,
 .section__lede { max-inline-size: 62ch; }
@@ -318,7 +315,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .split__text p { max-inline-size: 52ch; }
 .split__panel { display: grid; gap: 22px; min-inline-size: 0; max-inline-size: 100%; }
 
-/* ── comparison chart (static, no motion) ─────────────────── */
+/* comparison chart (static, no motion) */
 .compare {
   background: var(--paper-2);
   border-radius: var(--r-lg);
@@ -347,7 +344,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .lg--ink { background: var(--ink); }
 .lg--muted { background: var(--muted); }
 
-/* ── solution panel ───────────────────────────────────────── */
+/* solution panel */
 .section--panel { padding-block-start: 0; }
 .panel {
   background: var(--paper-2);
@@ -384,7 +381,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .dothe h3 { font-size: 1.02rem; line-height: 1.4; margin-block-end: 8px; }
 .dothe p { font-size: .92rem; line-height: 1.8; color: var(--ink-soft); margin: 0; }
 
-/* ── numbered process ─────────────────────────────────────── */
+/* numbered process */
 .steps {
   list-style: none;
   counter-reset: step;
@@ -414,7 +411,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 .steps h3 { font-size: 1.08rem; line-height: 1.4; margin-block-end: 6px; }
 .steps p { font-size: .9rem; line-height: 1.8; color: var(--ink-soft); margin: 0; max-inline-size: 40ch; }
 
-/* ── interactive demo ─────────────────────────────────────── */
+/* interactive demo */
 .section--demo { background: var(--paper-2); box-shadow: inset 0 1px 0 rgba(33, 30, 24, .06); }
 .demo__head { max-inline-size: 60ch; margin-block-end: clamp(22px, 3vw, 34px); }
 .demo__sub { color: var(--ink-soft); font-size: .96rem; }
@@ -443,8 +440,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
   color: var(--ink);
   letter-spacing: 0;
 }
-.input-row { display: flex; align-items: center; gap: 8px; }
-.num-input, input[type="number"] {
+.input-row { display: flex; align-items: center; gap: 8px; }input[type="number"]{
   inline-size: 118px;
   flex: none;
   font-family: var(--font-mono);
@@ -526,8 +522,7 @@ select {
   border-block-end: 0;
 }
 .results tfoot th[scope="row"] { font-weight: 700; }
-.results .is-key { font-weight: 600; }
-.usd-row th[scope="row"] { font-weight: 400; color: var(--muted); font-size: .82rem; }
+.results .is-cope="row"] { font-weight: 400; color: var(--muted); font-size: .82rem; }
 .usd-row .formula { color: var(--muted); }
 
 .demo__explain {
@@ -560,8 +555,8 @@ select {
 .dot--ink { background: var(--ink); }
 .dot--muted { background: var(--muted); }
 
-/* ── photographic band ────────────────────────────────────── */
-.band { padding-block: clamp(52px, 7vw, 96px); }
+/* photographic band */
+.band { padding-block: clamp(66px,7.8vw,125px); }
 .band__grid {
   max-inline-size: var(--wrap);
   margin-inline: auto;
@@ -572,7 +567,7 @@ select {
 }
 .shot--band img { aspect-ratio: 3 / 2; }
 
-/* ── pricing tables ───────────────────────────────────────── */
+/* pricing tables */
 .prices th, .prices td {
   text-align: start;
   padding-block: 14px;
@@ -603,7 +598,7 @@ select {
   max-inline-size: 76ch;
 }
 
-/* ── voices ───────────────────────────────────────────────── */
+/* voices */
 .section--voices { background: var(--paper-2); }
 .voices {
   list-style: none;
@@ -641,7 +636,7 @@ select {
 .quote { font-size: .98rem; line-height: 1.85; margin: 0 0 10px; }
 .who { font-size: .8rem; color: var(--muted); margin: 0; line-height: 1.7; }
 
-/* ── faq ──────────────────────────────────────────────────── */
+/* faq */
 .faq { margin-block-start: clamp(18px, 2.6vw, 30px); }
 .faq details {
   border-block-end: 1px solid rgba(33, 30, 24, .14);
@@ -676,7 +671,7 @@ select {
   padding-inline-start: 26px;
 }
 
-/* ── closing CTA ──────────────────────────────────────────── */
+/* closing CTA */
 .section--cta { padding-block-end: clamp(60px, 8vw, 110px); }
 .cta {
   background: var(--ink);
@@ -694,7 +689,7 @@ select {
 .cta__hours { font-size: .8rem; color: rgba(239, 233, 222, .62); margin: 0; line-height: 1.75; }
 .cta .btn--ghost { color: var(--ink); }
 
-/* ── footer ───────────────────────────────────────────────── */
+/* footer */
 .footer {
   background: var(--paper-3);
   box-shadow: inset 0 1px 0 rgba(33, 30, 24, .1);
@@ -730,7 +725,7 @@ select {
   margin-block-start: 14px;
 }
 
-/* ── responsive ───────────────────────────────────────────── */
+/* responsive */
 @media (max-width: 980px) {
   .hero__grid, .split, .panel__head, .cta { grid-template-columns: minmax(0, 1fr); }
   .footer__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -749,3 +744,9 @@ select {
   .voice { grid-template-columns: minmax(0, 1fr); }
   .input-row { flex-wrap: wrap; }
 }
+
+/* link and press feedback */
+.nav a{position:relative}
+.nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.btn:active{transform:translateY(0) scale(.985)}

@@ -3,10 +3,8 @@
 (function () {
   "use strict";
 
-  /* ============================================================
-     1) الحاسبة — Karvonen: Target = (HRmax − HRrest) × % + HRrest
-        HRmax مقدّرة نظريًا بـ 220 − العمر
-     ============================================================ */
+  /* 1) الحاسبة — Karvonen: Target = (HRmax − HRrest) × % + HRrest
+   HRmax مقدّرة نظريًا بـ 220 − العمر */
 
   var WEIGHT_KG = 70;            // فرض معلن في النص أسفل الحاسبة
   var WARMUP_MIN = 5;            // إحماء في المنطقة 1
@@ -159,10 +157,8 @@
   form.addEventListener("submit", function (e) { e.preventDefault(); render(); });
   render();
 
-  /* ============================================================
-     2) حركة واحدة عند التحميل + كشف واحد عند التمرير
-        مع مؤقّت احتياطي يكشف كل شيء بعد 1200ms
-     ============================================================ */
+  /* 2) حركة واحدة عند التحميل + كشف واحد عند التمرير
+   مع مؤقّت احتياطي يكشف كل شيء بعد 1200ms */
 
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var heroItems = Array.prototype.slice.call(document.querySelectorAll(".hero .reveal"));

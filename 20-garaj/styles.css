@@ -1,9 +1,4 @@
-/* ============================================================
-   كراج — karaaj.sy   ·   Aleppo workshop directory + price reference
-   Palette: workshop paper / ink / one safety-yellow accent
-   Type: Noto Kufi Arabic (display) · IBM Plex Sans Arabic (body)
-         IBM Plex Mono (numerals)
-   ============================================================ */
+/* كراج — karaaj.sy   ·   Aleppo workshop directory + price reference */
 
 :root{
   /* surfaces — never pure white, never pure black */
@@ -18,8 +13,8 @@
   --charcoal:     #33343A;   /* machine-oil — secondary surface only */
   --accent:       #D9A521;   /* garage safety yellow — the ONE accent */
 
-  --shadow-lo: 0 1px 2px rgba(27,27,29,.04), 0 6px 16px rgba(27,27,29,.05);
-  --shadow-hi: 0 2px 4px rgba(27,27,29,.05), 0 18px 40px rgba(27,27,29,.06);
+  --shadow-lo:0 1px 2px rgba(27,27,29,.05), 0 10px 26px -12px rgba(27,27,29,.14);
+  --shadow-hi:0 3px 10px rgba(27,27,29,.06), 0 34px 74px -28px rgba(27,27,29,.24);
   --shadow-in: inset 0 -2px 0 rgba(27,27,29,.06);
 
   --r-sm: 10px;
@@ -31,7 +26,7 @@
   --font-body:    "IBM Plex Sans Arabic", "Noto Kufi Arabic", sans-serif;
   --font-mono:    "IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
 
-  --ease: cubic-bezier(.22,.61,.21,1);
+  --ease: cubic-bezier(.2,.95,.25,1);
   --shell: 1240px;
   --gut: clamp(1.15rem, 4vw, 3.25rem);
 }
@@ -103,7 +98,7 @@ p{margin:0}
   margin-inline:auto;
 }
 
-/* ── numerals & bidi ─────────────────────────────────────── */
+/* numerals & bidi */
 .num,.lat{
   font-family:var(--font-mono);
   font-size:.9em;
@@ -113,9 +108,8 @@ p{margin:0}
   letter-spacing:0;
 }
 bdi{unicode-bidi:isolate}
-.num-lg{font-size:1em}
 
-/* ── eyebrow ─────────────────────────────────────────────── */
+/* eyebrow */
 .eyebrow{
   display:flex;
   align-items:center;
@@ -137,7 +131,7 @@ bdi{unicode-bidi:isolate}
 .tick-invert{background:var(--paper-2)}
 .eyebrow-invert{color:var(--paper-2)}
 
-/* ── headings ────────────────────────────────────────────── */
+/* headings */
 .h-display{
   font-size:clamp(2.35rem, 4.6vw, 3.75rem);
   line-height:1.16;
@@ -157,7 +151,7 @@ bdi{unicode-bidi:isolate}
   padding-inline:.08em;
 }
 
-/* ── buttons ─────────────────────────────────────────────── */
+/* buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -176,9 +170,7 @@ bdi{unicode-bidi:isolate}
 .btn-line{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 1.5px rgba(236,234,229,.42)}
 .btn:hover{translate:0 -3px;box-shadow:var(--shadow-hi)}
 
-/* ============================================================
-   1 · sticky bar
-   ============================================================ */
+/* sticky bar */
 .bar{
   position:sticky;
   inset-block-start:0;
@@ -226,9 +218,7 @@ bdi{unicode-bidi:isolate}
 @media (width <= 900px){ .bar-nav{display:none} }
 @media (width <= 520px){ .bar-cta span{display:none} .bar-cta{padding:.5rem .55rem} }
 
-/* ============================================================
-   2 · hero
-   ============================================================ */
+/* hero */
 .hero{padding-block:clamp(2.6rem,6vw,5.2rem) clamp(2.4rem,5vw,4rem)}
 .hero-grid{
   display:grid;
@@ -269,9 +259,7 @@ bdi{unicode-bidi:isolate}
 .hero-fig figcaption{flex-direction:column;align-items:flex-start;gap:.25rem}
 figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;opacity:.85}
 
-/* ============================================================
-   3 · trust strip
-   ============================================================ */
+/* trust strip */
 .trust{
   background:var(--paper-2);
   box-shadow:inset 0 1px 0 rgba(27,27,29,.07), inset 0 -1px 0 rgba(27,27,29,.07);
@@ -294,10 +282,8 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
 .stat-u{font-family:var(--font-body);font-size:.4em;font-weight:500;color:var(--muted);margin-inline-start:.28em}
 .trust-item span:last-child{font-size:.8rem;line-height:1.7;color:var(--muted)}
 
-/* ============================================================
-   4 · shared section scaffolding
-   ============================================================ */
-.sect{padding-block:clamp(3.2rem,7vw,6.4rem)}
+/* shared section scaffolding */
+.sect{padding-block:clamp(4.10rem,7.8vw,8.32rem)}
 .two-col{
   display:grid;
   grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
@@ -311,7 +297,7 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
 .sect-lead.narrow{max-inline-size:58ch}
 .sect-note{font-size:.87rem;line-height:1.8;color:var(--muted);margin-block-start:1.3rem;max-inline-size:48ch}
 
-/* ── 4a · problem: five quotes for one job ───────────────── */
+/* 4a · problem: five quotes for one job */
 .quotes{
   background:var(--paper-3);
   border-radius:var(--r-xl);
@@ -349,7 +335,7 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
   .q-num{text-align:start}
 }
 
-/* ── 4b · method panel ───────────────────────────────────── */
+/* 4b · method panel */
 .method-head{max-inline-size:60ch;margin-inline:auto;margin-block-end:clamp(1.6rem,3.4vw,2.6rem)}
 .method-panel{
   background:var(--charcoal);
@@ -359,8 +345,6 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
   color:var(--paper);
   overflow:hidden;
 }
-.flow{inline-size:100%;overflow:hidden;margin-block-end:1.2rem}
-.flow svg{display:block;inline-size:100%;block-size:auto;max-inline-size:760px;margin-inline:auto}
 .flow-steps{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:clamp(.9rem,2.4vw,1.8rem)}
 @media (width <= 800px){ .flow-steps{grid-template-columns:minmax(0,1fr)} .flow{display:none} }
 .flow-steps h3{
@@ -371,7 +355,7 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
 .flow-steps p{font-size:.82rem;line-height:1.8;color:rgba(236,234,229,.72)}
 .method-fig{margin-block-start:clamp(1.8rem,4vw,2.8rem)}
 
-/* ── 4c · process steps ──────────────────────────────────── */
+/* 4c · process steps */
 .steps{display:grid;gap:1rem}
 .steps li{
   display:grid;
@@ -394,9 +378,7 @@ figcaption cite{font-style:normal;font-family:var(--font-mono);font-size:.9em;op
 .steps h3{font-size:1rem;font-weight:600;line-height:1.5;margin-block-end:.35rem}
 .steps p{font-size:.86rem;line-height:1.8;color:var(--muted)}
 
-/* ============================================================
-   5 · the calculator
-   ============================================================ */
+/* the calculator */
 .demo{background:var(--paper-2);box-shadow:inset 0 1px 0 rgba(27,27,29,.07)}
 .demo-head{max-inline-size:62ch;margin-block-end:clamp(1.6rem,3.4vw,2.4rem)}
 .demo-grid{
@@ -523,7 +505,7 @@ select:focus-visible,.fq input:focus-visible,.switch input:focus-visible{
 .out-meta dt{font-size:.7rem;color:var(--muted);line-height:1.6}
 .out-meta dd{margin:.15rem 0 0;font-family:var(--font-mono);font-size:.95rem;font-weight:500;unicode-bidi:isolate}
 
-/* ── horizontal scroll tables: RTL guards ────────────────── */
+/* horizontal scroll tables: RTL guards */
 .table-scroll{
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
@@ -567,15 +549,9 @@ table{border-collapse:collapse;inline-size:100%}
   box-shadow:var(--shadow-lo);
 }
 .flag-g{font-family:var(--font-mono);font-size:1em;color:var(--muted);line-height:1.6}
-.flag-warn{background:#EFE7D4}
-.flag-warn .flag-g{color:#9A6C0B}
-.flag-bad{background:var(--ink);color:var(--paper-3)}
-.flag-bad .flag-g{color:var(--accent)}
 .out-fine{font-size:.72rem;line-height:1.8;color:var(--muted)}
 
-/* ============================================================
-   6 · photographic band
-   ============================================================ */
+/* photographic band */
 .band{background:var(--charcoal);color:var(--paper);padding-block:clamp(2rem,4.5vw,3.4rem)}
 .band-media{inline-size:100%;overflow:hidden}
 .band-main{margin:0}
@@ -612,9 +588,7 @@ table{border-collapse:collapse;inline-size:100%}
 }
 .band-cell figcaption cite{color:rgba(236,234,229,.5)}
 
-/* ============================================================
-   7 · directory
-   ============================================================ */
+/* directory */
 .dir-head{
   display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;
   gap:1rem;margin-block-end:1.6rem;
@@ -701,9 +675,7 @@ table{border-collapse:collapse;inline-size:100%}
 .dir-fine{font-size:.76rem;line-height:1.8;color:var(--muted);margin-block-start:1.6rem;max-inline-size:74ch}
 .dir-fine a{box-shadow:inset 0 -1px 0 var(--charcoal)}
 
-/* ============================================================
-   8 · price table
-   ============================================================ */
+/* price table */
 .pr-head{
   display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;
   gap:1rem;margin-block-end:1.5rem;
@@ -730,9 +702,7 @@ table{border-collapse:collapse;inline-size:100%}
 .pt-note{font-family:var(--font-body);font-size:.8em;color:var(--muted);font-weight:400}
 .pr-fine{font-size:.76rem;line-height:1.8;color:var(--muted);margin-block-start:1.2rem;max-inline-size:70ch}
 
-/* ============================================================
-   9 · voices
-   ============================================================ */
+/* voices */
 .voice-list{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -759,9 +729,7 @@ table{border-collapse:collapse;inline-size:100%}
 .v-who{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem;font-size:.76rem;color:var(--muted)}
 .v-who bdi{font-family:var(--font-display);font-weight:600;color:var(--ink)}
 
-/* ============================================================
-   10 · faq
-   ============================================================ */
+/* faq */
 .q-list{display:grid;gap:.6rem}
 .q{
   background:var(--paper-3);border-radius:var(--r-lg);
@@ -790,9 +758,7 @@ table{border-collapse:collapse;inline-size:100%}
 }
 .q p a{box-shadow:inset 0 -1px 0 var(--charcoal)}
 
-/* ============================================================
-   11 · closing
-   ============================================================ */
+/* closing */
 .close{
   background:var(--ink);color:var(--paper);
   padding-block:clamp(3rem,7vw,5.6rem);
@@ -804,9 +770,7 @@ table{border-collapse:collapse;inline-size:100%}
 .close-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-block-start:.8rem}
 .close-fine{font-size:.74rem;color:rgba(236,234,229,.5)}
 
-/* ============================================================
-   12 · footer
-   ============================================================ */
+/* footer */
 .foot{background:var(--paper-2);padding-block:clamp(2.2rem,4.5vw,3.4rem) 1.6rem}
 .foot-grid{
   display:grid;
@@ -835,9 +799,7 @@ table{border-collapse:collapse;inline-size:100%}
 .made .lat{font-family:var(--font-mono);font-size:1.02em}
 .foot-mini{font-size:.72rem;line-height:1.8;color:var(--muted);max-inline-size:60ch}
 
-/* ============================================================
-   Motion — one load choreography (pure CSS) + one scroll reveal
-   ============================================================ */
+/* Motion — one load choreography (pure CSS) + one scroll reveal */
 .js .rv{
   opacity:0;
   transform:translateY(14px);
@@ -886,3 +848,11 @@ table{border-collapse:collapse;inline-size:100%}
     animation:none !important;
   }
 }
+
+/* link and press feedback */
+.bar-nav a{position:relative}
+.bar-nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.bar-nav a:hover::after,.bar-nav a:focus-visible::after{transform:scaleX(1)}
+.btn:active{transform:translateY(0) scale(.985)}
+.band-media img{transition:transform 1.1s var(--ease)}
+.band-media:hover img{transform:scale(1.025)}

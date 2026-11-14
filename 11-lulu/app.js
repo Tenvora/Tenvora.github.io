@@ -4,9 +4,7 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ============================================================
-     1. DATA — the house's current vault, and the pricing rules
-     ============================================================ */
+  /* DATA — the house's current vault, and the pricing rules */
 
   /* reference price per carat by size band — same numbers as the grading table */
   var BANDS = [
@@ -69,7 +67,7 @@
     return { ct: ct, ppc: ppc, total: Math.round(ct * ppc / 50) * 50 };
   }
 
-  /* nacre decides the overtone of a pearl — one rule, used by every demo */
+  /* nacre decides the overtone of a pearl — one rule, used across the catalogue */
   function toneOf(rec) {
     if (rec.nacre === "pure") return { cls: "", ov: "rgba(14,74,69,.22)" };
     if (rec.nacre === "fair") return { cls: " pearl--warm", ov: "rgba(196,150,120,.26)" };
@@ -80,9 +78,7 @@
   var nf2 = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   var nf1 = new Intl.NumberFormat("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
-  /* ============================================================
-     2. shell — sticky bar, mobile nav, scroll reveal
-     ============================================================ */
+  /* shell — sticky bar, mobile nav, scroll reveal */
   var bar = document.getElementById("topbar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -120,9 +116,7 @@
     else { nodes.forEach(function (el) { el.classList.add("is-in"); }); }
   }
 
-  /* ============================================================
-     3. hero grading card — written by the same pricing code
-     ============================================================ */
+  /* hero grading card — written by the same pricing code */
   (function heroCard() {
     var rec = LOTS[0];
     var p = priceOf(rec);
@@ -143,9 +137,7 @@
     pearl.style.setProperty("--ov", tone.ov);
   })();
 
-  /* ============================================================
-     4. DEMO 1 — catalogue filter (grade / shape / size / price)
-     ============================================================ */
+  /* catalogue filter (grade / shape / size / price) */
   var fGrade = document.getElementById("fGrade");
   var fShape = document.getElementById("fShape");
   var fMin = document.getElementById("fMin");
@@ -230,9 +222,7 @@
   });
   renderCatalogue();
 
-  /* ============================================================
-     5. DEMO 2 — strand configurator (graduated 45 cm strand)
-     ============================================================ */
+  /* strand configurator (graduated 45 cm strand) */
   var STRAND_MM = 450;
   var TAPER = 0.55;
   var FITTING_FEE = 680;
@@ -352,9 +342,7 @@
   });
   renderStrand();
 
-  /* ============================================================
-     6. DEMO 3 — certificate checker against the house register
-     ============================================================ */
+  /* certificate checker against the house register */
   var certForm = document.getElementById("certForm");
   var certId = document.getElementById("certId");
   var certMsg = document.getElementById("certMsg");

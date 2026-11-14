@@ -1,20 +1,14 @@
-/* ============================================================
-   كراج — karaaj.sy
-   Scroll reveal + the search-and-quote calculator + directory filter.
-   No network, no storage, no dependencies.
-   ============================================================ */
+/* كراج — karaaj.sy */
 (function () {
   "use strict";
 
-  /* ────────────────────────────────────────────────────────────
-     1 · SCROLL REVEAL  (runs first, and cannot be broken by
-         anything below it)
-     ──────────────────────────────────────────────────────────── */
+  /* scroll reveal  (runs first, and cannot be broken by
+   anything below it) */
   var revealNodes = [];
 
   function collectReveals() {
     revealNodes = [].slice.call(document.querySelectorAll(".rv"));
-    // light stagger inside each sibling group so rows cascade
+                // light stagger inside each sibling group so rows cascade
     revealNodes.forEach(function (el) {
       var sibs = [].slice.call(el.parentElement.children).filter(function (c) {
         return c.classList && c.classList.contains("rv");
@@ -69,12 +63,10 @@
 
   try { initReveal(); } catch (e) { revealAll(); }
 
-  /* ────────────────────────────────────────────────────────────
-     2 · REFERENCE DATA
-     Hours and parts prices come from the measured workshops, and are
-     written into the HTML inputs (data-h / data-p) so the markup alone
-     tells the truth about what is being computed.
-     ──────────────────────────────────────────────────────────── */
+  /* reference data
+   Hours and parts prices come from the measured workshops, and are
+   written into the HTML inputs (data-h / data-p) so the markup alone
+   tells the truth about what is being computed. */
   var BASE_HOURLY = 45000;     // ساعة يد عاملة مرجعية، ل.س
   var VAT_RATE = 0.10;         // ضريبة المبيعات العامة
   var FX = 12000;              // ل.س لكل دولار — تقديري، مراجَع أسبوعياً
@@ -112,11 +104,9 @@
     firkah: "الفرقان", ashrafia: "الأشرفية"
   };
 
-  /* ────────────────────────────────────────────────────────────
-     3 · HELPERS
-     Every money line is rounded to the nearest 100 SYP *before* it is
-     summed, so the printed table adds up to the printed total exactly.
-     ──────────────────────────────────────────────────────────── */
+  /* helpers
+   Every money line is rounded to the nearest 100 SYP *before* it is
+   summed, so the printed table adds up to the printed total exactly. */
   function r100(v) { return Math.round(v / 100) * 100; }
   function n(v) { return r100(v).toLocaleString("en-US"); }
   function hrs(v) { return (Math.round(v * 100) / 100).toFixed(2); }
@@ -174,7 +164,7 @@
     var vat = vatOn ? r100(subtotal * VAT_RATE) : 0;
     var total = subtotal + vat;
 
-    // the same job in the cheapest quarter of the city, on identical assumptions
+                // the same job in the cheapest quarter of the city, on identical assumptions
     var alt = computeAlt(car, q, inputs, vatOn);
 
     return {
@@ -197,10 +187,8 @@
     return sub + (vatOn ? r100(sub * VAT_RATE) : 0);
   }
 
-  /* ────────────────────────────────────────────────────────────
-     4 · FLAGS — inline, not alerts. These are the calls a real
-         Aleppo mechanic would make about your selection.
-     ──────────────────────────────────────────────────────────── */
+  /* FLAGS — inline, not alerts. These are the calls a real
+   Aleppo mechanic would make about your selection. */
   function buildFlags(r) {
     var out = [];
     var k = r.keys, km = r.km, qk = r.qKey;
@@ -267,9 +255,7 @@
     return out;
   }
 
-  /* ────────────────────────────────────────────────────────────
-     5 · PAINT
-     ──────────────────────────────────────────────────────────── */
+  /* paint */
   function paint() {
     if (!carSel || !areaSel || !form) return;
 
@@ -391,9 +377,7 @@
   }
   paint();
 
-  /* ────────────────────────────────────────────────────────────
-     6 · DIRECTORY FILTER
-     ──────────────────────────────────────────────────────────── */
+  /* directory filter */
   var dirSearch = el("dirSearch");
   var wsItems = [].slice.call(document.querySelectorAll(".ws"));
   var state = { area: "all", spec: "all", q: "" };

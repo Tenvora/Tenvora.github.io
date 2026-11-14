@@ -1,9 +1,4 @@
-/* ============================================================
-   نخلة — تمر البصرة وتصديره
-   Language: palm-and-paper. Warm sand stock, brown-black ink,
-   one palm green used sparingly. Rectangular paper plates,
-   hairline rules, mono for every measured number.
-   ============================================================ */
+/* نخلة — تمر البصرة وتصديره */
 
 :root{
   --paper:#F4EEDF;
@@ -24,15 +19,15 @@
   --font-body:"IBM Plex Sans Arabic","Marhey",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
 
-  --sh-1:0 1px 2px rgba(36,26,16,.05), 0 8px 20px -14px rgba(36,26,16,.22);
-  --sh-2:0 2px 5px rgba(36,26,16,.05), 0 26px 48px -30px rgba(36,26,16,.30);
-  --sh-3:0 3px 8px rgba(36,26,16,.06), 0 54px 90px -44px rgba(36,26,16,.38);
+  --sh-1:0 1px 2px rgba(36,26,16,.05), 0 8px 22px -12px rgba(36,26,16,.14);
+  --sh-2:0 2px 6px rgba(36,26,16,.06), 0 28px 62px -26px rgba(36,26,16,.22);
+  --sh-3:0 3px 10px rgba(36,26,16,.07), 0 56px 104px -44px rgba(36,26,16,.28);
 
   --r:6px;
   --r-lg:10px;
   --wrap:1200px;
   --gutter:clamp(20px,5vw,60px);
-  --ease:cubic-bezier(.22,.61,.21,1);
+  --ease:cubic-bezier(.23,1,.32,1);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -62,7 +57,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .sr-only{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .n{font-family:var(--font-mono);font-weight:400;direction:ltr;unicode-bidi:isolate;font-feature-settings:"tnum";letter-spacing:0}
 
-/* ---------- buttons ---------- */
+/* buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.5em;
   font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1;letter-spacing:0;
@@ -84,7 +79,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .btn--sm{padding:.6rem 1.05rem;font-size:.85rem}
 .btn--lg{padding:1.05rem 2rem;font-size:1rem}
 
-/* ---------- notice + sticky bar ---------- */
+/* notice + sticky bar */
 .ticker{background:var(--ink);color:#DCD3C2}
 .ticker__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-block-size:40px;padding-block:.3rem;
   font-size:.79rem}
@@ -120,7 +115,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .mnav a{padding-block:.8rem;border-block-end:1px solid var(--line);font-family:var(--font-display);font-size:.98rem}
 .mnav .btn{margin-block-start:1rem;border:0}
 
-/* ---------- hero ---------- */
+/* hero */
 .hero{padding-block:clamp(40px,6vw,74px) clamp(52px,7vw,96px);overflow:clip}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(34px,5vw,70px);align-items:center}
 .kicker{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.73rem;color:var(--muted);
@@ -146,7 +141,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .plate__n{font-size:.72rem;color:var(--muted);line-height:1.7}
 .plate__n .n{font-size:.72rem;color:var(--ink-2)}
 
-/* ---------- standards strip ---------- */
+/* standards strip */
 .strip{background:var(--sand);border-block:1px solid var(--line)}
 .strip .wrap{padding-block:2.1rem}
 .strip__q{font-family:var(--font-body);font-weight:400;font-size:.8rem;color:var(--muted);text-align:center;margin-block-end:1.2rem}
@@ -156,8 +151,8 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .strip__list li:last-child span{font-family:var(--font-display);font-size:.95rem}
 .strip__list small{display:block;font-size:.72rem;color:var(--muted);line-height:1.55}
 
-/* ---------- sections ---------- */
-.section{padding-block:clamp(62px,8.5vw,112px)}
+/* sections */
+.section{padding-block:clamp(78px,9.5vw,146px)}
 .section--sand{background:var(--sand);border-block:1px solid var(--line)}
 .eyebrow{font-family:var(--font-display);font-size:.79rem;font-weight:400;color:var(--ink);display:flex;align-items:center;gap:.65rem;
   margin-block-end:.9rem}
@@ -188,7 +183,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .ticks__i{flex:0 0 auto;inline-size:20px;block-size:20px;border-radius:3px;background:var(--ink);color:var(--paper);
   display:inline-flex;align-items:center;justify-content:center;font-size:.68rem;font-family:system-ui,sans-serif;margin-block-start:.32rem}
 
-/* ---------- cultivars ---------- */
+/* cultivars */
 .filters{display:inline-flex;background:var(--surface);border-radius:var(--r);padding:.25rem;box-shadow:var(--sh-1);gap:.15rem}
 .fbtn{background:none;border:0;border-radius:4px;padding:.5rem 1.05rem;font-family:var(--font-display);font-size:.85rem;
   color:var(--muted);cursor:pointer;transition:color .3s var(--ease),background-color .3s var(--ease)}
@@ -220,7 +215,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .hint{font-size:.8rem;color:var(--muted);margin-block-start:1.4rem;max-inline-size:70ch}
 .hint bdi{font-family:var(--font-mono)}
 
-/* ---------- grading / packing ---------- */
+/* grading / packing */
 .spec-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(26px,3.6vw,52px);align-items:start}
 .spec-grid__main{display:grid;gap:1.6rem}
 .tbl-wrap{background:var(--surface);border-radius:var(--r);box-shadow:var(--sh-1);overflow-inline:auto}
@@ -257,7 +252,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .packs p{font-size:.85rem}
 .note{font-size:.78rem;color:var(--muted);padding-inline-start:.9rem;border-inline-start:2px solid var(--line-strong)}
 
-/* ---------- process ---------- */
+/* process */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;
   background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
 .step{background:var(--surface);padding:1.6rem 1.5rem 1.7rem;display:grid;gap:.35rem;align-content:start;
@@ -270,7 +265,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .step__doc{font-size:.75rem;color:var(--muted);border-block-start:1px dashed var(--line);padding-block-start:.55rem;margin-block-start:.5rem}
 .step__doc bdi{font-family:var(--font-mono);color:var(--ink-2)}
 
-/* ---------- traceability ---------- */
+/* traceability */
 .athar__head{margin-block-end:1.4rem}
 .code{background:var(--ink);color:#E7DFCD;border-radius:var(--r-lg);padding:clamp(20px,3vw,30px);box-shadow:var(--sh-2);
   margin-block-end:1.6rem}
@@ -302,7 +297,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .wide__cap p{font-size:.85rem;max-inline-size:70ch}
 .wide__n{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);direction:ltr}
 
-/* ---------- planner ---------- */
+/* planner */
 .planner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(24px,3vw,44px);align-items:start}
 .planner__form{display:grid;gap:1.2rem}
 .planner__set{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);padding:1.3rem 1.4rem 1.5rem;margin:0}
@@ -390,7 +385,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .tape__foot{font-size:.72rem;color:var(--muted);margin-block-start:1rem;padding-block-start:.8rem;
   border-block-start:1px dashed var(--line);line-height:1.7}
 
-/* ---------- photo band ---------- */
+/* photo band */
 .band{position:relative;background:var(--ink)}
 .band__fig{margin:0;block-size:clamp(300px,42vw,480px);overflow:hidden}
 .band__fig img{inline-size:100%;block-size:100%;object-fit:cover;object-position:center 55%;filter:saturate(.9) contrast(1.03)}
@@ -404,7 +399,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .band__stats span{font-size:.8rem;color:rgba(233,227,210,.78)}
 .band__stats b bdi{font-family:var(--font-mono)}
 
-/* ---------- calendar ---------- */
+/* calendar */
 .cal-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(26px,4vw,56px);align-items:start}
 .cal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(16px,2.4vw,34px);
   border-block-start:1px solid var(--line-strong)}
@@ -430,7 +425,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .sw--on{background:var(--line-strong)}
 .sw--peak{background:var(--ink)}
 
-/* ---------- markets ---------- */
+/* markets */
 .tbl--markets{min-inline-size:760px;font-size:.85rem}
 .tbl--markets th[scope="row"]{font-size:.9rem}
 .tbl--markets td{vertical-align:top}
@@ -445,7 +440,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .terms li bdi,.terms li .n{font-family:var(--font-mono);color:var(--ink)}
 .terms li span:not(.lab){color:var(--ink-2)}
 
-/* ---------- quotes ---------- */
+/* quotes */
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,282px),1fr));gap:1.1rem}
 .quote{margin:0;background:var(--surface);border-radius:var(--r);padding:1.7rem 1.6rem;box-shadow:var(--sh-1);
   display:flex;flex-direction:column;gap:1.3rem;border-block-start:2px solid var(--ink);
@@ -459,7 +454,7 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .av{grid-row:1/span 2;inline-size:38px;block-size:38px;border-radius:4px;background:var(--sand);color:var(--ink);
   display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.78rem;font-weight:600}
 
-/* ---------- enquiry ---------- */
+/* enquiry */
 .enq{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(26px,4vw,56px);align-items:start}
 .enq__intro .sec__title{margin-block-end:1rem}
 .enq__intro p{font-size:.94rem}
@@ -496,7 +491,7 @@ fieldset.fld{border:1px solid var(--line);border-radius:var(--r);padding:.8rem .
 .enq__done[hidden]{display:none}
 .enq__done bdi{font-family:var(--font-mono)}
 
-/* ---------- faq ---------- */
+/* faq */
 .faq{border-block-start:1px solid var(--line-strong)}
 .faq details{border-block-end:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;padding:1.2rem 2.4rem 1.2rem 0;font-family:var(--font-display);font-size:1.02rem;
@@ -511,7 +506,7 @@ fieldset.fld{border:1px solid var(--line);border-radius:var(--r);padding:.8rem .
 .faq p{padding-block:0 1.3rem;font-size:.93rem;max-inline-size:68ch}
 .faq p bdi{font-family:var(--font-mono);color:var(--ink)}
 
-/* ---------- closing ---------- */
+/* closing */
 .close{background:var(--ink);color:#DED5C3;padding-block:clamp(58px,8vw,96px)}
 .close__inner{display:grid;gap:.9rem;max-inline-size:760px;justify-items:start}
 .close__k{font-family:var(--font-mono);font-size:.76rem;color:#9C8E76;letter-spacing:.06em}
@@ -521,7 +516,7 @@ fieldset.fld{border:1px solid var(--line);border-radius:var(--r);padding:.8rem .
 .close__p bdi{font-family:var(--font-mono);color:#F6F2E7}
 .close__act{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-block-start:1rem}
 
-/* ---------- footer ---------- */
+/* footer */
 .foot{background:var(--paper);border-block-start:1px solid var(--line);padding-block:3.2rem 1.8rem}
 .foot__grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:2rem 1.5rem;
   padding-block-end:2.4rem;border-block-end:1px solid var(--line)}
@@ -546,12 +541,12 @@ fieldset.fld{border:1px solid var(--line);border-radius:var(--r);padding:.8rem .
 .foot__credit{font-family:var(--font-display);color:var(--ink-2)}
 .foot__credit span{color:var(--ink);font-family:var(--font-mono);font-size:.82rem}
 
-/* ---------- reveal ---------- */
+/* reveal */
 [data-reveal]{opacity:1;transform:none}
 html.js [data-reveal]{opacity:0;transform:translateY(14px)}
 html.js [data-reveal].is-in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
 
-/* ---------- responsive ---------- */
+/* responsive */
 @media (max-width:1080px){
   .hero__grid,.spec-grid,.planner,.cal-grid,.mk-note,.enq,.split{grid-template-columns:minmax(0,1fr)}
   .tape{position:static}
@@ -591,3 +586,11 @@ html.js [data-reveal].is-in{opacity:1;transform:none;transition:opacity .7s var(
   html{scroll-behavior:auto}
   html.js [data-reveal]{opacity:1;transform:none}
 }
+
+/* link and press feedback */
+.nav a{position:relative}
+.nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.btn:active{transform:translateY(0) scale(.985)}
+.band__fig img{transition:transform 1.1s var(--ease)}
+.band__fig:hover img{transform:scale(1.025)}

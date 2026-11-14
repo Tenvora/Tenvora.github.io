@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   var onScroll = function () { bar.classList.toggle("is-stuck", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal ---------- */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -39,7 +39,7 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- payroll calculator ---------- */
+  /* payroll calculator */
   var WAGE_CAP = 45000;
   var EMP_RATE = 0.0975;   /* اشتراك الموظف: 9.5% معاشات + 0.25% ساند */
   var EST_RATE = 0.1275;   /* اشتراك المنشأة: 11.5% + 1.25% ساند */
@@ -105,7 +105,7 @@
   form.addEventListener("submit", function (e) { e.preventDefault(); });
   render();
 
-  /* ---------- pricing cycle ---------- */
+  /* pricing cycle */
   var cycleBtns = document.querySelectorAll(".toggle__btn");
   var prices = document.querySelectorAll(".plan__price b[data-m]");
   var unit = document.querySelectorAll(".plan__price span");

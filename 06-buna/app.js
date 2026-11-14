@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal ---------- */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -38,11 +38,9 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ============================================================
-     حاسبة تكلفة البناء — أسعار إرشادية لعام 2026 بالريال السعودي
-     السعر النهائي = (سعر المتر المرجعي + البدلات) × المساحة المبنية
-                     + بدل تسريع الجدول إن طُلبت مدة أقصر من الأساسية
-     ============================================================ */
+  /* حاسبة تكلفة البناء — أسعار إرشادية لعام 2026 بالريال السعودي
+   السعر النهائي = (سعر المتر المرجعي + البدلات) × المساحة المبنية
+   + بدل تسريع الجدول إن طُلبت مدة أقصر من الأساسية */
   var RATE = {                                  /* ريال / م² مبنية */
     res: { std: 1850, plus: 2450, lux: 3200 },
     com: { std: 2100, plus: 2750, lux: 3600 },
@@ -162,7 +160,7 @@
     }
   }
 
-  /* ---------- controls ---------- */
+  /* controls */
   document.querySelectorAll(".seg__btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var group = btn.parentNode;
@@ -201,7 +199,7 @@
   document.getElementById("estForm").addEventListener("submit", function (e) { e.preventDefault(); });
   paint();
 
-  /* ---------- نموذج الطلب: بصري فقط، لا إرسال ولا تخزين ---------- */
+  /* نموذج الطلب: بصري فقط، لا إرسال ولا تخزين */
   var askForm = document.getElementById("askForm");
   var askHint = document.getElementById("askHint");
   askForm.addEventListener("submit", function (e) {

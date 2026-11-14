@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   var onScroll = function () { bar.classList.toggle("is-stuck", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal ---------- */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -39,12 +39,10 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* =========================================================
-     Fit-out budget estimator
-     Indicative rates for the Dubai design-and-build market
-     (AED per built-up square metre, materials + installation,
-     excluding land, MEP base-capacity upgrades and 5% VAT).
-     ========================================================= */
+  /* fit-out budget estimator
+   Indicative rates for the Dubai design-and-build market
+   (AED per built-up square metre, materials + installation,
+   excluding land, MEP base-capacity upgrades and 5% VAT). */
   var LEVELS = {
     basic:      { name: "أساسي",   rate: 1850 },
     executive:  { name: "تنفيذي",  rate: 3200 },
@@ -184,13 +182,13 @@
     return key;
   }
 
-  /* ---------- area sync (input <-> slider) ---------- */
+  /* area sync (input <-> slider) */
   areaInput.addEventListener("input", function () { areaRange.value = clampArea(num(areaInput, 420)); render(); });
   areaRange.addEventListener("input", function () { areaInput.value = areaRange.value; render(); });
   unitSel.addEventListener("change", render);
   Object.keys(addonBoxes).forEach(function (k) { addonBoxes[k].addEventListener("change", render); });
 
-  /* ---------- finish-level segment ---------- */
+  /* finish-level segment */
   segBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
       segBtns.forEach(function (b) {
@@ -205,7 +203,7 @@
 
   render();
 
-  /* ---------- enquiry form (visual only) ---------- */
+  /* enquiry form (visual only) */
   var enqForm = document.getElementById("enqForm");
   var enqNote = document.getElementById("enqNote");
   enqForm.addEventListener("submit", function (e) {

@@ -10,9 +10,7 @@
   var reduce = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ------------------------------------------------------------
-     REVEALS
-     ------------------------------------------------------------ */
+  /* reveals */
   var targets = [];
 
   function collect() {
@@ -77,9 +75,7 @@
     window.addEventListener('pagehide', showAll);
   }
 
-  /* ------------------------------------------------------------
-     COMMISSION SHEET
-     ------------------------------------------------------------ */
+  /* commission sheet */
   var PER_M2 = {            // laid pieces per m², grout joint included
     '2x2': 1736,            // module 2.0 + 0.4 joint = 2.4 cm -> 10000/5.76
     '4x4': 494,             // module 4.0 + 0.5 joint = 4.5 cm -> 10000/20.25
@@ -239,7 +235,7 @@
     put('lbp', int(total * LBP));
   }
 
-  /* ------------------------------------------------------------ */
+  
   function init() {
     initReveals();
     if (form) {

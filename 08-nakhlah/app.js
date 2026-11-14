@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar shadow ---------- */
+  /* sticky bar shadow */
   var bar = document.getElementById("bar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 10); }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var burger = document.getElementById("burger");
   var mnav = document.getElementById("mnav");
   burger.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mnav.hidden = true; burger.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal ---------- */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -39,7 +39,7 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- cultivar texture filter ---------- */
+  /* cultivar texture filter */
   var fbtns = document.querySelectorAll(".fbtn");
   var vars = document.querySelectorAll("#vars .var");
   fbtns.forEach(function (btn) {
@@ -56,12 +56,10 @@
     });
   });
 
-  /* ==========================================================
-     shipment planner
-     كل عبوة لها: صافي، وزن التغليف الفارغ، وحجم مشغول.
-     الحاوية لها: حمولة صافية وحجم، والحجم القابل للتحميل
-     بعد خصم فقد التخزين (15%).
-     ========================================================== */
+  /* shipment planner
+   كل عبوة لها: صافي، وزن التغليف الفارغ، وحجم مشغول.
+   الحاوية لها: حمولة صافية وحجم، والحجم القابل للتحميل
+   بعد خصم فقد التخزين (15%). */
   var LOSS = 0.15;
   var PACKS = {
     c5:  { net: 5,  tare: 0.55, vol: 0.019, unit: "كرتونة" },
@@ -172,7 +170,7 @@
     meter(view.mw, view.mwn, wRatio);
     meter(view.mv, view.mvn, vRatio);
 
-    /* — السطر التوضيحي للعامل المحدِّد — */
+    /* سطر الشرح تحت العامِل المحدَّد */
     var cap;
     if (!net) {
       cap = "لم تُدخل كمية بعد؛ اعلَّم صنفاً وعدِّد الكراتين لتظهر الحسابات.";
@@ -242,7 +240,7 @@
   contBtns.forEach(function (b) { b.closest(".cont").classList.toggle("is-on", b.checked); });
   render();
 
-  /* ---------- enquiry form (واجهة فقط) ---------- */
+  /* enquiry form (واجهة فقط) */
   var enq = document.getElementById("enquiry");
   var done = document.getElementById("enqDone");
   enq.addEventListener("submit", function (e) {

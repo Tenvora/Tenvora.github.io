@@ -5,9 +5,7 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var NS = "http://www.w3.org/2000/svg";
 
-  /* ============================================================
-     shared helpers
-     ============================================================ */
+  /* shared helpers */
   function $(id) { return document.getElementById(id); }
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -28,9 +26,7 @@
   function ml(v) { return Math.round(v).toLocaleString("en-US"); }
   function money(v) { return v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
 
-  /* ============================================================
-     sticky bar + mobile nav
-     ============================================================ */
+  /* sticky bar + mobile nav */
   var bar = $("topbar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -46,9 +42,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ============================================================
-     scroll reveal
-     ============================================================ */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     for (var i = 0; i < items.length; i++) items[i].classList.add("is-in");
@@ -64,10 +58,8 @@
     for (var j = 0; j < items.length; j++) io.observe(items[j]);
   }
 
-  /* ============================================================
-     roast data — the real schedule used on the 15 kg drum
-     charge 205°C · turning point 92°C @ 01:35 · first crack 196°C
-     ============================================================ */
+  /* roast data — the real schedule used on the 15 kg drum
+   charge 205°C · turning point 92°C @ 01:35 · first crack 196°C */
   var CHARGE = 205, TP_T = 95, TP_TEMP = 92, FC_TEMP = 196, BATCH_IN = 12;
 
   var PROFILES = {
@@ -100,9 +92,7 @@
     }
   };
 
-  /* ============================================================
-     SVG roast curve (signature): time on X, bean temp on Y
-     ============================================================ */
+  /* svg roast curve (signature): time on x, bean temp on y */
   function curvePoints(p) {
     var pts = [[0, CHARGE], [TP_T, TP_TEMP]];
     var span = p.total - TP_T, k = 3.2, denom = 1 - Math.exp(-k);
@@ -173,9 +163,7 @@
     ev(px(TP_T) + 6, py(TP_TEMP) - 8, "start", "نقطة التحوّل " + clock(TP_T), "cv-ev");
   }
 
-  /* ============================================================
-     demo 1 — roast profile selector
-     ============================================================ */
+  /* roast profile selector */
   var profBtns = document.querySelectorAll(".prof__btn");
   var profNotes = $("profNotes"), profBars = $("profBars"), profSpec = $("profSpec");
   var heroCurve = $("heroCurve"), profCurve = $("profCurve");
@@ -245,14 +233,12 @@
     b.addEventListener("click", function () { applyProfile(b.getAttribute("data-profile")); });
   });
 
-  /* hero record + demo both start on today's roast (medium) */
+  /* hero record and the calculator both start on today's roast (medium) */
   shape(heroCurve, PROFILES.medium);
   applyProfile("medium");
 
-  /* ============================================================
-     demo 2 — brew ratio calculator
-     water = dose × ratio · served = water × (1 − simmer loss) − dose × absorption
-     ============================================================ */
+  /* brew ratio calculator
+   water = dose × ratio · served = water × (1 − simmer loss) − dose × absorption */
   var METHODS = {
     v60: {
       ratios: [15, 16, 18], ratio: 16, dose: 20, water: 320,
@@ -399,9 +385,7 @@
   renderRatios();
   calcBrew();
 
-  /* ============================================================
-     demo 3 — seasonal menu board + in-page bill (15% VAT)
-     ============================================================ */
+  /* seasonal menu board + in-page bill (15% vat) */
   var CATS = [
     { id: "filter", title: "مرشَّح" },
     { id: "espresso", title: "إسبريسو وحليب" },

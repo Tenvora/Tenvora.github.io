@@ -1,9 +1,6 @@
-/* ============================================================
-   حِبر — hibr.jo · العدد 24
-   Review imprimé : papier chaud, ink noir, rouge reliure unique.
-   ============================================================ */
+/* حِبر — hibr.jo · العدد 24 */
 
-/* ---------- 1. Jetons ---------- */
+/* jetons */
 :root{
   --paper:#F4F1EA;
   --paper-2:#EFEAE1;
@@ -15,17 +12,17 @@
   --red-deep:#7E2820;
   --hair:rgba(22,21,26,.16);
   --hair-soft:rgba(22,21,26,.09);
-  --shadow-1:0 1px 2px rgba(22,21,26,.04),0 10px 28px rgba(22,21,26,.06);
-  --shadow-2:0 2px 4px rgba(22,21,26,.05),0 18px 44px rgba(22,21,26,.08);
+  --shadow-1:0 1px 2px rgba(22,21,26,.05), 0 12px 30px -12px rgba(22,21,26,.14);
+  --shadow-2:0 2px 6px rgba(22,21,26,.06), 0 30px 64px -26px rgba(22,21,26,.22);
   --font-serif:"Amiri","Times New Roman",serif;
   --font-body:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;
   --font-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
-  --ease:cubic-bezier(.22,.61,.21,1);
+  --ease:cubic-bezier(.25,.8,.25,1);
   --rd-fs:19px;
   --rd-lh:1.9;
 }
 
-/* ---------- 2. Base ---------- */
+/* base */
 *,*::before,*::after{box-sizing:border-box}
 html{
   scroll-behavior:smooth;
@@ -102,7 +99,7 @@ dd{unicode-bidi:isolate}
 }
 .skip:focus{inset-block-start:0}
 
-/* ---------- 3. Révélation / chorégraphie ---------- */
+/* Révélation / chorégraphie */
 html.js .will-reveal{
   opacity:0;
   transform:translateY(14px);
@@ -118,7 +115,7 @@ html.js .will-reveal.is-revealed{
 }
 html.js .on-load{animation:rise .7s var(--ease) both}
 
-/* ---------- 4. Barre haute ---------- */
+/* barre haute */
 .topbar{
   position:sticky;
   inset-block-start:0;
@@ -191,7 +188,7 @@ html.js .on-load{animation:rise .7s var(--ease) both}
 .mobile-nav a:last-child{border-block-end:0;color:var(--red);font-weight:500}
 .mobile-nav[hidden]{display:none}
 
-/* ---------- 5. Masthead ---------- */
+/* masthead */
 .masthead{
   padding-block:clamp(3rem,7vw,5.5rem) clamp(2.2rem,4vw,3.2rem);
   text-align:center;
@@ -246,8 +243,8 @@ html.js .on-load{animation:rise .7s var(--ease) both}
   font-weight:500;
 }
 
-/* ---------- 6. Titres de section ---------- */
-.section{padding-block:clamp(3.2rem,6.5vw,5rem)}
+/* titres de section */
+.section{padding-block:clamp(4.10rem,7.3vw,6.50rem)}
 .section--tint{background:var(--paper-2)}
 .sec-head{margin-block-end:1.9rem}
 .sec-head--row{
@@ -275,7 +272,7 @@ html.js .on-load{animation:rise .7s var(--ease) both}
   margin-block-end:.6rem;
 }
 
-/* ---------- 7. Sommaire ---------- */
+/* sommaire */
 .toc-sec{padding-block:clamp(2.2rem,4vw,3.4rem) clamp(3.2rem,6.5vw,5rem)}
 .toc-sec__grid{
   display:grid;
@@ -427,7 +424,7 @@ html.js .on-load{animation:rise .7s var(--ease) both}
 .side-block--press p{font-size:.85rem;color:var(--ink-soft)}
 .side-block--press em{font-family:var(--font-serif);font-style:normal;font-weight:700}
 
-/* ---------- 8. Éditorial ---------- */
+/* Éditorial */
 .opening{
   background:var(--ink);
   color:var(--paper);
@@ -504,7 +501,7 @@ html.js .lead[data-lines-built] .ln.is-on{
   transition-delay:var(--d,0ms);
 }
 
-/* ---------- 9. Filtres archive ---------- */
+/* filtres archive */
 .filters{
   display:flex;
   flex-wrap:wrap;
@@ -551,7 +548,6 @@ html.js .lead[data-lines-built] .ln.is-on{
   font-size:.85rem;
   text-align:center;
 }
-.numfield input.is-alert{border-color:var(--red);background:rgba(168,53,42,.06)}
 .select select{
   appearance:none;
   background:var(--paper-2)
@@ -577,7 +573,7 @@ html.js .lead[data-lines-built] .ln.is-on{
 }
 .link-btn:hover{color:var(--red);border-block-end-color:var(--red)}
 
-/* ---------- 10. Liste des numéros ---------- */
+/* Liste des numéros */
 .issues{display:grid;gap:1.1rem}
 .issue{
   display:grid;
@@ -634,7 +630,7 @@ html.js .lead[data-lines-built] .ln.is-on{
 }
 .filters__empty[hidden]{display:none}
 
-/* ---------- 11. Étagère de textes ---------- */
+/* Étagère de textes */
 .shelf{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));
@@ -667,7 +663,7 @@ html.js .lead[data-lines-built] .ln.is-on{
 .shelf__meta{font-size:.78rem;color:var(--ink-faint);margin-block-start:.2rem}
 .mins{unicode-bidi:isolate}
 
-/* ---------- 12. Bandeau Amman ---------- */
+/* bandeau amman */
 .band{position:relative;margin-block:clamp(3rem,6vw,4.5rem) 0}
 .band__fig{margin:0;overflow:hidden}
 .band__fig img{
@@ -696,7 +692,7 @@ html.js .lead[data-lines-built] .ln.is-on{
 }
 .band__meta{font-size:.78rem;color:var(--ink-faint);margin-block-start:.5rem}
 
-/* ---------- 13. Abonnement ---------- */
+/* abonnement */
 .sub{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);
@@ -798,7 +794,7 @@ html.js .lead[data-lines-built] .ln.is-on{
   line-height:1.3;
 }
 
-/* ---------- 14. À propos ---------- */
+/* À propos */
 .about{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
@@ -864,7 +860,7 @@ html.js .lead[data-lines-built] .ln.is-on{
   display:grid;gap:.3rem;
 }
 
-/* ---------- 15. Lecteur ---------- */
+/* lecteur */
 .reader{
   position:fixed;
   inset:0;
@@ -1063,7 +1059,7 @@ html.js .piece.is-active{display:block}
 }
 .reader__end em{font-family:var(--font-serif);font-style:normal;font-weight:700}
 
-/* ---------- 16. Pied de page ---------- */
+/* pied de page */
 .footer{
   background:var(--ink);
   color:rgba(244,241,234,.82);
@@ -1109,7 +1105,7 @@ html.js .piece.is-active{display:block}
 }
 .footer__attr a:hover{color:var(--paper);border-block-end-color:var(--red)}
 
-/* ---------- 17. Responsif ---------- */
+/* responsif */
 @media (max-width:1020px){
   .toc-sec__grid{grid-template-columns:minmax(0,1fr)}
   .toc-side{
@@ -1154,7 +1150,7 @@ html.js .piece.is-active{display:block}
   .dateline{grid-template-columns:minmax(0,1fr)}
 }
 
-/* ---------- 18. Mouvement réduit ---------- */
+/* Mouvement réduit */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   html.js .will-reveal,
@@ -1170,3 +1166,10 @@ html.js .piece.is-active{display:block}
     animation-duration:.01ms !important;
   }
 }
+
+/* link and press feedback */
+.nav a{position:relative}
+.nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.band__fig img{transition:transform 1.1s var(--ease)}
+.band__fig:hover img{transform:scale(1.025)}

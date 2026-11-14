@@ -1,25 +1,18 @@
-/* ══════════════════════════════════════════════════════════════
-   رَوِ — rawi.jo
-   ١) كوريغرافيا التحميل + الكشف بالتمرير (مع شبكة أمان زمنية)
-   ٢) آلة حالات مشغّل الحلقة: idle → playing → paused → ended
-   كل شيء محليّ: لا شبكة، لا ملفات صوتية، لا تخزين.
-   ══════════════════════════════════════════════════════════════ */
+/* رَوِ — rawi.jo */
 (function () {
   'use strict';
 
   var doc = document;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ────────────────────────────────────────────────────────────
-     ١. الحركة: لا شيء فوق الطية ينتظر التمرير
-     ──────────────────────────────────────────────────────────── */
+  /* الحركة: لا شيء فوق الطية ينتظر التمرير */
   function forceAll() {
     doc.documentElement.classList.add('is-ready');
     var hidden = doc.querySelectorAll('[data-reveal]:not(.is-in),[data-choreo]:not(.is-in)');
     for (var i = 0; i < hidden.length; i++) hidden[i].classList.add('is-in');
   }
 
-  // شبكة الأمان: تُقرأ بعد أي محتوى يُضاف برمجياً، وتُظهر كل ما بقي خفيّاً فوق الطية.
+        // شبكة الأمان: تُقرأ بعد أي محتوى يُضاف برمجياً، وتُظهر كل ما بقي خفيّاً فوق الطية.
   setTimeout(function () {
     doc.documentElement.classList.add('is-ready');
     var pending = doc.querySelectorAll('[data-reveal]:not(.is-in),[data-choreo]:not(.is-in)');
@@ -47,9 +40,7 @@
     for (var i = 0; i < items.length; i++) io.observe(items[i]);
   }
 
-  /* ────────────────────────────────────────────────────────────
-     أدوات
-     ──────────────────────────────────────────────────────────── */
+  /* أدوات */
   function el(tag, cls, txt) {
     var n = doc.createElement(tag);
     if (cls) n.className = cls;
@@ -57,7 +48,7 @@
     return n;
   }
 
-  // كل رقمٍ أو طابعٍ زمني داخل نصٍ عربي يُلفَّ بـ bdi عزلًا للاتجاه.
+        // كل رقمٍ أو طابعٍ زمني داخل نصٍ عربي يُلفَّ بـ bdi عزلًا للاتجاه.
   function textWithDigits(node, str) {
     var parts = String(str).split(/(\d+(?::\d+)*(?:[.,]\d+)?)/);
     for (var i = 0; i < parts.length; i++) {
@@ -81,7 +72,7 @@
     return h > 0 ? h + ':' + p(m) + ':' + p(x) : p(m) + ':' + p(x);
   }
 
-  // مولّد أرقام شبه-عشوائي ثابت البذرة: نفس الحلقة = نفس شكل الموجة.
+        // مولّد أرقام شبه-عشوائي ثابت البذرة: نفس الحلقة = نفس شكل الموجة.
   function mulberry32(a) {
     return function () {
       a |= 0; a = (a + 0x6D2B79F5) | 0;
@@ -104,18 +95,14 @@
     return out;
   }
 
-  /* ────────────────────────────────────────────────────────────
-     ٢. بيانات الموسم
-     ──────────────────────────────────────────────────────────── */
+  /* بيانات الموسم */
   var NODE = doc.getElementById('rawi-data');
   var DATA = JSON.parse(NODE.textContent);
   var EPS = DATA.episodes;
 
-  /* ────────────────────────────────────────────────────────────
-     ٣. آلة حالات المشغّل
-        idle ─play()→ playing ─pause()→ paused ─play()→ playing
-        playing ─بلوغ النهاية→ ended ─play()/seek()→ playing
-     ──────────────────────────────────────────────────────────── */
+  /* آلة حالات المشغّل
+   idle -play()-> playing -pause()-> paused -play()-> playing
+   playing -بلوغ النهاية-> ended -play()/seek()-> playing */
   var S = { ep: 0, built: -1, t: 0, status: 'idle', rate: 1, raf: null, last: 0 };
 
   var BARS = 72, VW = 720, VH = 96, SLOT = VW / BARS, BARW = SLOT - 3.6;
@@ -201,7 +188,7 @@
 
   function say(msg) { dom.live.textContent = msg; }
 
-  /* ── المؤقّت: وقت حقيقي، لا وهم ── */
+  /* المؤقّت: وقت حقيقي، لا وهم */
   function loop(now) {
     if (S.status !== 'playing') return;
     var dt = (now - S.last) / 1000;
@@ -243,7 +230,7 @@
     }
   }
 
-  /* ── تبديل الحلقة: يغيّر البطاقة كاملة ── */
+  /* تبديل الحلقة: يغيّر البطاقة كاملة */
   function loadEp(idx, at, autoplay) {
     if (idx !== S.built) {
       S.ep = idx;
@@ -278,9 +265,7 @@
     }
   }
 
-  /* ────────────────────────────────────────────────────────────
-     ٤. بناء القوائم
-     ──────────────────────────────────────────────────────────── */
+  /* بناء القوائم */
   function chapterBtn(e, c, i) {
     var b = el('button', 'chip');
     b.type = 'button';
@@ -383,12 +368,10 @@
     }
   }
 
-  /* ────────────────────────────────────────────────────────────
-     ٥. الأحداث
-     ──────────────────────────────────────────────────────────── */
+  /* الأحداث */
   function ratioFromClientX(node, x) {
     var r = node.getBoundingClientRect();
-    // اتجاه الصفحة rtl: نقطة البداية عند الحرف القبليّ (اليمين).
+                // اتجاه الصفحة rtl: نقطة البداية عند الحرف القبليّ (اليمين).
     return Math.max(0, Math.min(1, (r.right - x) / r.width));
   }
 
@@ -473,9 +456,7 @@
     doc.getElementById('player').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   }
 
-  /* ────────────────────────────────────────────────────────────
-     ٦. الإقلاع
-     ──────────────────────────────────────────────────────────── */
+  /* الإقلاع */
   function boot() {
     doc.documentElement.classList.add('booted');
     renderEps();

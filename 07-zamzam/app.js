@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   var onScroll = function () { bar.classList.toggle("is-stuck", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal ---------- */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -39,7 +39,7 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- program finder ---------- */
+  /* program finder */
   var form = document.getElementById("finderForm");
   var selects = Array.prototype.slice.call(form.querySelectorAll("select"));
   var results = Array.prototype.slice.call(document.querySelectorAll(".res"));

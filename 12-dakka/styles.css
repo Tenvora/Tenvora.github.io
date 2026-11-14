@@ -1,9 +1,4 @@
-/* ============================================================
-   دكّاية — محمصة قهوة مختص · الطائف
-   Design language: warm paper + deep roast-brown ink, one burnt
-   caramel accent, a published roast record instead of a slogan,
-   and an SVG roast curve as the signature. No glow, no glass.
-   ============================================================ */
+/* دكّاية — محمصة قهوة مختص · الطائف */
 
 :root{
   --paper:#F4EFE6;
@@ -25,14 +20,14 @@
   --font-body:"IBM Plex Sans Arabic","Reem Kufi",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
 
-  --sh-1:0 1px 2px rgba(36,26,19,.04), 0 6px 18px -10px rgba(36,26,19,.12);
-  --sh-2:0 2px 4px rgba(36,26,19,.05), 0 28px 56px -28px rgba(36,26,19,.22);
-  --sh-3:0 1px 1px rgba(36,26,19,.04), 0 48px 80px -40px rgba(36,26,19,.28);
+  --sh-1:0 1px 2px rgba(36,26,19,.05), 0 8px 22px -12px rgba(36,26,19,.14);
+  --sh-2:0 2px 6px rgba(36,26,19,.06), 0 28px 62px -26px rgba(36,26,19,.22);
+  --sh-3:0 3px 10px rgba(36,26,19,.07), 0 56px 104px -44px rgba(36,26,19,.28);
 
   --r-sm:10px; --r-md:16px; --r-lg:22px;
   --wrap:1180px;
   --gutter:clamp(20px,5vw,56px);
-  --ease:cubic-bezier(.22,.61,.21,1);
+  --ease:cubic-bezier(.21,.9,.35,1);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -76,7 +71,7 @@ bdi,.num,[dir="ltr"]{font-family:var(--font-mono);font-weight:500;font-feature-s
 bdi{font-size:.97em}
 bdi > .ar{font-family:var(--font-body)}
 
-/* ---------- buttons ---------- */
+/* buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.5em;
   font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1.4;
@@ -97,7 +92,7 @@ bdi > .ar{font-family:var(--font-body)}
 .btn--sm{padding:.62rem 1.15rem;font-size:.85rem}
 .btn--lg{padding:1.1rem 2.1rem;font-size:1rem}
 
-/* ---------- top bar ---------- */
+/* top bar */
 .topbar{position:sticky;inset-block-start:0;z-index:30;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(140%) blur(10px);border-block-end:1px solid transparent;transition:box-shadow .4s var(--ease),border-color .4s var(--ease)}
 .topbar.is-stuck{border-block-end-color:var(--line);box-shadow:0 10px 24px -22px rgba(36,26,19,.4)}
 .topbar__inner{display:flex;align-items:center;gap:1.6rem;block-size:76px}
@@ -119,7 +114,7 @@ bdi > .ar{font-family:var(--font-body)}
 .mobile-nav a{padding:.75rem 0;border-block-end:1px solid var(--line);font-family:var(--font-display);font-size:1.02rem;color:var(--ink)}
 .mobile-nav .btn{margin-block:.9rem .2rem;border:0}
 
-/* ---------- hero: دفتر التحميص ---------- */
+/* hero: دفتر التحميص */
 .hero{padding-block:clamp(40px,6vw,74px) clamp(56px,8vw,104px);position:relative;overflow:clip}
 .hero::before{content:"";position:absolute;inset-block-start:-320px;inset-inline-end:-220px;inline-size:760px;block-size:760px;
   background:radial-gradient(circle at center,rgba(162,87,31,.08),rgba(162,87,31,0) 62%);pointer-events:none}
@@ -159,7 +154,7 @@ bdi > .ar{font-family:var(--font-body)}
 .log__foot span{font-size:.72rem;color:var(--muted)}
 .log__foot strong{font-weight:500;font-size:1rem;color:var(--ink);font-family:var(--font-body)}
 
-/* ---------- svg roast curve ---------- */
+/* svg roast curve */
 .curve{inline-size:100%;block-size:auto;display:block;overflow:visible}
 .curve .cv-area{fill:var(--accent-soft);opacity:.6}
 .curve .cv-line{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
@@ -169,10 +164,9 @@ bdi > .ar{font-family:var(--font-body)}
 .curve .cv-dot{fill:var(--surface);stroke:var(--accent);stroke-width:2}
 .curve .cv-dot--fc{fill:var(--surface);stroke:var(--ink-2);stroke-width:1.6}
 .curve .cv-lbl{fill:var(--muted);font-family:var(--font-mono);font-size:11px;font-weight:400}
-.curve .cv-lbl--key{fill:var(--ink)}
 .curve .cv-ev{fill:var(--muted);font-family:var(--font-body);font-size:11px}
 
-/* ---------- trust strip ---------- */
+/* trust strip */
 .trust{border-block:1px solid var(--line);background:var(--surface)}
 .trust .wrap{padding-block:1.8rem}
 .trust__label{font-size:.8rem;color:var(--muted);text-align:center;margin-block-end:1rem}
@@ -181,8 +175,8 @@ bdi > .ar{font-family:var(--font-body)}
 .trust__list:hover li{opacity:.3}
 .trust__list li:hover{opacity:.92}
 
-/* ---------- sections ---------- */
-.section{padding-block:clamp(60px,8.5vw,116px)}
+/* sections */
+.section{padding-block:clamp(76px,9.5vw,151px)}
 .section--tint{background:var(--paper-tint)}
 .eyebrow{font-family:var(--font-display);font-size:.8rem;font-weight:500;color:var(--muted);display:flex;align-items:center;gap:.7rem;margin-block-end:1rem}
 .eyebrow::before{content:"";inline-size:26px;block-size:1px;background:currentColor;opacity:.6}
@@ -205,7 +199,7 @@ bdi > .ar{font-family:var(--font-body)}
 .rules li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding-block:.68rem;border-block-end:1px solid var(--line);font-size:.88rem;color:var(--ink-2)}
 .rules li bdi{color:var(--ink)}
 
-/* ---------- lots ---------- */
+/* lots */
 .lots__head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,3vw,44px);align-items:center;margin-block-end:2rem}
 .lots__head p{max-inline-size:52ch}
 .lots__fig{margin:0}
@@ -224,7 +218,7 @@ table.lots .lot small{display:block;font-size:.74rem;color:var(--muted);line-hei
 table.lots .score{color:var(--ink)}
 .tablecap{font-size:.8rem;color:var(--muted);margin-block-start:1rem}
 
-/* ---------- roast profile demo ---------- */
+/* roast profile demo */
 .roast__head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,3.6vw,56px);align-items:start;margin-block-end:2.4rem}
 .roast__intro p{max-inline-size:56ch}
 .roast__fig{margin:0}
@@ -265,7 +259,7 @@ table.lots .score{color:var(--ink)}
 .prof__buy span{font-size:.78rem;color:var(--muted)}
 .prof__buy strong{font-weight:500;font-size:1.05rem;color:var(--ink);font-family:var(--font-body)}
 
-/* ---------- photographic band ---------- */
+/* photographic band */
 .band{position:relative;background:var(--roast)}
 .band__fig{margin:0;block-size:clamp(300px,44vw,500px);overflow:hidden}
 .band__fig img{inline-size:100%;block-size:100%;object-fit:cover;object-position:center 58%;filter:saturate(.9) contrast(1.02)}
@@ -276,7 +270,7 @@ table.lots .score{color:var(--ink)}
 .band__stats li > strong bdi{font-size:1em}
 .band__stats span{font-size:.84rem;color:rgba(242,233,220,.78)}
 
-/* ---------- steps ---------- */
+/* steps */
 .steps{display:grid;gap:0;border-block-start:1px solid var(--line-strong)}
 .step{display:grid;grid-template-columns:88px minmax(0,1fr);gap:clamp(16px,3vw,40px);
   padding-block:1.9rem;border-block-end:1px solid var(--line);transition:background-color .4s var(--ease)}
@@ -285,7 +279,7 @@ table.lots .score{color:var(--ink)}
 .step h3{font-size:1.2rem;margin-block-end:.4rem}
 .step p{max-inline-size:64ch;font-size:.96rem}
 
-/* ---------- brew calculator ---------- */
+/* brew calculator */
 .brew{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(28px,4vw,64px);align-items:start}
 .brew__intro{min-inline-size:0}
 .brew__intro .section__title{margin-block-end:1.2rem}
@@ -339,7 +333,7 @@ table.lots .score{color:var(--ink)}
 .out-cap{font-size:.8rem;color:rgba(242,233,220,.72);line-height:1.8;margin-block-start:1.1rem}
 .brew__out.is-flash .out-row--main strong{color:#F6C896}
 
-/* ---------- seasonal menu board ---------- */
+/* seasonal menu board */
 .menu__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:clamp(20px,3vw,48px);align-items:end;margin-block-end:2.2rem}
 .menu__head p{max-inline-size:56ch}
 .menu__cats{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end}
@@ -388,7 +382,7 @@ table.lots .score{color:var(--ink)}
 .order__hint{font-size:.76rem;color:var(--muted);margin-block-start:.9rem;line-height:1.7}
 .board__empty{font-size:.86rem;color:rgba(242,233,220,.7);padding-block:1.4rem 1rem}
 
-/* ---------- quotes ---------- */
+/* quotes */
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.2rem}
 .quote{margin:0;background:var(--surface);border-radius:var(--r-md);padding:1.8rem 1.6rem;box-shadow:var(--sh-1);
   display:flex;flex-direction:column;gap:1.3rem;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
@@ -400,7 +394,7 @@ table.lots .score{color:var(--ink)}
 .mono-av{inline-size:32px;block-size:32px;border-radius:50%;background:var(--paper-tint);color:var(--ink);grid-row:1/span 2;
   display:inline-flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:600}
 
-/* ---------- faq ---------- */
+/* faq */
 .faq{border-block-start:1px solid var(--line-strong)}
 .faq details{border-block-end:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;padding:1.25rem 2.5rem 1.25rem 0;font-family:var(--font-display);font-size:1.02rem;color:var(--ink);position:relative;transition:color .3s var(--ease)}
@@ -412,7 +406,7 @@ table.lots .score{color:var(--ink)}
 .faq details[open] summary::after{transform:rotate(-135deg)}
 .faq details p{padding-block:0 1.4rem;font-size:.95rem;max-inline-size:66ch}
 
-/* ---------- closing cta ---------- */
+/* closing cta */
 .cta{background:var(--roast);color:var(--cream);padding-block:clamp(56px,8vw,96px)}
 .cta__inner{display:grid;gap:1rem;justify-items:start;max-inline-size:820px}
 .cta h2{color:#FFF9F1;font-size:clamp(1.6rem,3vw,2.25rem)}
@@ -425,7 +419,7 @@ table.lots .score{color:var(--ink)}
 .cta .btn--solid{background:var(--cream);color:var(--roast)}
 .cta .btn--solid:hover{background:#FFF9F1}
 
-/* ---------- footer ---------- */
+/* footer */
 .footer{background:var(--paper);border-block-start:1px solid var(--line);padding-block:3.2rem 2rem}
 .footer__grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:2rem 1.5rem;padding-block-end:2.4rem;border-block-end:1px solid var(--line)}
 .footer__brand .brand__name{font-size:1.35rem}
@@ -442,12 +436,12 @@ table.lots .score{color:var(--ink)}
 .footer__attr a{text-decoration:underline;text-underline-offset:3px}
 .footer__attr a:hover{color:var(--ink)}
 
-/* ---------- reveals (motion budget) ---------- */
+/* reveals (motion budget) */
 [data-reveal]{opacity:1;transform:none}
 html.js [data-reveal]{opacity:0;transform:translateY(14px)}
 html.js [data-reveal].is-in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
 
-/* ---------- responsive ---------- */
+/* responsive */
 @media (max-width:1040px){
   .hero__grid,.split,.lots__head,.roast__head,.menu,.menu__head,.brew{grid-template-columns:minmax(0,1fr)}
   .menu__cats{justify-content:flex-start}
@@ -490,3 +484,11 @@ html.js [data-reveal].is-in{opacity:1;transform:none;transition:opacity .7s var(
   html.js [data-reveal]{opacity:1;transform:none}
   html.js [data-reveal].is-in{transition:none}
 }
+
+/* link and press feedback */
+.nav a{position:relative}
+.nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.btn:active{transform:translateY(0) scale(.985)}
+.band__fig img{transition:transform 1.1s var(--ease)}
+.band__fig:hover img{transform:scale(1.025)}

@@ -5,13 +5,7 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fmt = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
 
-  /* ============================================================
-     قواعد قفّص لإيواء الطيور
-     a1  = المساحة الأرضية للطائر الأول (سم²)
-     an  = الزيادة لكل طائر إضافي (سم²)
-     lmin / wmin / hmin = حدود الأبعاد الصلبة بالسم
-     fl  = أقل طول لغرفة الطيران (سم)
-     ============================================================ */
+  /* قواعد قفّص لإيواء الطيور */
   var ASPECT = 1.8;
   var SPECIES = {
     canary: { name: "كناري",           a1: 1800, an: 900,  lmin: 60,  wmin: 35, hmin: 40,  fl: 150, bar: "1.25" },
@@ -41,9 +35,7 @@
     return { area: area, l: l, w: w, h: h, s: s, t: t };
   }
 
-  /* ============================================================
-     sticky bar + mobile nav
-     ============================================================ */
+  /* sticky bar + mobile nav */
   var bar = document.getElementById("topbar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -60,9 +52,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ============================================================
-     scroll reveal
-     ============================================================ */
+  /* scroll reveal */
   var items = document.querySelectorAll("[data-reveal]");
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -79,9 +69,7 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ============================================================
-     حاسبة مقاس الحيازة
-     ============================================================ */
+  /* حاسبة مقاس الحيازة */
   var form = document.getElementById("sizeForm");
   var outBox = document.getElementById("sizeOut");
   var sType = document.getElementById("sType");
@@ -252,9 +240,7 @@
     });
   });
 
-  /* ============================================================
-     فلتر الإعلانات
-     ============================================================ */
+  /* فلتر الإعلانات */
   var fType = document.getElementById("fType");
   var fCity = document.getElementById("fCity");
   var fPrice = document.getElementById("fPrice");
@@ -292,9 +278,7 @@
   document.getElementById("emptyReset").addEventListener("click", resetFilters);
   applyFilter();
 
-  /* ============================================================
-     إضافة فعالية إلى التقويم (ملف ICS محلي)
-     ============================================================ */
+  /* إضافة فعالية إلى التقويم (ملف ICS محلي) */
   function icsEscape(s) { return String(s).replace(/([,;\\])/g, "\\$1").replace(/\n/g, "\\n"); }
 
   document.querySelectorAll(".ics").forEach(function (btn) {

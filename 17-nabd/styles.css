@@ -1,7 +1,4 @@
-/* ============================================================
-   نبض · nabd.lb — chalk paper, ink, one clay-red pulse
-   Changa (display) / IBM Plex Sans Arabic (body) / IBM Plex Mono (numerals)
-   ============================================================ */
+/* نبض — nabd.lb · مناطق النبض وخطة التدريب */
 
 :root{
   --paper:#F1EFEA;
@@ -15,16 +12,16 @@
   --font-body:"IBM Plex Sans Arabic","Changa",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,monospace;
 
-  --shadow-sm:0 1px 2px rgba(25,26,28,.04), 0 8px 20px rgba(25,26,28,.05);
-  --shadow-md:0 1px 2px rgba(25,26,28,.05), 0 16px 34px rgba(25,26,28,.06);
-  --shadow-lg:0 2px 4px rgba(25,26,28,.05), 0 28px 60px rgba(25,26,28,.06);
+  --shadow-sm:0 1px 2px rgba(25,26,28,.05), 0 10px 24px -12px rgba(25,26,28,.13);
+  --shadow-md:0 2px 6px rgba(25,26,28,.06), 0 24px 54px -22px rgba(25,26,28,.20);
+  --shadow-lg:0 3px 10px rgba(25,26,28,.07), 0 44px 88px -36px rgba(25,26,28,.26);
 
   --r-sm:10px;
   --r-md:14px;
   --r-lg:18px;
   --r-xl:22px;
 
-  --ease:cubic-bezier(.22,.61,.21,1);
+  --ease:cubic-bezier(.12,.8,.2,1);
   --pad:clamp(1.15rem,4vw,2.5rem);
   --maxw:1180px;
 }
@@ -73,7 +70,7 @@ body::after{
   padding-inline:var(--pad);
 }
 
-/* ---------- type ---------- */
+/* type */
 h1,h2,h3,.brand-word,.display{
   font-family:var(--font-display);
   font-weight:700;
@@ -121,9 +118,9 @@ bdi{unicode-bidi:isolate;font-style:normal}
 .lede{font-size:1.06rem;color:var(--muted);max-inline-size:46ch;margin-block-start:1.5rem}
 .section-lede{font-size:1.02rem;color:var(--muted);max-inline-size:62ch;margin-block-start:1rem;margin-block-end:2.4rem}
 
-section{padding-block:clamp(3.4rem,7vw,6.4rem)}
+section{padding-block:clamp(4.35rem,7.8vw,8.32rem)}
 
-/* ---------- buttons ---------- */
+/* buttons */
 .btn{
   display:inline-block;
   font-family:var(--font-display);
@@ -145,7 +142,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
 .btn-block{display:block;text-align:center}
 .btn-sm{font-size:.88rem;padding-block:.42rem;padding-inline:1rem}
 
-/* ---------- sticky bar ---------- */
+/* sticky bar */
 .topbar{
   position:sticky;
   inset-block-start:0;
@@ -183,7 +180,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
 .topnav a{transition:color 200ms var(--ease)}
 .topnav a:hover{color:var(--ink)}
 
-/* ---------- hero ---------- */
+/* hero */
 .hero{padding-block-start:clamp(2.4rem,5vw,4.2rem);padding-block-end:clamp(2.6rem,6vw,5rem)}
 .hero-grid{
   display:grid;
@@ -194,7 +191,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-block-start:2rem}
 .hero-fine{font-size:.86rem;color:var(--muted);margin-block-start:1.6rem;max-inline-size:44ch}
 
-/* ---------- phone screen (product truth) ---------- */
+/* phone screen (product truth) */
 .hero-device{display:flex;justify-content:flex-end}
 .phone{
   inline-size:min(348px,100%);
@@ -333,7 +330,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
   line-height:1.7;
 }
 
-/* ---------- trust strip ---------- */
+/* trust strip */
 .trust{
   padding-block:clamp(2rem,4vw,3rem);
   background:var(--paper-2);
@@ -353,7 +350,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
 .trust-list span{font-size:.92rem;color:var(--muted);line-height:1.7}
 .trust-foot{font-size:.8rem;color:var(--muted);margin-block-start:1.4rem}
 
-/* ---------- problem / solution ---------- */
+/* problem / solution */
 .split{
   display:grid;
   grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
@@ -401,7 +398,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
 .card h3{margin-block-end:.5rem}
 .card p{font-size:.92rem;color:var(--muted);line-height:1.8}
 
-/* ---------- process ---------- */
+/* process */
 .process h2{margin-block-end:2.4rem}
 .steps{
   display:grid;
@@ -437,7 +434,7 @@ section{padding-block:clamp(3.4rem,7vw,6.4rem)}
   padding-block:.2rem;
 }
 
-/* ---------- demo ---------- */
+/*  */
 .demo{background:var(--paper-2)}
 .demo-grid{
   display:grid;
@@ -607,7 +604,7 @@ table.zones tr.is-hot td:last-child{border-start-end-radius:var(--r-sm);border-e
 .out-plan .sub{font-size:.78rem;color:var(--muted);line-height:1.75}
 .demo-note{font-size:.84rem;color:var(--muted);line-height:1.85}
 
-/* ---------- photographic band ---------- */
+/* photographic band */
 .band-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -635,7 +632,7 @@ table.zones tr.is-hot td:last-child{border-start-end-radius:var(--r-sm);border-e
 .shot-wide{grid-column:span 2}
 .shot-wide img{block-size:340px}
 
-/* ---------- pricing ---------- */
+/* pricing */
 .incl-grid{
   display:grid;
   grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
@@ -705,7 +702,7 @@ table.zones tr.is-hot td:last-child{border-start-end-radius:var(--r-sm);border-e
   line-height:1.85;
 }
 
-/* ---------- voices ---------- */
+/* voices */
 .voices{background:var(--paper-2)}
 .voice-list{
   display:grid;
@@ -734,7 +731,7 @@ table.zones tr.is-hot td:last-child{border-start-end-radius:var(--r-sm);border-e
 .voice-meta{font-size:.84rem;color:var(--muted)}
 .voices-foot{font-size:.82rem;color:var(--muted);margin-block-start:1.6rem;max-inline-size:70ch}
 
-/* ---------- faq ---------- */
+/* faq */
 .faq-wrap{
   display:grid;
   grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);
@@ -778,7 +775,7 @@ details[open] summary::before{content:"–"}
 }
 .ans p{margin:0}
 
-/* ---------- closing ---------- */
+/* closing */
 .closing-grid{
   display:grid;
   grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
@@ -791,7 +788,7 @@ details[open] summary::before{content:"–"}
 .closing-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-block-start:1.6rem}
 .closing-fine{font-size:.82rem;color:var(--muted);margin-block-start:1.4rem}
 
-/* ---------- footer ---------- */
+/* footer */
 .footer{
   background:var(--ink);
   color:#D9D6CF;
@@ -832,7 +829,7 @@ details[open] summary::before{content:"–"}
 }
 .footer-base p{margin:0}
 
-/* ---------- reveal (one scroll reveal + one load choreography) ---------- */
+/* reveal (one scroll reveal + one load choreography) */
 .js .reveal{opacity:0;transform:translateY(14px)}
 .js .reveal.is-in{
   opacity:1;
@@ -841,7 +838,7 @@ details[open] summary::before{content:"–"}
 }
 .js .hero .reveal.is-in{transition-delay:var(--d,0ms)}
 
-/* ---------- responsive ---------- */
+/* responsive */
 @media (max-width:1080px){
   .solution-grid,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .band-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -868,7 +865,7 @@ details[open] summary::before{content:"–"}
   .hero-actions .btn{inline-size:100%;text-align:center}
 }
 
-/* ---------- reduced motion ---------- */
+/* reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{
@@ -878,3 +875,9 @@ details[open] summary::before{content:"–"}
   .js .reveal{opacity:1 !important;transform:none !important}
   .btn:hover,.band-opt:hover span{transform:none}
 }
+
+/* link and press feedback */
+.topnav a{position:relative}
+.topnav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
+.topnav a:hover::after,.topnav a:focus-visible::after{transform:scaleX(1)}
+.btn:active{transform:translateY(0) scale(.985)}

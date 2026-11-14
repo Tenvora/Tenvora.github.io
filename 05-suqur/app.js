@@ -5,24 +5,18 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ============================================================
-     1. Load choreography — one time only, hero only
-     ============================================================ */
+  /* Load choreography — one time only, hero only */
   function goLive() { document.body.classList.add("is-live"); }
   if (reduce) { goLive(); }
   else { requestAnimationFrame(function () { requestAnimationFrame(goLive); }); }
 
-  /* ============================================================
-     2. Sticky bar
-     ============================================================ */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   function barState() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", barState, { passive: true });
   barState();
 
-  /* ============================================================
-     3. Mobile nav
-     ============================================================ */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -37,11 +31,9 @@
     }
   });
 
-  /* ============================================================
-     4. Reveals — IntersectionObserver plus a direct geometry scan.
-        The scan runs on load and on scroll, so content is never
-        stranded invisible if the observer does not fire.
-     ============================================================ */
+  /* Reveals — IntersectionObserver plus a direct geometry scan.
+   The scan runs on load and on scroll, so content is never
+   stranded invisible if the observer does not fire. */
   var revealables = [].slice.call(document.querySelectorAll("[data-reveal]"));
 
   function show(el, i) {
@@ -79,9 +71,7 @@
     window.addEventListener("load", scan);
   }
 
-  /* ============================================================
-     5. Season window (Abu Dhabi, 2026–2027)
-     ============================================================ */
+  /* Season window (Abu Dhabi, 2026–2027) */
   var SEASON_START = new Date(2026, 9, 20);   /* 20 أكتوبر 2026 */
   var SEASON_END   = new Date(2027, 0, 31);   /* 31 يناير 2027 */
   var MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو",
@@ -107,9 +97,7 @@
     seasonLine.innerHTML = "الموسم مغلق حاليًا. تُستأنف المعاينات في <bdi dir=\"ltr\">20</bdi> أكتوبر <bdi dir=\"ltr\">2026</bdi>؛ اترك طلبك وسنثبّته في أول يومٍ يُفتح فيه السجل.";
   }
 
-  /* ============================================================
-     6. Season catalogue — filter, spec sheet, reservation
-     ============================================================ */
+  /* Season catalogue — filter, spec sheet, reservation */
   var table = document.getElementById("birdTable");
   var rows = [].slice.call(table.tBodies[0].rows);
   var chips = [].slice.call(document.querySelectorAll(".chip"));

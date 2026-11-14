@@ -1,7 +1,4 @@
-/* ============================================================
-   حِبر — app.js
-   Vanilla DOM uniquement : aucun appel réseau, aucune librairie.
-   ============================================================ */
+/* حِبر — app.js */
 (function () {
   'use strict';
 
@@ -12,9 +9,7 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-  /* ----------------------------------------------------------
-     1. Révélation au défilement (une seule, budget respecté)
-     ---------------------------------------------------------- */
+  /* Révélation au défilement (une seule, budget respecté) */
   var REVEAL_SEL = [
     '.toc-main .sec-head', '.tbl-wrap', '.plate', '.side-block',
     '.sec-head--row', '.filters', '.issue', '.shelf__item',
@@ -60,9 +55,7 @@
     if (!io) revealables.forEach(reveal);
   }, 1200);
 
-  /* ----------------------------------------------------------
-     2. Menu mobile
-     ---------------------------------------------------------- */
+  /* menu mobile */
   var menuBtn = $('#menuBtn');
   var mobileNav = $('#mobileNav');
 
@@ -85,9 +78,7 @@
     });
   }
 
-  /* ----------------------------------------------------------
-     3. Ouverture de l'éditorial : révélation ligne à ligne
-     ---------------------------------------------------------- */
+  /* Ouverture de l'éditorial : révélation ligne à ligne */
   var leadEl = $('.lead[data-lines]');
   var leadOriginal = leadEl ? leadEl.innerHTML : null;
 
@@ -194,9 +185,7 @@
     });
   }
 
-  /* ----------------------------------------------------------
-     4. Lecteur « وضع القراءة » : panneaux, outils, progression
-     ---------------------------------------------------------- */
+  /* Lecteur « وضع القراءة » : panneaux, outils, progression */
   var reader = $('#reader');
   var readerScroll = $('#readerScroll');
   var readerRule = $('#readerRule');
@@ -327,9 +316,7 @@
     }
   });
 
-  /* ----------------------------------------------------------
-     5. Filtres de l'archive
-     ---------------------------------------------------------- */
+  /* filtres de l'archive */
   var form = $('#filters');
   var issuesList = $('#issues');
   var issues = $$('.issue', issuesList || document);

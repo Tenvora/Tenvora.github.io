@@ -1,14 +1,11 @@
-/* ═══════════════════════════════════════════════════════════
-   زيتون — reveal choreography + حاسبة المعصرة
-   No network, no storage, no libraries.
-   ═══════════════════════════════════════════════════════════ */
+/* زيتون — reveal choreography + حاسبة المعصرة */
 (function () {
   'use strict';
 
   var doc = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 1. load timeline + one scroll reveal ─────────────── */
+  /* 1. load timeline + one scroll reveal */
   function showAll() {
     [].slice.call(doc.querySelectorAll('[data-load], [data-reveal]'))
       .forEach(function (el) { el.classList.add('is-in'); });
@@ -38,7 +35,7 @@
     window.setTimeout(showAll, 1200);
   }
 
-  /* ── 2. حاسبة المعصرة ─────────────────────────────────── */
+  /* 2. حاسبة المعصرة */
   var POMACE_PRICE = 1.50;   // ₪/كغ — price contracted with the soap factories
   var FX = 3.60;             // ₪ per $1, indicative
   var BALA_PRICE = 4;        // ₪/كغ — what the roadside buyer pays

@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   function onScroll() { bar.classList.toggle("is-stuck", window.scrollY > 8); }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal (opacity + translateY only) ---------- */
+  /* scroll reveal (opacity + translatey only) */
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
   if (reduce || !("IntersectionObserver" in window)) {
     items.forEach(function (el) { el.classList.add("is-in"); });
@@ -51,9 +51,7 @@
     return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0];
   }
 
-  /* ============================================================
-     (a) SHIPMENT TRACKING LOOKUP — seeded, client-side only
-     ============================================================ */
+  /* (a) SHIPMENT TRACKING LOOKUP — seeded, client-side only */
   var SHIPMENTS = {
     "MRSI-2026-4471": {
       vessel: "AL NUAIMA", voyage: "MR-2141", lane: "موندرا ← الدوحة",
@@ -177,10 +175,8 @@
   var pre = (new URLSearchParams(window.location.search).get("track") || "").trim().toUpperCase();
   if (pre && SHIPMENTS[pre]) { trackInput.value = pre; renderShipment(pre, SHIPMENTS[pre]); }
 
-  /* ============================================================
-     (b) FREIGHT ESTIMATOR — chargeable weight = max(actual,
-         volumetric @ 1000 kg / m³), then a QAR total + range
-     ============================================================ */
+  /* (b) FREIGHT ESTIMATOR — chargeable weight = max(actual,
+   volumetric @ 1000 kg / m³), then a QAR total + range */
   var LANES = {
     jebel_ali: { name: "جبل علي", fcl20: 1200, fcl40: 1900, perTon: 550, perTonBulk: 480, baf20: 120, baf40: 210, bafTon: 55 },
     dammam:    { name: "الدمام", fcl20: 1500, fcl40: 2400, perTon: 680, perTonBulk: 600, baf20: 150, baf40: 260, bafTon: 70 },

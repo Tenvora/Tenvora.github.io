@@ -4,13 +4,13 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- sticky bar ---------- */
+  /* sticky bar */
   var bar = document.getElementById("topbar");
   var onScroll = function () { bar.classList.toggle("is-stuck", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- mobile nav ---------- */
+  /* mobile nav */
   var menuBtn = document.getElementById("menuBtn");
   var mobileNav = document.getElementById("mobileNav");
   menuBtn.addEventListener("click", function () {
@@ -22,7 +22,7 @@
     if (e.target.tagName === "A") { mobileNav.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); }
   });
 
-  /* ---------- scroll reveal (never leaves content hidden) ---------- */
+  /* scroll reveal (never leaves content hidden) */
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
   var revealAll = function () { items.forEach(function (el) { el.classList.add("is-in"); }); };
   if (reduce || !("IntersectionObserver" in window)) {
@@ -40,9 +40,7 @@
     window.setTimeout(revealAll, 1400);
   }
 
-  /* ============================================================
-     منصة sizing calculator — indicative monthly cost, SAR
-     ============================================================ */
+  /* منصة sizing calculator — indicative monthly cost, SAR */
   var RATE = {
     computePerTB: 34,     /* حوسبة لكل تيرابايت مستوعَبة شهريًا */
     computePerPipe: 280,  /* حوسبة لكل خط معالجة */
