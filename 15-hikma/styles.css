@@ -481,3 +481,12 @@ details[open] summary::after{transform:rotate(45deg)}
 .nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
 .nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
 .btn:active{transform:translateY(0) scale(.985)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .js .m-mask{opacity:1;transform:none}
+  .m-mask .ml{display:block;overflow:clip;overflow-clip-margin:.34em}
+  .m-mask .ml>span{display:block;transform:translateY(calc(100% + .34em));transition:transform .95s var(--ease)}
+  .m-mask.is-in .ml>span{transform:translateY(0)}
+  .trust-figs, .hero-fig{translate:0 var(--py,0px)}
+}

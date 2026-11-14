@@ -881,3 +881,20 @@ details[open] summary::before{content:"–"}
 .topnav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
 .topnav a:hover::after,.topnav a:focus-visible::after{transform:scaleX(1)}
 .btn:active{transform:translateY(0) scale(.985)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .js .m-mask{opacity:1;transform:none}
+  .m-mask .ml{display:block;overflow:clip;overflow-clip-margin:.34em}
+  .m-mask .ml>span{display:block;transform:translateY(calc(100% + .34em));transition:transform .95s var(--ease)}
+  .m-mask.is-in .ml>span{transform:translateY(0)}
+  .shot-wide, .shot-city{translate:0 var(--py,0px)}
+  .btn-primary{position:relative;overflow:hidden}
+  .btn-primary::after{content:"";position:absolute;top:0;bottom:0;right:-55%;width:38%;pointer-events:none;transform:translateX(150%);transition:transform .8s var(--ease);background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent)}
+  .btn-primary:hover::after,.btn-primary:focus-visible::after{transform:translateX(-330%)}
+  .topnav a{color:inherit}
+  .topnav a.is-current{color:--accent}
+  .topnav a.is-current::after{transform:scaleX(1)}
+  .topbar::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:2px;
+    background:--accent;transform:scaleX(var(--sp,0));transform-origin:right}
+}

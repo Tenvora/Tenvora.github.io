@@ -1173,3 +1173,8 @@ html.js .piece.is-active{display:block}
 .nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
 .band__fig img{transition:transform 1.1s var(--ease)}
 .band__fig:hover img{transform:scale(1.025)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .band__fig, .piece__fig{translate:0 var(--py,0px)}
+}

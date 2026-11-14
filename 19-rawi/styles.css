@@ -710,3 +710,16 @@ bdi{unicode-bidi:isolate}
 .bar__nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:-5px;block-size:1px;background:currentColor;opacity:.72;transform:scaleX(0);transform-origin:right;transition:transform .34s var(--ease)}
 .bar__nav a:hover::after,.bar__nav a:focus-visible::after{transform:scaleX(1)}
 .btn:active{transform:translateY(0) scale(.985)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .trust__figs, .problem__fig, .hero__fig{translate:0 var(--py,0px)}
+  .btn--accent{position:relative;overflow:hidden}
+  .btn--accent::after{content:"";position:absolute;top:0;bottom:0;right:-55%;width:38%;pointer-events:none;transform:translateX(150%);transition:transform .8s var(--ease);background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent)}
+  .btn--accent:hover::after,.btn--accent:focus-visible::after{transform:translateX(-330%)}
+  .bar__nav a{color:inherit}
+  .bar__nav a.is-current{color:--accent}
+  .bar__nav a.is-current::after{transform:scaleX(1)}
+  .bar::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:2px;
+    background:--accent;transform:scaleX(var(--sp,0));transform-origin:right}
+}

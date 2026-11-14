@@ -235,3 +235,81 @@
   form.addEventListener("change", render);
   render();
 })();
+
+/* scroll motion */
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var all = function (sel) {
+    return Array.prototype.slice.call(document.querySelectorAll(sel));
+  };
+
+  /* headlines: every line climbs out from behind its own edge */
+  all('h1').forEach(function (h) {
+    var line = [], lines = [line];
+    Array.prototype.forEach.call(h.childNodes, function (n) {
+      if (n.nodeType === 1 && n.tagName === "BR") { line = []; lines.push(line); return; }
+      line.push(n);
+    });
+    h.textContent = "";
+    lines.forEach(function (parts, i) {
+      if (!parts.length) return;
+      var box = document.createElement("span"), run = document.createElement("span");
+      box.className = "ml";
+      run.style.transitionDelay = (i * 90) + "ms";
+      parts.forEach(function (n) { run.appendChild(n); });
+      box.appendChild(run);
+      h.appendChild(box);
+    });
+    var shown = h.classList.contains("is-in");
+    if (shown) h.classList.remove("is-in");
+    h.classList.add("m-mask");
+    void h.offsetHeight;
+    requestAnimationFrame(function () { h.classList.add("is-in"); });
+  });
+
+  /* figures drift against the scroll, each selector with its own travel */
+  var PLANES = {".trust-figs": 16, ".hero-fig": 14};
+  var planes = [];
+  Object.keys(PLANES).forEach(function (sel) {
+    all(sel).forEach(function (el) { planes.push([el, PLANES[sel]]); });
+  });
+  function drift() {
+    var vh = window.innerHeight || 800;
+    planes.forEach(function (p) {
+      var r = p[0].getBoundingClientRect();
+      if (r.bottom < -240 || r.top > vh + 240) return;
+      var mid = (r.top + r.height / 2 - vh / 2) / vh;
+      p[0].style.setProperty("--py", (mid * -p[1]).toFixed(1) + "px");
+    });
+  }
+  var queued = false;
+  window.addEventListener("scroll", function () {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; drift(); });
+  }, { passive: true });
+  drift();
+
+  /* the bar keeps the section you are reading lit */
+  var LINKS = {};
+  all('.nav a').forEach(function (a) {
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" && href.length > 1) LINKS[href.slice(1)] = a;
+  });
+  var read = Object.keys(LINKS);
+  if (read.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        read.forEach(function (id) {
+          LINKS[id].classList.toggle("is-current", id === e.target.id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    read.forEach(function (id) {
+      var section = document.getElementById(decodeURIComponent(id));
+      if (section) spy.observe(section);
+    });
+  }
+
+})();

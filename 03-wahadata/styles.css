@@ -415,3 +415,20 @@ html.js [data-reveal].is-in{opacity:1;transform:none;transition:opacity .7s var(
 .btn:active{transform:translateY(0) scale(.985)}
 .creds__fig img{transition:transform 1.1s var(--ease)}
 .creds__fig:hover img{transform:scale(1.025)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .js .m-mask{opacity:1;transform:none}
+  .m-mask .ml{display:block;overflow:clip;overflow-clip-margin:.34em}
+  .m-mask .ml>span{display:block;transform:translateY(calc(100% + .34em));transition:transform .95s var(--ease)}
+  .m-mask.is-in .ml>span{transform:translateY(0)}
+  .band__fig, .creds__fig{translate:0 var(--py,0px)}
+  .btn--solid{position:relative;overflow:hidden}
+  .btn--solid::after{content:"";position:absolute;top:0;bottom:0;right:-55%;width:38%;pointer-events:none;transform:translateX(150%);transition:transform .8s var(--ease);background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent)}
+  .btn--solid:hover::after,.btn--solid:focus-visible::after{transform:translateX(-330%)}
+  .nav a{color:inherit}
+  .nav a.is-current{color:--accent}
+  .nav a.is-current::after{transform:scaleX(1)}
+  .topbar::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:2px;
+    background:--accent;transform:scaleX(var(--sp,0));transform-origin:right}
+}

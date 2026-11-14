@@ -459,3 +459,12 @@ html.js [data-reveal].is-in{opacity:1;transform:none;
 .btn:active{transform:translateY(0) scale(.985)}
 .band__fig img{transition:transform 1.1s var(--ease)}
 .band__fig:hover img{transform:scale(1.025)}
+
+/* scroll motion */
+@media (prefers-reduced-motion: no-preference){
+  .js .m-mask{opacity:1;transform:none}
+  .m-mask .ml{display:block;overflow:clip;overflow-clip-margin:.34em}
+  .m-mask .ml>span{display:block;transform:translateY(calc(100% + .34em));transition:transform .95s var(--ease)}
+  .m-mask.is-in .ml>span{transform:translateY(0)}
+  .band__fig, .hero__fig{translate:0 var(--py,0px)}
+}
